@@ -1,4 +1,4 @@
-html, body{margin: 0;height: 1850px;}
+html, body{margin: 0;height: 1850px;width:1350px;}
 body{display: flex;flex-flow: column;text-decoration: none;background: rgb(171,199,212);font-family: "微软雅黑";}
 a{text-decoration:none;color: black;}
 a:hover{color: red;}
