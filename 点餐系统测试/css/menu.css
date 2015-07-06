@@ -1,0 +1,45 @@
+html,body,.body{margin:0;height:100%;overflow:hidden;}
+body{color:white;}
+.head{position:absolute;top:0;left:0;right:0;height:7%;box-shadow: 0 2px 10px 0px #666;-webkit-box-shadow: 0 2px 10px 0px #666;background-image:linear-gradient(rgb(54,54,54),rgb(26,26,26));text-align: center;}
+.title{position: relative;top:26%;color:lightgray;font-family: "仿宋";font-size: 20px;font-weight: bold;}
+.side{position:absolute;left:0;top:7%;bottom:10%;width:25%;background:linear-gradient(90deg,rgb(54,54,54),rgb(26,26,26));color: white;}
+.main{position:absolute;left:25%;top:7%;bottom:10%;right:0;overflow: auto;}
+.foot{position:absolute;left:0;right:0;bottom:0;height:10%;background:lightgray;text-align: center;font-size: 20px;color: black;}
+.home{position:absolute;left:5%;display:block;height:35px;width:35px;background:url(../img/Menu-50.png) no-repeat center;background-size:35px 35px;}
+.search{position:absolute;top:0px;right:5%;display:block;height:35px;width:35px;background:url(../img/Search-50.png) no-repeat center;background-size:35px 35px;}
+.sd_head{width: 100%;height: 49px;background: url(../img/focus.jpg) no-repeat;background-size: 100% 49px;}
+.sd_body{position:absolute;top:49px;width: 100%;height:80%;}
+.nav{width: 100%;height:10%;text-align: center;}
+.nav a{display:block;width:100%;height:100%;color: #cccccc;text-decoration: none;margin:0px;border-bottom: 2px  solid rgb(54,54,54)}
+.nav a p{position: relative;top:40%;}
+.cur{background: url(../img/nav.jpg) no-repeat;background-size: 100% 100%;}
+.main .ma_head{position:fixed;top:7%;width:75%;height:40px;background: gray;box-shadow: 1px 3px 3px 0px black;text-align: center;z-index: 999;}
+.main .inner{color: black;border-bottom: 1px solid black;display: none;}
+.ma_head2{height:40px;}
+.inner ul{list-style:none;}
+.inner ul li{position:relative;width: 100%;height: 90px;background:white;border-bottom: 1px solid black;}
+.pic{position: absolute;top:5px;left: 10px;}
+.name,.price{position: absolute;top: 5px;right:10px;width:80px;font-family: "仿宋";font-size: 15px;
+word-break:break-word;}
+.price{top:38px;color: red;font-weight: bold;}
+.control{position: absolute;top:60px;right:25px;height: 20px;width: 66px;}
+.control a{position:absolute;top:0px;display:inline-block;height:20px;width:20px;border: 1px solid black;line-height: 20px;text-align: center;font-size: 20px;font-weight: bolder;}
+.add{right: 0px;}
+.subtract{left: 0px;}
+.control input{position: absolute;left:20px; width: 20px;height: 18px;text-align: center;font-size: 17px;line-height: 18px;}
+.foot_head{position:absolute;top:5px;width: 25%;height:100%;border-right: 1px solid gray;}
+.foot_body{position: absolute;left: 25%;width: 75%;height: 100%;}
+.foot_price{position: absolute;top:10px;left:20px;color: red;font-size: 30px;}
+.buy{position: absolute;right:10px;bottom:10px;width:80px;line-height:30px;height: 30px;background: rgb(255,102,0);border-radius: 5px;}
+.order{position:relative;width: 100%;height: 100%;background:rgba(169,169,169,0.6);}
+.od_content{position: absolute;width:80%;height:60%;top: 20%;left: 10%;background:white;border-radius: 10px;}
+.od_head{position:absolute;width: 100%;height: 15%;background: gainsboro;border-radius: 10px 10px 0px 0px/10px 10px 0px 0px;}
+.od_head p{position:absolute;color:black;font-size: 20px;font-family: "微软雅黑";left: 35%;top: 25%;}
+.od_body{position:absolute;top:15%;height:70%;width: 100%;}
+.od_body ul{list-style:none;height: 100%;overflow:auto;color: black;}
+.od_body ul li{display:none;width:100%;height:15%;background:white;border-bottom: 1px solid black;color:black;font-size: 20px;font-family: "微软雅黑";font-weight: bolder;}
+.od_foot{position:absolute;width: 100%;height: 15%;bottom:0px;background: gainsboro;border-radius:0px 0px 10px 10px/0px 0px 10px 10px;}
+.submit{position:absolute;color:black;font-size: 20px;font-family: "微软雅黑";right:5%;top: 25%;width: 20%;height:100%;text-align: center;}
+.close{position: absolute;width:20%;height:10%;top:2%;right:0px;color:black;font-size: 20px;font-family: "微软雅黑";font-weight: bolder;text-align: center;}
+.ob_num{position: absolute;right: 10px;}
+.all{position: absolute;top:10px;left:20px;color: red;font-size: 30px;}
