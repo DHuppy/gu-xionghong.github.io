@@ -1,6 +1,6 @@
 html,body,.body{margin:0;height:100%;overflow:hidden;}
 body{color:white;}
-.head{position:absolute;top:0;left:0;right:0;height:7%;box-shadow: 0 2px 10px 0px #666;-webkit-box-shadow: 0 2px 10px 0px #666;background-image:linear-gradient(rgb(54,54,54),rgb(26,26,26));text-align: center;}
+.head{position:absolute;top:0;left:0;right:0;height:7%;box-shadow: 0 2px 10px 0px #666;-webkit-box-shadow: 0 2px 10px 0px #666;background-image:linear-gradient(rgb(54,54,54),rgb(26,26,26));filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='rgb(54,54,54)',endColorStr='rgb(26,26,26)',gradientType='0');background:-moz-linear-gradient(top, rgb(54,54,54), rgb(26,26,26)); background: -o-linear-gradient(top,rgb(54,54,54), rgb(26,26,26));text-align: center;}
 .title{position: relative;top:26%;color:lightgray;font-family: "仿宋";font-size: 20px;font-weight: bold;}
 .side{position:absolute;left:0;top:7%;bottom:10%;width:25%;background:linear-gradient(90deg,rgb(54,54,54),rgb(26,26,26));filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='rgb(54,54,54)',endColorStr='rgb(26,26,26)',gradientType='1');background:-moz-linear-gradient(left, rgb(54,54,54), rgb(26,26,26)); background: -o-linear-gradient(left,rgb(54,54,54), rgb(26,26,26)); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(54,54,54)), to(rgb(26,26,26)));color: white;}
 .main{position:absolute;left:25%;top:7%;bottom:10%;right:0;overflow: auto;}
