@@ -1,8 +1,9 @@
-html,body,.body{margin:0;padding:0px;height:100%;overflow:hidden;}
+html,body,.body{margin:0;height:100%;overflow:hidden;}
 body{color:white;}
-.head{position:absolute;top:0;left:0;right:0;height:7%;box-shadow: 0 2px 10px 0px #666;-webkit-box-shadow: 0 2px 10px 0px #666;background-image:linear-gradient(rgb(54,54,54),rgb(26,26,26));filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='rgb(54,54,54)',endColorStr='rgb(26,26,26)',gradientType='0');background:-moz-linear-gradient(top, rgb(54,54,54), rgb(26,26,26)); background: -o-linear-gradient(top,rgb(54,54,54), rgb(26,26,26));background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(54,54,54)), to(rgb(26,26,26)));text-align: center;}
+.head{position:absolute;top:0;left:0;right:0;height:7%;box-shadow: 0 2px 10px 0px #666;-webkit-box-shadow: 0 2px 10px 0px #666;background-image:linear-gradient(rgb(54,54,54),rgb(26,26,26));
+filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='rgb(54,54,54)',endColorStr='rgb(26,26,26)',gradientType='0');background:-moz-linear-gradient(top, rgb(54,54,54), rgb(26,26,26)); background: -o-linear-gradient(top,rgb(54,54,54), rgb(26,26,26)); background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(54,54,54)), to(rgb(26,26,26)));text-align: center;}
 .title{position: relative;top:26%;color:lightgray;font-family: "仿宋";font-size: 20px;font-weight: bold;}
-.side{position:absolute;left:0;top:7%;bottom:10%;width:25%;background:linear-gradient(90deg,rgb(54,54,54),rgb(26,26,26));filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='rgb(54,54,54)',endColorStr='rgb(26,26,26)',gradientType='1');background:-moz-linear-gradient(left, rgb(54,54,54), rgb(26,26,26)); background: -o-linear-gradient(left,rgb(54,54,54), rgb(26,26,26)); background: -webkit-gradient(linear,100% 0%, 0% 0%, from(rgb(54,54,54)), to(rgb(26,26,26)));color: white;}
+.side{position:absolute;left:0;top:7%;bottom:10%;width:25%;background:linear-gradient(90deg,rgb(54,54,54),rgb(26,26,26));filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='rgb(54,54,54)',endColorStr='rgb(26,26,26)',gradientType='1');background:-moz-linear-gradient(left, rgb(54,54,54), rgb(26,26,26)); background: -o-linear-gradient(left,rgb(54,54,54), rgb(26,26,26)); background:-webkit-gradient(linear, 100% 0%, 0% 0%, from(rgb(54,54,54)), to(rgb(26,26,26))); color: white;}
 .main{position:absolute;left:25%;top:7%;bottom:10%;right:0;overflow: auto;}
 .foot{position:absolute;left:0;right:0;bottom:0;height:10%;background:lightgray;text-align: center;font-size: 20px;color: black;}
 .home{position:absolute;left:5%;display:block;height:35px;width:35px;background:url(../img/Menu-50.png) no-repeat center;background-size:35px 35px;}
@@ -13,7 +14,7 @@ body{color:white;}
 .nav a{display:block;width:100%;height:100%;color: #cccccc;text-decoration: none;margin:0px;border-bottom: 2px  solid rgb(54,54,54)}
 .nav a p{position: relative;top:40%;}
 .cur{background: url(../img/nav.jpg) no-repeat;background-size: 100% 100%;}
-.main .ma_head{position:fixed;top:7%;width:75%;height:40px;background: gray;box-shadow: 1px 3px 3px 0px black;text-align: center;z-index: 999;}
+.ma_head{position:absolute;top:7%;left:25%;width:75%;height:40px;background: gray;box-shadow: 1px 3px 3px 0px black;text-align: center;z-index: 999;}
 .main .inner{color: black;border-bottom: 1px solid black;display: none;}
 .ma_head2{height:40px;}
 .inner ul{list-style:none;}
@@ -27,7 +28,7 @@ word-break:break-word;}
 .add{right: 0px;}
 .subtract{left: 0px;}
 .control input{position: absolute;left:22px; width: 20px;height: 18px;text-align: center;font-size: 17px;line-height: 18px;}
-.foot_head{position:absolute;top:5px;width: 25%;height:100%;border-right: 1px solid gray;}
+.foot_head{position:absolute;top:5px;width: 25%;height:80%;border-right: 1px solid gray;}
 .foot_body{position: absolute;left: 25%;width: 75%;height: 100%;}
 .foot_price{position: absolute;top:10px;left:20px;color: red;font-size: 30px;}
 .buy{position: absolute;right:10px;bottom:10px;width:80px;line-height:30px;height: 30px;background: rgb(255,102,0);border-radius: 5px;}
