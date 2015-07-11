@@ -2,8 +2,14 @@ function getId(id){
 	return typeof id==='string'?document.getElementById(id):id;
 }
 
+function goBack()
+{
+  window.history.back(-1);
+}
 
 window.onload=function(){
+	document.getElementsByClassName('body')[0].style.display='block';
+	document.getElementsByClassName('spinner-loader')[0].style.display='none';
 	var titles=getId('sd_body').getElementsByTagName('a'),
 	mains=getId('main').getElementsByClassName('inner'),
 	lis=document.querySelectorAll("#main .inner li"),
@@ -84,7 +90,7 @@ window.onload=function(){
 	}
 	buy[0].onclick=function(){
 		order[0].style.display='block';
-		allprices[0].textContent=getId('foot_price_num').textContent;
+		
 		for(var b=0;b<inputs.length;b++){
 			var self=b;	
 			if(inputs[self].value>0){	
@@ -93,9 +99,10 @@ window.onload=function(){
 				ob_nums[self].textContent=inputs[self].value+'份';
 			}else{
 				od_lis[self].style.display='none';
-			}
+			}	
 		}
+		allprices[0].textContent=getId('foot_price_num').textContent;
 	}
-	
+
 }
 

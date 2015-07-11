@@ -1,0 +1,25 @@
+html,body{margin: 0px;width:100%;height:100%;overflow: hidden;}
+.head{position:absolute;top:0;left:0;right:0;height:7%;width:100%;box-shadow: 0 2px 10px 0px #666;-webkit-box-shadow: 0 2px 10px 0px #666;background-image:linear-gradient(rgb(54,54,54),rgb(26,26,26));
+filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='rgb(54,54,54)',endColorStr='rgb(26,26,26)',gradientType='0');background:-moz-linear-gradient(top, rgb(54,54,54), rgb(26,26,26)); background: -o-linear-gradient(top,rgb(54,54,54), rgb(26,26,26)); background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(54,54,54)), to(rgb(26,26,26)));text-align: center;}
+.title{position: relative;top:26%;color:lightgray;font-family: "仿宋";font-size: 20px;font-weight: bold;}
+.back{position:absolute;left:2%;height:100%;width:40px;font-size: 35px;color: white;}
+.body{position:absolute;top:15%;width:100%;height: 77%;background: url(../img/bg_pic.png);overflow: auto;}
+.foot{position:absolute;left:0;right:0;bottom:0;height:9%;background:url(../img/bg_foot.png);text-align: center;font-size: 20px;color:white;opacity: 0.8;}
+.foot_head{position:absolute;top:5px;width: 25%;height:80%;border-right: 1px solid gray;}
+.foot_body{position: absolute;left: 25%;width: 75%;height: 100%;}
+.foot_price{position: absolute;top:10px;left:20px;color:orangered;font-size: 25px;}
+.buy{position: absolute;right:10px;bottom:10px;width:80px;line-height:30px;height: 30px;background: url(../img/bg_bug.png);border-radius: 5px;}
+.bd_head{position:absolute;width: 100%;height: 8%;top:7%;background: orangered;opacity: 0.8;z-index: 10;}
+.bd_head p{position:absolute;left:5%;top:26%;color:rgb(45,45,45);font-family: "仿宋";font-size: 20px;font-weight: bold;}
+.body ul{width: 100%;height: 100%;}
+.body ul li{position:relative;height: 60px;width: 100%;border-bottom: 1px solid gray;font-size: 20px;}
+.body li a{position:relative;display: inline-block;background: orangered;text-align: center;color: white;width: 28px;height: 28px;border-radius: 14px;font-size: 28px;line-height: 28px;opacity: 0.8;}
+.name{position: absolute;top: 26%;}
+.price{position: absolute;top:26%;left: 40%;}
+.change{position: absolute;top: 20%;right:3%;}
+.num{display:inline-block;height:100%;width: 25px;text-align:center;line-height: 30px;}
+.decide{position:relative;width: 100%;height: 100%;background: grey;opacity: 0.7;}
+.dc_win{position: absolute;width: 220px;height: 100px;top: 50%;left: 50%;margin-top:-50px;margin-left:-110px;background: url(../img/bg_bug.png);border-radius: 10px;color: orangered;font-size: 20px;}
+.dc_win p{position: absolute;top: 20%;left: 25%;}
+.cancel{position:absolute;left: 20px;bottom: 10px;color:white;}
+.ensure{position:absolute;border: none;background: url(../img/bg_bug.png);color: white;font-size: 20px;right: 20px;bottom: 10px;}

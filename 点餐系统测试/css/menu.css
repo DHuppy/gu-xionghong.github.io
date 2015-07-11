@@ -40,7 +40,8 @@ word-break:break-word;}
 .od_body ul{list-style:none;height: 100%;overflow:auto;color: black;}
 .od_body ul li{display:none;width:100%;height:15%;background:white;border-bottom: 1px solid black;color:black;font-size: 20px;font-family: "微软雅黑";font-weight: bolder;}
 .od_foot{position:absolute;width: 100%;height: 15%;bottom:0px;background: gainsboro;border-radius:0px 0px 10px 10px/0px 0px 10px 10px;}
-.submit{position:absolute;color:black;font-size: 20px;font-family: "微软雅黑";right:5%;top: 25%;width: 20%;height:100%;text-align: center;}
+.submit{position:absolute;color:black;font-size: 20px;font-family: "微软雅黑";right:5%;;width: 20%;height:100%;text-align: center;border-style:none}
 .close{position: absolute;width:20%;height:10%;top:2%;right:0px;color:black;font-size: 20px;font-family: "微软雅黑";font-weight: bolder;text-align: center;}
 .ob_num{position: absolute;right: 10px;}
 .all{position: absolute;top:10px;left:20px;color: red;font-size: 30px;}
+

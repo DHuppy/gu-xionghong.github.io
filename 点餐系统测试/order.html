@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"content="width=device-width,height=device-height,initial-scale=1,
+		minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>订单</title>
+		<link type="text/css" rel="stylesheet" href="css/reset.css">
+		<link type="text/css" rel="stylesheet" href="css/order.css">
+		<link type="text/css" rel="stylesheet" href="css/spinners.css">
+	</head>
+		<div class="spinner-loader">
+  			Loading…
+		</div>
+		<div class="head" style="display: none;">
+			<a class="back" onclick="goBack()"><</a>
+			<p class="title">菜单汇总</p>
+		</div>
+		<div class="bd_head" style="display: none;"><p>确认菜品-XX酒楼</p></div>
+		<div class="body" style="display: none;">	
+			<ul>
+				<li>
+					<span class="name">无敌风火轮</span>
+					<p class="price">￥<span class="pr_num">10</span>/份</p>
+					<p class="change"><a class="subtract">-</a><span class="num">10</span><a class="add">+</a></p>
+				</li>
+			</ul>
+		</div>
+		<div class="foot" style="display: none;">
+			<div class="foot_head">已点菜<p><span class="allnum" id="allnum">100</span>份</p></div>
+			<div class="foot_body">
+				<p class="foot_price">￥<span class="foot_price_num" id="foot_price_num">1000.00</span></p>
+				<div class="buy">确认</div>
+			</div>
+		</div>
+		<div class="decide" style="display: none;">
+			<div class="dc_win">
+				<p>是否确定下单</p>
+				<span class="cancel">取消</span>
+				<input type='submit'  class="ensure" value="确定">
+			</div>
+		</div>
+		<script type="text/javascript" src="js/order.js"></script>
+		<!--<script>
+			document.body.onload = function load()
+				{
+					document.getElementsByClassName('head')[0].style.display='block';
+					document.getElementsByClassName('bd_head')[0].style.display='block';
+					document.getElementsByClassName('body')[0].style.display='block';
+					document.getElementsByClassName('foot')[0].style.display='block';
+					document.getElementsByClassName('spinner-loader')[0].style.display='none';
+				}
+		</script>-->
+	<body>
+	</body>
+</html>
