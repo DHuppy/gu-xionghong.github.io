@@ -1,0 +1,558 @@
+$headerColor:  #0082d4;
+$colorGray:#f6f6f6;
+$colorWhite:white;
+
+
+html, body {
+  height: 100%;
+  color: black;
+  font-family:'华文细黑';
+  overflow: hidden;
+}
+
+#wn-header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 60px;
+	background-color: rgba(0,130,211,0.9);
+
+	@at-root #wikinote{
+		position: relative;
+		left: 50px;
+	}
+
+	@at-root #wn-searchresults{
+	position: absolute;
+	top: 15px;
+	right: 70px;
+
+		@at-root #search{
+			border:0;
+			width: 250px;
+			height: 30px;
+			text-indent:1em;
+			vertical-align:middle;
+			border-right:1px solid lightgray;
+			border-radius: 5px 0 0 5px/5px 0 0 5px;
+		}
+
+		@at-root #searchButton{
+			border:0;
+			width: 70px;
+			height: 30px;
+			cursor: pointer;
+			background-color: lightgray;
+			border-radius: 0 5px 5px 0/0 5px 5px 0;
+			&:hover {
+				background-color:$colorGray;
+			}
+		}
+
+		@at-root #search-list{
+			position: absolute;
+			top: 30px;
+			z-index: 1;
+			height: 300px;
+			width: 250px;
+			border-top:0;
+			background-color: $colorGray;
+			border:1px solid rgba(0,130,211,0.7);
+			border-radius: 2px 0 5px 5px/2px 0 5px 5px;
+
+			ul{
+				overflow: auto;
+				list-style:none;
+				height: 300px;
+				width: 250px;
+				div{
+					margin: 50% 10px;
+					font:{
+						size:20px;
+					}
+				}
+			}
+
+			@at-root #closesearch{
+				position: absolute;
+				top: 5px;
+				right: 15px;
+				height: 30px;
+				width: 60px;
+				color:gray;
+				cursor: pointer;
+				text-align: center;
+				font:{
+					size:17px;
+					weight:600;
+				}
+			}
+
+			@at-root .search-name{
+				height: 40px;
+				width: 200px;
+				color: gray;
+				text-overflow:ellipsis;
+    			white-space:nowrap;
+				overflow: hidden;
+				margin:15px 0px 0px 5px;
+				border-bottom: 1px solid rgba(0,130,211,0.7);
+				font:{
+					size:17px;
+				}
+			}
+		}
+	}
+}
+
+#wn-notebooks{
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 220px;
+	background-color: $colorWhite;
+	border-right:1px solid $headerColor;
+	box-shadow: 2px -1px 3px $headerColor;
+
+	.none{
+		margin: 70% 10px;
+		width: 200px;
+		font:{
+			size:20px;
+		}
+	}
+
+	@at-root #notebooks-createButton{
+		position: relative;
+		height: 40px;
+		width: 100%;
+		background-color: $colorGray;
+		border-bottom: 1px solid $headerColor;
+
+		@at-root #createButton-name{
+			-moz-user-select: none; 
+			-khtml-user-select: none; 
+			user-select: none; 
+			cursor: default;
+			position: absolute;
+			top: 11px;
+			right:10px;
+			color:gray;
+			font-size:20px;
+		}
+
+		@at-root #create{
+			position: absolute;
+			right: 50px;
+			border:0;
+			height: 40px;
+			width: 40px;
+			cursor: pointer;
+			background-color: $colorGray;
+			color:$headerColor;
+			font:{
+				size:40px;
+				weight:600;
+			}
+			&:hover {
+				color:#0142d0;
+			}
+		}
+	}
+
+	@at-root #createNotebook{
+		position: relative;
+		height: 90px;
+		width: 100%;
+		background-color: $colorGray;
+		border-bottom: 1px solid $headerColor;
+
+		@at-root #notebookName{
+			position: absolute;
+			top: 15px;
+			left: 25px;
+			border:1px solid $headerColor;
+			height: 30px;
+			width: 150px;
+			box-shadow: 1px 1px 3px $headerColor inset,-1px -1px 3px $headerColor inset;
+			text-indent:2em;
+		}
+
+		@at-root #confirmCreate,#canelCreate{
+			position: absolute;
+			top: 55px;
+			left: 40px;
+			height: 22px;
+			width: 40px;
+			cursor: pointer;
+			border:1px solid $headerColor;
+			background-color: $colorGray;
+			font:{
+				size:15px;
+				weight:bold;
+			}
+			&:hover {
+				background-color: $colorWhite;
+			}
+		}
+
+		@at-root #canelCreate{
+			left:110px;
+		}
+	}
+
+	@at-root #notebooks-header{
+		background-color: $colorGray;
+		height: 60px;
+		width: 100%;
+		text-align: center;
+		border-bottom: 1px solid $headerColor;
+
+		@at-root #notebooks-header-name{
+			-moz-user-select: none; 
+			-khtml-user-select: none; 
+			user-select: none; 
+			cursor: default;
+			line-height: 60px;
+			font:{
+				size:24px;
+				weight:600;
+			}
+		}
+	}
+
+	@at-root #notebooks-list{
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+
+		@at-root .clicklist{
+			background-color: rgba(0,130,211,0.1)
+		}	
+
+		li{
+			position: relative;
+			height: 60px;
+			width: 100%;
+			border-bottom: 1px solid gray;
+			list-style:none;
+			&:hover {
+					border-radius: 1px;
+					box-shadow: 1px 1px 3px $headerColor inset,-1px -1px 3px $headerColor inset;
+				}
+
+			input{
+				position: absolute;
+				border: 0;
+				height: 28px;
+				width: 28px;
+				top:10px;
+				right: 15px;
+				border-radius: 50%;
+				line-height: 14px;
+				color: $headerColor;
+				background-color: #f2f2e2;
+				border: 1px solid lightgray;
+				cursor: pointer;
+				font:{
+					size:14px;
+					weight: bolder;
+				}
+				&:hover {
+					color:red;
+					border: 1px solid $headerColor;
+				}
+			}
+		}
+
+		@at-root .notebook-title{
+			position: absolute;
+			top:8px;
+			left: 15px;
+			line-height: 20px;
+			font-size: 20px;
+			width: 150px;
+			text-overflow:ellipsis;
+    		white-space:nowrap;
+			overflow: hidden;
+		}
+
+		@at-root  .notebook-createdate{
+			position: absolute;
+			top: 38px;
+			left: 15px;
+		}
+	}
+}
+
+#wn-notes{
+	position: absolute;
+	top: 60px;
+	left: 223px;
+	right: 0;
+	bottom: 0;
+	width: 305px;
+	background-color: $colorWhite;
+	border-right:1px solid $headerColor;
+	box-shadow: 2px -1px 3px $headerColor;
+
+	.none{
+		margin: 65% 70px;
+		width: 200px;
+		font:{
+			size:20px;
+		}
+	}
+
+	@at-root #notes-header{
+		height: 70px;
+		width: 100%;
+		background-color: $colorGray;
+		border-bottom:1px solid $headerColor;
+		text-align: center;
+
+		@at-root #notes-header-name{
+			-moz-user-select: none; 
+			-khtml-user-select: none; 
+			user-select: none; 
+			cursor: default;
+			line-height: 70px;
+			font:{
+				size:24px;
+				weight:600;
+			}
+		}
+
+		@at-root #showallnotes{
+			position: absolute;
+			top: 22px;
+			right: 18px;
+			height: 26px;
+			width: 50px;
+			border: 1px solid $headerColor;
+			border-radius: 5px;
+			cursor: pointer;
+			background-color: #f2f2e2;
+			font:{
+				size:18px;
+				family:'Times New Roman','Helvetica';
+			}
+			&:hover {
+				color:white;
+				background-color: rgba(0,130,211,0.6);
+			}
+		}
+	}
+
+	@at-root #notes-list{
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+
+		li{
+			position: relative;
+			height: 91px;
+			width: 100%;
+			cursor: default;
+			list-style:none;
+			border-bottom: 1px solid gray;
+			&:hover {
+					border-radius: 1px;
+					box-shadow: 1px 1px 3px $headerColor inset,-1px -1px 3px $headerColor inset;
+				}
+
+			input{
+				position: absolute;
+				height: 20px;
+				width: 50px;
+				top:8px;
+				right: 15px;
+				line-height: 14px;
+				background-color: white;
+				border: 1px solid $headerColor;
+				border-radius: 5px;
+				font:{
+					size:14px;
+					family:"Microsoft YaHei";
+				}
+
+				&:hover {
+					cursor: pointer;
+					background-color: #f2f2e2;
+				}
+			}
+		}
+
+		@at-root .note-title{
+			position: absolute;
+			top: 8px;
+			left: 15px;
+			width: 200px;
+			text-overflow:ellipsis;
+    		white-space:nowrap;
+			overflow: hidden;
+			font:{
+				size:18px;
+				family:'SimHei';
+			}
+		}
+
+		@at-root .note-createdate,.note-modifyDate{
+			position: absolute;
+			top: 35px;
+			left: 15px;
+			font:{
+				size:12px;
+				family:'SimSun';
+			} 
+		}
+
+		@at-root .note-modifyDate{
+			left: 165px;
+		}
+
+		@at-root .note-content{
+			position: absolute;
+			bottom: 5px;
+			left: 15px;
+			height: 26px;
+			width: 280px;
+			overflow: hidden;
+			color: gray;
+			font:{
+				size:12px;
+				family:'SimSun';
+			} 
+
+		}
+	}
+}
+
+#wn-note{
+	position: absolute;
+	top: 60px;
+	left: 533px;
+	right: 0px;
+	bottom: 0px;
+
+	@at-root #note-header{
+		position: relative;
+		width: 100%;
+		height: 82px;
+		background-color:$colorGray;
+		border-bottom: 1px solid $headerColor;
+
+		@at-root #notebutton{
+			position: absolute;
+			top: 15px;
+			right: 0;
+			height: 50px;
+			width: 30%;
+
+			@at-root #updateNote,#createNote,#saveNote{
+				height: 50px;
+				width: 47%;
+				border:0;
+				color: $colorGray;
+				border-radius: 5px;
+				font:{
+					size:20px;
+					weight:600;
+				}
+
+				@at-root .updateNote,.createNote,#saveNote{
+					cursor: pointer;
+					background-color: rgba(0,130,211,0.6);
+					&:hover {
+						background-color: rgba(0,130,211,0.7);
+					}
+				}
+			}
+		}
+
+		@at-root #notebookSelect{
+			position: absolute;
+			top: 30px;
+			left: 30px;
+			color:rgba(0,130,211,1);
+			font:{
+				size:20px;
+			}
+			
+			@at-root #selection{
+				height: 25px;
+				width: 100px;
+				border:1px solid $headerColor;
+				text-indent:1em;
+				border-radius: 5px;
+				&:hover {
+					box-shadow: 1px 1px 1px $headerColor inset,-1px -1px 1px $headerColor inset;
+				}
+			}
+		}
+	}
+
+	@at-root #date{
+		position: absolute;
+		top: 90px;
+		left:3%; 
+		width: 94%;
+		height: 20px;
+		text-align: left;
+		font:{
+			size: 15px;
+		}
+	}
+
+
+	@at-root #notetitle{
+		position: absolute;
+		top: 114px;
+		left: 3%;
+		height: 60px;
+		width: 94%;
+		border:0;
+		background-color: white;
+		border-bottom: 1px solid rgb(185,185,185);
+		font:{
+			size:30px;
+		}
+		@at-root .shownotetitle{
+			text-align: center;
+		}
+		@at-root .editnotetitle{
+			box-shadow: 1px 1px 3px $headerColor inset,-1px -1px 3px $headerColor inset;
+		}
+	}
+
+	@at-root #notecontent,#notecontentedit{
+		position: absolute;
+		top: 190px;
+		left: 3%;
+		bottom: 40px;
+		width: 94%;
+		overflow: auto;
+		line-height: 35px;
+		border-bottom: 1px solid rgb(185,185,185);
+		font:{
+			size:20px;
+		}
+	}
+
+	@at-root #notecontentedit{
+		box-shadow: 1px 1px 3px $headerColor inset,-1px -1px 3px $headerColor inset;
+	}
+
+	@at-root #statement{
+		position: absolute;
+		left:50px;
+		bottom: 10px;
+		overflow: hidden;
+		text-align: center;
+		font-size: 15px;
+	}
+}
