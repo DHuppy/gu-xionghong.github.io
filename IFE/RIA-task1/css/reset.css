@@ -10,6 +10,7 @@
 	pre,code,kbd,samp{font-family:inherit;}
 	q:before,q:after{content:none;}
 	textarea{overflow:auto;resize:none;}
+	input{-webkit-appearance: none;}
 	label,summary{cursor:default;}
 	a,button{cursor:pointer;}
 	del,ins,u,s,a,a:hover{text-decoration:none;}
