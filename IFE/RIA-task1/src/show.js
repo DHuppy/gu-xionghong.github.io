@@ -158,14 +158,14 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
         var notebook = notebooks[i];
         $('#notebookSelect select').append('<option value=' + notebook.title + '>' + notebook.title + '</option>');
       }
-      $("#notebookSelect select").click(function() {
+      // $("#notebookSelect select").click(function() {
         var notebookTitle = $("#notebookSelect select").val();
         $('#notecontent').hide();
         $('#notecontentedit').show();
         $('#notetitle').removeAttr('disabled');
         $('#notetitle').removeClass('shownotetitle');
         $('#notetitle').addClass('editnotetitle');
-      });
+      // });
       return _NoteTag;
     });
   };
