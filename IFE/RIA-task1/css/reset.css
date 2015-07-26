@@ -6,6 +6,7 @@
 	html,body,fieldset,img,iframe,abbr{border:0;}
 	[hidefocus],summary{outline:0;}
 	li{list-style:none;}
+	input{-webkit-appearance: none;}
 	sup,sub{font-size:83%;}
 	pre,code,kbd,samp{font-family:inherit;}
 	q:before,q:after{content:none;}

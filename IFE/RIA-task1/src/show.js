@@ -20,9 +20,9 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
    * @return {boolean}         是否创建成功
    */
   var clickUpdateNoteList = function() {
-    $("#wn-notebooks ul li:last").bind('click', function() {
-      $("#wn-notes ul").html("");
-      $('#wn-notebooks ul li').removeClass('clicklist');
+    $("#notebooks-list li:last").bind('click', function() {
+      $("#notes-list").html("");
+      $('#notebooks-list li').removeClass('clicklist');
       $(this).addClass('clicklist');
       var notebookId = $(this).attr("id").substr(8);
       showNotesFromNotebook(notebookId);
@@ -42,7 +42,7 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
    * @return {boolean}           删除状态
    */
   var deleteNoteList = function(noteTitle, notebookId) {
-    $("#wn-notes ul li:last input").bind("click", function() {
+    $("#notes-list li:last input").bind("click", function() {
       $(this).parent().remove();
       var tag = data.deleteNoteByTitle(noteTitle, notebookId);
       document.getElementById('notetitle').value = null;
@@ -53,7 +53,7 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
       if (_tag) {
         showNotesFromNotebook(notebookId);
         if ($('#wn-notes>ul').html() === '') {
-          $("#wn-notes ul").append("<div class='none'>您暂时未创建笔记</div>");
+          $("#notes-list").append("<div class='none'>您暂时未创建笔记</div>");
         }
       } else {
         showAllNotes();
@@ -67,8 +67,8 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
    * @return {boolean}           
    */
   var clickupdateNote = function() {
-    $("#wn-notes ul li:last").bind("click", function() {
-      $('#wn-notes ul li').removeClass('clicklist');
+    $("#notes-list li:last").bind("click", function() {
+      $('#notes-list li').removeClass('clicklist');
       $(this).addClass('clicklist');
       var noteId = $(this).attr("id").substr(4);
       var notebookId = $(this).attr("name").substr(8);
@@ -86,14 +86,14 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
    * @return {boolean}            删除状态
    */
   var deleteNotebookList = function(notebookId) {
-    $("#wn-notebooks ul li:last input").bind("click", function() {
+    $("#notebooks-list li:last input").bind("click", function() {
       if (data.getNoteBookById(notebookId).notes.length === 0) {
         $(this).parent().remove();
         var tag = data.deleteNoteBookById(notebookId);
-        if ($("#wn-notebooks ul").html() === '') {
+        if ($("#notebooks-list").html() === '') {
           $('#createNote').attr('disabled', 'true');
           $('#createNote').removeClass('createNote');
-          $("#wn-notebooks ul").append("<div class='none'>您暂时未创建笔记本， &nbsp&nbsp请先添加笔记本</div>");
+          $("#notebooks-list").append("<div class='none'>您暂时未创建笔记本， &nbsp&nbsp请先添加笔记本</div>");
         }
         showAllNotes();
         return tag;
@@ -118,13 +118,13 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
       var notebook = notebooks[i];
       var notes = notebooks[i].notes;
       if (notebooks[i].title.toLowerCase().indexOf(title.toLowerCase()) >= 0) {
-        $("#wn-searchresults ul").append("<li><p class='search-name'>笔记本&nbsp&nbsp&nbsp&nbsp " + notebook.title+"</p></li>");
+        $("#wn-searchresults ul").append("<li><a href='#notebook"+notebooks[i].id+"'><p class='search-name'>笔记本&nbsp&nbsp&nbsp&nbsp " + notebook.title+"</p></a></li>");
         $("#wn-searchresults ul li:last").attr("id", ("searchnotebook" + notebooks[i].id));
         notebooktag = true;
       }
       for (var j = 0; j < notes.length; j++) {
         if (notes[j].title.toLowerCase().indexOf(title.toLowerCase()) >= 0) {
-          $("#wn-searchresults ul").append("<li><p class='search-name'>笔记&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp " + notes[j].title+"</p></li>");
+          $("#wn-searchresults ul").append("<li><a href='#note"+notes[j].id+"'><p class='search-name'>笔记&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp " + notes[j].title+"</p></a></li>");
           $("#wn-searchresults ul li:last").attr("id", (i + "searchnote" + notes[j].id));
           notetag = true;
         }
@@ -267,8 +267,8 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
       for (var i = 0; i < notes.length; i++) {
         $("#wn-notes>ul").append("<li><p class='note-title'>" + notes[i].title + "</p><p class='note-createdate'>创建时间:" + notes[i].createDate.toLocaleString().substring(0, 9) +
           "</p><p class='note-modifyDate'>更新时间:" + notes[i].modifyDate.toLocaleString().substring(0, 9) + "</p><p class='note-content'> 摘要:" + notes[i].content + "</p><input type='button' value='删除' title='删除笔记'/></li>");
-        $("#wn-notes ul li:last").attr("id", ("note" + notes[i].id));
-        $("#wn-notes ul li:last").attr("name", ("notebook" + notebookId));
+        $("#notes-list li:last").attr("id", ("note" + notes[i].id));
+        $("#notes-list li:last").attr("name", ("notebook" + notebookId));
         deleteNoteList(notes[i].title, notebookId);
         clickupdateNote();
       }
@@ -285,12 +285,12 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
     if (notebooks.length === 0) {
       $('#createNote').attr('disabled', 'true');
       $('#creatNote').removeClass('createNote');
-      $("#wn-notebooks ul").append("<div class='none'>您暂时未创建笔记本， &nbsp&nbsp请先添加笔记本</div>");
+      $("#notebooks-list").append("<div class='none'>您暂时未创建笔记本， &nbsp&nbsp请先添加笔记本</div>");
       return false;
     } else {
       for (var i = 0; i < notebooks.length; i++) {
-        $("#wn-notebooks>ul").append("<li><p class='notebook-title'>" + notebooks[i].title + "<p class='notebook-createdate'> " + notebooks[i].createDate.toLocaleString().substring(0, 9) + "</p><input type='button' value='—' title='删除笔记本'/></li>");
-        $("#wn-notebooks ul li:last").attr("id", ("notebook" + notebooks[i].id));
+        $("#notebooks-list").append("<li><p class='notebook-title'>" + notebooks[i].title + "<p class='notebook-createdate'> " + notebooks[i].createDate.toLocaleString().substring(0, 9) + "</p><input type='button' value='—' title='删除笔记本'/></li>");
+        $("#notebooks-list li:last").attr("id", ("notebook" + notebooks[i].id));
         clickUpdateNoteList();
         $('#createNote').removeAttr('disabled');
         $('#createNote').addClass('createNote');
@@ -342,17 +342,19 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
   var createNotebook = function() {
     $('#create').bind('click', function() {
       $('#createNotebook').show();
+      $('#notebooks-list').attr('style','top:193px');
     });
     $('#confirmCreate').bind('click', function() {
       var title = document.getElementById('notebookName').value;
       var tag = data.createNotebook(title);
       if (tag) {
-        $("#wn-notebooks ul").html('');
+        $("#notebooks-list").html('');
         showNotebooks();
         alert('创建成功');
         $('#createNote').removeAttr('disabled');
         $('#createNote').addClass('createNote');
         $('#createNotebook').hide();
+        $('#notebooks-list').attr('style','top:102px');
         document.getElementById('notebookName').value = "";
         return true;
       } else {
@@ -363,6 +365,7 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
     $('#canelCreate').bind('click', function() {
       document.getElementById('notebookName').value = "";
       $('#createNotebook').hide();
+      $('#notebooks-list').attr('style','top:102px');
       return false;
     });
   };
