@@ -489,6 +489,9 @@ html, body {
   left: 3%;
   width: 94%;
   height: 20px;
+  width: 90%;
+	overflow: hidden;
+	text-overflow:ellipsis;
   text-align: left;
   font-size: 15px;
 }
