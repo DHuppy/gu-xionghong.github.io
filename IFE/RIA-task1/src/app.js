@@ -16,7 +16,7 @@ require(['jquery', 'data', 'show'], function($, data, show) {
   show.createNotebook();
   show.saveNote();
   show.clickShowAllNote();
-  $('#closesearch').bind('click',function(){
+  $('#closesearch').bind('click', function() {
     $('#search-list').hide();
   });
 });

@@ -96,6 +96,7 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
           $("#notebooks-list").append("<div class='none'>您暂时未创建笔记本， &nbsp&nbsp请先添加笔记本</div>");
         }
         showAllNotes();
+        showSelect();
         return tag;
       } else {
         alert('该笔记本内还有笔记！');
@@ -118,13 +119,13 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
       var notebook = notebooks[i];
       var notes = notebooks[i].notes;
       if (notebooks[i].title.toLowerCase().indexOf(title.toLowerCase()) >= 0) {
-        $("#wn-searchresults ul").append("<li><a href='#notebook"+notebooks[i].id+"'><p class='search-name'>笔记本&nbsp&nbsp&nbsp&nbsp " + notebook.title+"</p></a></li>");
+        $("#wn-searchresults ul").append("<li><a href='#notebook" + notebooks[i].id + "'><p class='search-name'>笔记本&nbsp&nbsp&nbsp&nbsp " + notebook.title + "</p></a></li>");
         $("#wn-searchresults ul li:last").attr("id", ("searchnotebook" + notebooks[i].id));
         notebooktag = true;
       }
       for (var j = 0; j < notes.length; j++) {
         if (notes[j].title.toLowerCase().indexOf(title.toLowerCase()) >= 0) {
-          $("#wn-searchresults ul").append("<li><a href='#note"+notes[j].id+"'><p class='search-name'>笔记&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp " + notes[j].title+"</p></a></li>");
+          $("#wn-searchresults ul").append("<li><a href='#note" + notes[j].id + "'><p class='search-name'>笔记&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp " + notes[j].title + "</p></a></li>");
           $("#wn-searchresults ul li:last").attr("id", (i + "searchnote" + notes[j].id));
           notetag = true;
         }
@@ -136,36 +137,41 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
     return notebooktag || notetag;
   };
 
+
+  var showSelect = function() {
+    var notebooks = data.getAllNotebook();
+    $('#notebookSelect select').html('');
+    for (var i = 0; i < notebooks.length; i++) {
+      var notebook = notebooks[i];
+      $('#notebookSelect select').append('<option value=' + notebook.title + '>' + notebook.title + '</option>');
+    }
+  };
+
   /**
    * 绑定点击添加按钮时发生的事件
    * @return {boolean}  ture为更改操作，false为添加操作
    */
   var createNote = function() {
     $('#createNote').bind('click', function() {
-      var notebooks = data.getAllNotebook();
       document.getElementById('notetitle').value = null;
       document.getElementById('notecontentedit').value = null;
       $('#createNote').attr('disabled', 'true');
       $('#createNote').removeClass('createNote');
-      $('#notebookSelect select').html('');
       $('#notebookSelect').show();
       $('#notecontent').html('');
       $('#updateNote').hide();
       $('#saveNote').show();
       $('#date').text("");
       _NoteTag = false;
-      for (var i = 0; i < notebooks.length; i++) {
-        var notebook = notebooks[i];
-        $('#notebookSelect select').append('<option value=' + notebook.title + '>' + notebook.title + '</option>');
-      }
-      $("#notebookSelect select").click(function() {
-        var notebookTitle = $("#notebookSelect select").val();
-        $('#notecontent').hide();
-        $('#notecontentedit').show();
-        $('#notetitle').removeAttr('disabled');
-        $('#notetitle').removeClass('shownotetitle');
-        $('#notetitle').addClass('editnotetitle');
-      });
+      showSelect();
+      // $("#notebookSelect select").click(function() {
+      var notebookTitle = $("#notebookSelect select").val();
+      $('#notecontent').hide();
+      $('#notecontentedit').show();
+      $('#notetitle').removeAttr('disabled');
+      $('#notetitle').removeClass('shownotetitle');
+      $('#notetitle').addClass('editnotetitle');
+      // });
       return _NoteTag;
     });
   };
@@ -190,10 +196,11 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
     $('#notetitle').removeClass('editnotetitle');
     $('#notebookSelect').hide();
     $('#saveNote').hide();
+    _NoteTag=true;
     if (tag) {
       alert('添加成功');
     } else {
-      alert('已存在同名笔记，添加失败');
+      alert('笔记名为空或已存在同名笔记，添加失败');
       $('#updateNote').attr('disabled', 'true');
       $('#updateNote').removeClass('updateNote');
     }
@@ -342,7 +349,7 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
   var createNotebook = function() {
     $('#create').bind('click', function() {
       $('#createNotebook').show();
-      $('#notebooks-list').attr('style','top:193px');
+      $('#notebooks-list').attr('style', 'top:193px');
     });
     $('#confirmCreate').bind('click', function() {
       var title = document.getElementById('notebookName').value;
@@ -354,8 +361,13 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
         $('#createNote').removeAttr('disabled');
         $('#createNote').addClass('createNote');
         $('#createNotebook').hide();
-        $('#notebooks-list').attr('style','top:102px');
+        $('#notebooks-list').attr('style', 'top:102px');
         document.getElementById('notebookName').value = "";
+        if (!_NoteTag) {
+          $('#createNote').attr('disabled', 'true');
+          $('#createNote').removeClass('createNote');
+          showSelect();
+        }
         return true;
       } else {
         alert('创建失败');
@@ -365,7 +377,7 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
     $('#canelCreate').bind('click', function() {
       document.getElementById('notebookName').value = "";
       $('#createNotebook').hide();
-      $('#notebooks-list').attr('style','top:102px');
+      $('#notebooks-list').attr('style', 'top:102px');
       return false;
     });
   };
