@@ -23,7 +23,4 @@ event.preventDefault();
   $('#closesearch').bind('click', function() {
     $('#search-list').hide();
   });
-  document.addEventListener('touchmove', function (event) {
-event.preventDefault();
-}, false);
 });
