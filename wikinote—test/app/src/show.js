@@ -20,7 +20,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
    * @return {boolean}         是否创建成功
    */
   var clickUpdateNoteList = function() {
-    $("#notebooks-list li:last").bind('click', function() {
+    $("#notebooks-list li:last").bind('click tap', function() {
       $("#notes-list").html("");
       $('#notebooks-list li').removeClass('clicklist');
       $(this).addClass('clicklist');
@@ -67,7 +67,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
    * @return {boolean}           
    */
   var clickupdateNote = function() {
-    $("#notes-list li:last").bind("click", function() {
+    $("#notes-list li:last").bind("click tap", function() {
       $('#notes-list li').removeClass('clicklist');
       $(this).addClass('clicklist');
       var noteId = $(this).attr("id").substr(4);
