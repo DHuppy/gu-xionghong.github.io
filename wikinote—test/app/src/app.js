@@ -11,6 +11,9 @@ require.config({
 
 // Start the main app logic
 require(['zepto', 'data', 'show'], function(Zepto, data, show) {
+  document.addEventListener('touchmove', function (event) {
+event.preventDefault();
+}, false);
   show.showNotebooks();
   show.showAllNotes();
   show.searchByTitle();
@@ -20,4 +23,7 @@ require(['zepto', 'data', 'show'], function(Zepto, data, show) {
   $('#closesearch').bind('click', function() {
     $('#search-list').hide();
   });
+  document.addEventListener('touchmove', function (event) {
+event.preventDefault();
+}, false);
 });
