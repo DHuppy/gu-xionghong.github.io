@@ -278,7 +278,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
         $("#notes-list li:last").attr("name", ("notebook" + notebookId));
         deleteNoteList(notes[i].title, notebookId);
         clickupdateNote();
-        $('#notes-list li:last').bind('tap', function() {
+        $('#notes-list p').bind('tap', function() {
           $('.contain')[0].style.left = '-64rem';
         });
       }
@@ -308,7 +308,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
         $("#notebooks-list").append("<li><p class='notebook-title'>" + notebooks[i].title + "<p class='notebook-createdate'> " + notebooks[i].createDate.toLocaleString().substring(0, 9) + "</p><p class='notebook-img'></p><input type='button' value='—' title='删除笔记本'/></li>");
         $("#notebooks-list li:last").attr("id", ("notebook" + notebooks[i].id));
         clickUpdateNoteList();
-        $('#notebooks-list li:last').bind('tap', function() {
+        $('#notebooks-list p').bind('tap', function() {
           $('.contain')[0].style.left = '-32rem';
         });
         $('#createNote').removeAttr('disabled');
