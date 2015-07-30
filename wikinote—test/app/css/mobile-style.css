@@ -1,0 +1,446 @@
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+  margin: 0;
+  padding: 0;
+}
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th {
+  text-align: left;
+  font-weight: normal;
+}
+
+html, body, fieldset, img, iframe, abbr {
+  border: 0;
+}
+
+[hidefocus], summary {
+  outline: 0;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+sup, sub {
+  font-size: 83%;
+}
+
+input {
+  border: none;
+}
+
+pre, code, kbd, samp {
+  font-family: inherit;
+}
+
+q:before, q:after {
+  content: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+label, summary {
+  cursor: default;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+del, ins, u, s, a, a:hover {
+  text-decoration: none;
+}
+
+body, textarea, input, button, select, keygen, legend {
+  font: 12px/1.14 arial,simsun;
+  color: #333;
+  outline: 0;
+}
+
+body {
+  background: #fff;
+}
+
+a, a:hover {
+  color: #333;
+}
+
+html {
+  font-size: 10px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.contain {
+  position: relative;
+  width: 300%;
+  height: 300%;
+}
+
+#wn-notebooks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32rem;
+  height: 56.8rem;
+}
+
+#notebooks-header, #create {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32rem;
+  height: 3.84rem;
+  color: white;
+  line-height: 3.84rem;
+  text-align: center;
+  background-color: black;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+#createButton-name {
+  display: none;
+}
+
+#create {
+  width: 3.84rem;
+  height: 3.84rem;
+  left: 28rem;
+  color: white;
+  z-index: 10;
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+#createNotebook {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -8rem;
+  margin-top: -10rem;
+  width: 16rem;
+  height: 12rem;
+  background-color: red;
+  z-index: 10;
+}
+
+#notebooks-list {
+  position: absolute;
+  top: 7.7rem;
+  left: 0;
+  bottom: 0;
+  width: 39rem;
+  overflow: auto;
+}
+
+#notebooks-list li {
+  position: relative;
+  width: 32rem;
+  height: 5.54rem;
+  border-bottom: 0.1rem solid #e3e4e6;
+}
+
+#notebooks-list li input {
+  position: absolute;
+  top: -.1rem;
+  right: -7rem;
+  width: 7rem;
+  height: 5.74rem;
+  text-indent: -9999px;
+  background: url("../images/mobile-icon.png") 1.2rem -10rem no-repeat;
+  background-size: 5rem 25rem;
+  background-color: #da3610;
+}
+
+.notebook-title, .notebook-createdate {
+  position: absolute;
+  top: 1.45rem;
+  left: 2.13rem;
+  font-size: 1.7rem;
+  width: 25rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.notebook-createdate {
+  top: 3.5rem;
+  font-size: 1rem;
+  color: #e3e4e6;
+}
+
+.notebook-img {
+  position: absolute;
+  top: 1.7rem;
+  right: 1.5rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  background: url("../images/mobile-icon.png") 0.1rem -3.8rem no-repeat;
+  background-size: 3rem 15rem;
+}
+
+#wn-header {
+  position: absolute;
+  top: 3.84rem;
+  width: 32rem;
+  height: 3.75rem;
+  border-bottom: 0.1rem solid #e3e4e6;
+  z-index: 10;
+}
+
+#wn-searchresults {
+  position: absolute;
+  top: .6rem;
+  left: .6rem;
+}
+
+#search {
+  width: 30.89rem;
+  height: 2.43rem;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #e3e4e6;
+  border-radius: .7rem;
+}
+
+#searchButton {
+  position: absolute;
+  right: .6rem;
+  width: 2.43rem;
+  height: 2.43rem;
+  text-indent: -9999px;
+  background: url("../images/mobile-icon.png") 0.1rem 0.1rem no-repeat;
+  background-size: 2rem 10rem;
+}
+
+#wn-notes {
+  position: absolute;
+  top: 0;
+  left: 32rem;
+  width: 32rem;
+  height: 56.8rem;
+  background-color: white;
+}
+
+#notes-header {
+  position: relative;
+  width: 32rem;
+  height: 3.64rem;
+  border-bottom: 0.1rem solid #e3e4e6;
+  border-top: 0.1rem solid #e3e4e6;
+  color: red;
+  line-height: 3.64rem;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+#returnNotebook {
+  display: inline-block;
+  position: absolute;
+  left: .5rem;
+}
+
+#showallnotes {
+  display: none;
+}
+
+#notes-list {
+  position: absolute;
+  top: 3.84rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 39rem;
+  overflow: auto;
+}
+
+.note-title {
+  position: absolute;
+  top: .45rem;
+  left: 2.13rem;
+  font-size: 1.7rem;
+  width: 25rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.note-content {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.13rem;
+  width: 24rem;
+  height: 2.2rem;
+  overflow: hidden;
+  font-size: .75rem;
+  color: gray;
+}
+
+.note-createdate, .note-modifyDate {
+  display: none;
+}
+
+#notes-list li {
+  position: relative;
+  width: 32rem;
+  height: 5.54rem;
+  border-bottom: 0.1rem solid #e3e4e6;
+}
+
+#notes-list li input {
+  position: absolute;
+  top: -.1rem;
+  right: -7rem;
+  width: 7rem;
+  height: 5.74rem;
+  text-indent: -9999px;
+  background: url("../images/mobile-icon.png") 1.2rem -10rem no-repeat;
+  background-size: 5rem 25rem;
+  background-color: #da3610;
+}
+
+.note-img {
+  position: absolute;
+  top: 1.7rem;
+  right: 1.5rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  background: url("../images/mobile-icon.png") 0.1rem -3.8rem no-repeat;
+  background-size: 3rem 15rem;
+}
+
+#wn-note {
+  position: absolute;
+  top: 0;
+  left: 64rem;
+  right: 0;
+  bottom: 0;
+  width: 32rem;
+  height: 56.8rem;
+  background-color: white;
+}
+
+#note-header {
+  position: relative;
+  width: 32rem;
+  height: 3.64rem;
+  border-bottom: 0.1rem solid #e3e4e6;
+  border-top: 0.1rem solid #e3e4e6;
+  color: gray;
+  line-height: 3.64rem;
+  text-align: center;
+  font-size: 1.35rem;
+}
+
+#notebutton {
+  position: absolute;
+  right: .5rem;
+}
+
+#updateNote, #createNote, #saveNote {
+  width: 4.82rem;
+  height: 2.81rem;
+  color: white;
+  background-color: #da4242;
+  border-radius: .5rem;
+  font-size: 1.25rem;
+}
+
+#createNote {
+  position: absolute;
+  top: .5rem;
+  right: 33rem;
+}
+
+#selection {
+  width: 8rem;
+  font-size: 1.25rem;
+}
+
+#date {
+  position: absolute;
+  top: 4.2rem;
+  left: .1rem;
+  width: 32rem;
+  height: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  font-size: .9rem;
+}
+
+#notetitle {
+  position: absolute;
+  top: 5.7rem;
+  left: 1rem;
+  height: 4rem;
+  width: 30rem;
+  background-color: white;
+  border-bottom: 0.1rem solid #e3e4e6;
+  font-size: 2rem;
+}
+
+.shownotetitle {
+  text-align: center;
+}
+
+.editnotetitle {
+  box-shadow: 1px 1px 3px #e3e4e6 inset, -1px -1px 3px #e3e4e6 inset;
+}
+
+#notecontent, #notecontentedit {
+  position: absolute;
+  top: 10.5rem;
+  left: 1rem;
+  bottom: 3rem;
+  width: 30rem;
+  overflow: auto;
+  line-height: 2.5rem;
+  border-bottom: 0.1rem solid #e3e4e6;
+  font-size: 1.7rem;
+}
+
+#notecontent ul, #notecontentedit ul {
+  margin: 2rem;
+}
+
+#notecontent ol, #notecontentedit ol {
+  margin: 2.5rem;
+}
+
+#notecontentedit {
+  box-shadow: 1px 1px 3px #e3e4e6 inset, -1px -1px 3px #e3e4e6 inset;
+}
+
+#statement {
+  position: absolute;
+  left: 1rem;
+  bottom: .8rem;
+  width: 30rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  font-size: .8rem;
+}
+
+.forum {
+  display: none;
+}
