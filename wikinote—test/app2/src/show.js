@@ -20,7 +20,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
    * @return {boolean}         是否创建成功
    */
   var clickUpdateNoteList = function() {
-    $("#notebooks-list li:last").bind('click tap', function() {
+    $("#notebooks-list li:last").bind('click', function() {
       $("#notes-list").html("");
       $('#notebooks-list li').removeClass('clicklist');
       $(this).addClass('clicklist');
@@ -42,7 +42,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
    * @return {boolean}           删除状态
    */
   var deleteNoteList = function(noteTitle, notebookId) {
-    $("#notes-list input:last").bind("click tap", function() {
+    $("#notes-list input:last").bind("click", function() {
       $(this).parent().remove();
       var tag = data.deleteNoteByTitle(noteTitle, notebookId);
       document.getElementById('notetitle').value = null;
@@ -67,7 +67,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
    * @return {boolean}           
    */
   var clickupdateNote = function() {
-    $("#notes-list li:last").bind("click tap", function() {
+    $("#notes-list li:last").bind("click", function() {
       $('#notes-list li').removeClass('clicklist');
       $(this).addClass('clicklist');
       var noteId = $(this).attr("id").substr(4);
@@ -86,7 +86,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
    * @return {boolean}            删除状态
    */
   var deleteNotebookList = function(notebookId) {
-    $("#notebooks-list input:last").bind("click tap", function() {
+    $("#notebooks-list input:last").bind("click", function() {
       if (data.getNoteBookById(notebookId).notes.length === 0) {
         $(this).parent().remove();
         var tag = data.deleteNoteBookById(notebookId);
@@ -152,7 +152,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
    * @return {boolean}  ture为更改操作，false为添加操作
    */
   var createNote = function() {
-    $('#createNote').bind('click tap', function() {
+    $('#createNote').bind('click', function() {
       document.getElementById('notetitle').value = null;
       document.getElementById('notecontentedit').value = null;
       $('#createNote').attr('disabled', 'true');
@@ -211,7 +211,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
    * @return {boolean} ture为更改操作，false为添加操作
    */
   var updateNote = function() {
-    $('#updateNote').bind('click tap', function() {
+    $('#updateNote').bind('click', function() {
       $('#notetitle').removeAttr('disabled');
       $('#notetitle').removeClass('shownotetitle');
       $('#notetitle').addClass('editnotetitle');
@@ -357,7 +357,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
       $('#search-list').show();
       return showSearchResults(title);
     });
-    $('#searchButton').bind('click tap', function() {
+    $('#searchButton').bind('click', function() {
       var title = document.getElementById("search").value;
       $('#search-list').show();
       return showSearchResults(title);
@@ -369,12 +369,12 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
    * @return {boolean} 是否添加新的笔记本
    */
   var createNotebook = function() {
-    $('#create').bind('click tap', function() {
+    $('#create').bind('click', function() {
       $('#createNotebook').show();
       $('#notebooks-list').removeClass('close');
       $('#notebooks-list').addClass('open');
     });
-    $('#confirmCreate').bind('click tap', function() {
+    $('#confirmCreate').bind('click', function() {
       var title = document.getElementById('notebookName').value;
       var tag = data.createNotebook(title);
       if (tag) {
@@ -398,7 +398,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
         return false;
       }
     });
-    $('#canelCreate').bind('click tap', function() {
+    $('#canelCreate').bind('click', function() {
       document.getElementById('notebookName').value = "";
       $('#createNotebook').hide();
       $('#notebooks-list').removeClass('open');
@@ -415,7 +415,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
   var saveNote = function() {
     updateNote();
     createNote();
-    $('#saveNote').bind('click tap', function() {
+    $('#saveNote').bind('click', function() {
       $('#notebooks-list').html('');
       showNotebooks();
       if (_NoteTag) {
@@ -440,7 +440,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
    * @return {[type]} [description]
    */
   var clickShowAllNote = function() {
-    $('#showallnotes').bind('click tap', function() {
+    $('#showallnotes').bind('click', function() {
       showAllNotes();
       _tag = false;
     });
