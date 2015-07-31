@@ -33,5 +33,6 @@ require(['zepto', 'show', 'touch'], function(Zepto, show, touch) {
     $('.contain')[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
     $('.contain')[0].style.webkitTransform = 'translate3d(-32rem, 0, 0)';
   });
+  setTimeout(function(){ window.scrollTo(0, 1); }, 0);
 
 });
