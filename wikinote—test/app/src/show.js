@@ -164,14 +164,12 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
       $('#date').text("");
       _NoteTag = false;
       showSelect();
-      // $("#notebookSelect select").click(function() {
       var notebookTitle = $("#notebookSelect select").val();
       $('#notecontent').hide();
       $('#notecontentedit').show();
       $('#notetitle').removeAttr('disabled');
       $('#notetitle').removeClass('shownotetitle');
       $('#notetitle').addClass('editnotetitle');
-      // });
       return _NoteTag;
     });
   };
@@ -188,17 +186,17 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
     $('#notecontent').html(marked(content));
     var tag = data.createNote(title, content, notebook.id);
     $('#wn-notes>ul').html('');
-    $('#updateNote').show();
-    $('#createNote').removeAttr('disabled');
-    $('#createNote').addClass('createNote');
-    $('#notetitle').attr('disabled', 'true');
-    $('#notetitle').addClass('shownotetitle');
-    $('#notetitle').removeClass('editnotetitle');
-    $('#notebookSelect').hide();
-    $('#saveNote').hide();
-    _NoteTag = true;
     if (tag) {
       alert('添加成功');
+      _NoteTag = true;
+      $('#updateNote').show();
+      $('#createNote').removeAttr('disabled');
+      $('#createNote').addClass('createNote');
+      $('#notetitle').attr('disabled', 'true');
+      $('#notetitle').addClass('shownotetitle');
+      $('#notetitle').removeClass('editnotetitle');
+      $('#notebookSelect').hide();
+      $('#saveNote').hide();
     } else {
       alert('笔记名为空或已存在同名笔记，添加失败');
       $('#updateNote').attr('disabled', 'true');
@@ -320,7 +318,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
         deleteNotebookList(notebooks[i].id);
       }
       $('#notebooks-list li').bind('swipeLeft', function() {
-         $(this)[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
+        $(this)[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
         $(this)[0].style.webkitTransform = 'translate3d(-7rem, 0, 0)';
       });
       $('#notebooks-list li').bind('swipeRight', function() {
@@ -404,7 +402,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
       document.getElementById('notebookName').value = "";
       $('#createNotebook').hide();
       $('#notebooks-list').removeClass('open');
-        $('#notebooks-list').addClass('close');
+      $('#notebooks-list').addClass('close');
       return false;
     });
   };
@@ -426,10 +424,12 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
         $('#notecontentedit').hide();
         return true;
       } else {
-        saveCreateNote();
-        $('#notecontent').show();
-        $('#notecontentedit').hide();
-        return true;
+        if (saveCreateNote()) {
+          $('#notecontent').show();
+          $('#notebookSelect').hide();
+          $('#notecontentedit').hide();
+          return true;
+        }
       }
     });
     return false;

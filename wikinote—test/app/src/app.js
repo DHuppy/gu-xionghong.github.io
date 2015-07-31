@@ -30,9 +30,37 @@ require(['zepto', 'show', 'touch'], function(Zepto, show, touch) {
   });
 
   $('#returnNote').bind('tap', function() {
-    $('.contain')[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
-    $('.contain')[0].style.webkitTransform = 'translate3d(-32rem, 0, 0)';
+    var saveNote = document.getElementById('saveNote');
+    if (saveNote.style.display == 'none') {
+      $('.contain')[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
+      $('.contain')[0].style.webkitTransform = 'translate3d(-32rem, 0, 0)';
+    } else {
+      alert('请保存操作');
+      $('.contain')[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
+      $('.contain')[0].style.webkitTransform = 'translate3d(-64rem, 0, 0)';
+    }
   });
-  setTimeout(function(){ window.scrollTo(0, 1); }, 0);
 
+  $('#createNote').bind('tap', function() {
+    $('.contain')[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
+    $('.contain')[0].style.webkitTransform = 'translate3d(-64rem, 0, 0)';
+  });
+
+  (function(doc, win) {
+    var docEl = doc.documentElement,
+      resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+      recalc = function() {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        docEl.style.fontSize = 10 * (clientWidth / 320) + 'px';
+        console.log(docEl.style.fontSize.split('p')[0]);
+        if (docEl.style.fontSize.split('p')[0] > 20) {
+          docEl.style.fontSize = 20 + 'px';
+        }
+      };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+  })(document, window);
 });
