@@ -1,8 +1,8 @@
 require.config({
   // Alwats make main.js the baseUrl
   paths: {
-    jquery: '../bower_components/jquery/dist/jquery.min',
     marked: '../bower_components/marked/marked.min',
+    touch: './touch',
     zepto: './zepto',
     data: './data',
     show: './show',
@@ -10,7 +10,7 @@ require.config({
 });
 
 // Start the main app logic
-require(['zepto', 'data', 'show'], function(Zepto, data, show) {
+require(['zepto', 'show', 'touch'], function(Zepto, show, touch) {
   show.showNotebooks();
   show.showAllNotes();
   show.searchByTitle();
@@ -20,4 +20,10 @@ require(['zepto', 'data', 'show'], function(Zepto, data, show) {
   $('#closesearch').bind('click', function() {
     $('#search-list').hide();
   });
+
+  $('#returnNotebook').bind('tap', function() {
+    $('.contain')[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
+    $('.contain')[0].style.webkitTransform = 'translate3d(0, 0, 0)';
+  });
+
 });

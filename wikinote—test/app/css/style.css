@@ -294,12 +294,19 @@ html, body {
 
 #notebooks-list {
   position: absolute;
-  top: 102px;
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
   overflow: auto;
+}
+
+.open {
+  top: 193px;
+}
+
+.close {
+  top: 102px;
 }
 
 .clicklist {

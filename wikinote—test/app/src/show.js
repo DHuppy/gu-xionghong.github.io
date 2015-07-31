@@ -20,7 +20,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
    * @return {boolean}         是否创建成功
    */
   var clickUpdateNoteList = function() {
-    $("#notebooks-list li:last").bind('click', function() {
+    $("#notebooks-list li:last").bind('click tap', function() {
       $("#notes-list").html("");
       $('#notebooks-list li').removeClass('clicklist');
       $(this).addClass('clicklist');
@@ -67,7 +67,7 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
    * @return {boolean}           
    */
   var clickupdateNote = function() {
-    $("#notes-list li:last").bind("click", function() {
+    $("#notes-list li:last").bind("click tap", function() {
       $('#notes-list li').removeClass('clicklist');
       $(this).addClass('clicklist');
       var noteId = $(this).attr("id").substr(4);
@@ -278,15 +278,18 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
         $("#notes-list li:last").attr("name", ("notebook" + notebookId));
         deleteNoteList(notes[i].title, notebookId);
         clickupdateNote();
-        $('#notes-list li:last').bind('tap', function() {
-          $('.contain')[0].style.left = '-64rem';
+        $('#notes-list p').bind('tap', function() {
+          $('.contain')[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
+          $('.contain')[0].style.webkitTransform = 'translate3d(-64rem, 0, 0)';
         });
       }
       $('#notes-list li').bind('swipeLeft', function() {
-        $(this)[0].style.left = '-7rem';
+        $(this)[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
+        $(this)[0].style.webkitTransform = 'translate3d(-7rem, 0, 0)';
       });
       $('#notes-list li').bind('swipeRight', function() {
-        $(this)[0].style.left = '0rem';
+        $(this)[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
+        $(this)[0].style.webkitTransform = 'translate3d(0, 0, 0)';
       });
       return true;
     }
@@ -308,18 +311,21 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
         $("#notebooks-list").append("<li><p class='notebook-title'>" + notebooks[i].title + "<p class='notebook-createdate'> " + notebooks[i].createDate.toLocaleString().substring(0, 9) + "</p><p class='notebook-img'></p><input type='button' value='—' title='删除笔记本'/></li>");
         $("#notebooks-list li:last").attr("id", ("notebook" + notebooks[i].id));
         clickUpdateNoteList();
-        $('#notebooks-list li:last').bind('tap', function() {
-          $('.contain')[0].style.left = '-32rem';
+        $('#notebooks-list p').bind('tap', function() {
+          $('.contain')[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
+          $('.contain')[0].style.webkitTransform = 'translate3d(-32rem, 0, 0)';
         });
         $('#createNote').removeAttr('disabled');
         $('#createNote').addClass('createNote');
         deleteNotebookList(notebooks[i].id);
       }
       $('#notebooks-list li').bind('swipeLeft', function() {
-        $(this)[0].style.left = '-7rem';
+         $(this)[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
+        $(this)[0].style.webkitTransform = 'translate3d(-7rem, 0, 0)';
       });
       $('#notebooks-list li').bind('swipeRight', function() {
-        $(this)[0].style.left = '0';
+        $(this)[0].style.webkitTransition = '-webkit-transform 0.2s ease-out';
+        $(this)[0].style.webkitTransform = 'translate3d(0, 0, 0)';
       });
       return true;
     }
@@ -367,7 +373,8 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
   var createNotebook = function() {
     $('#create').bind('click', function() {
       $('#createNotebook').show();
-      $('#notebooks-list').attr('style', 'top:193px');
+      $('#notebooks-list').removeClass('close');
+      $('#notebooks-list').addClass('open');
     });
     $('#confirmCreate').bind('click', function() {
       var title = document.getElementById('notebookName').value;
@@ -379,7 +386,8 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
         $('#createNote').removeAttr('disabled');
         $('#createNote').addClass('createNote');
         $('#createNotebook').hide();
-        $('#notebooks-list').attr('style', 'top:102px');
+        $('#notebooks-list').removeClass('open');
+        $('#notebooks-list').addClass('close');
         document.getElementById('notebookName').value = "";
         if (!_NoteTag) {
           $('#createNote').attr('disabled', 'true');
@@ -395,7 +403,8 @@ define(['zepto', 'data', 'marked'], function(Zepto, data, marked) {
     $('#canelCreate').bind('click', function() {
       document.getElementById('notebookName').value = "";
       $('#createNotebook').hide();
-      $('#notebooks-list').attr('style', 'top:102px');
+      $('#notebooks-list').removeClass('open');
+        $('#notebooks-list').addClass('close');
       return false;
     });
   };

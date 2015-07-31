@@ -97,7 +97,7 @@ html, body {
   top: 0;
   left: 0;
   width: 32rem;
-  height: 56.8rem;
+  height: 100%;
 }
 
 #notebooks-header, #create {
@@ -234,7 +234,7 @@ html, body {
   top: 0;
   left: 32rem;
   width: 32rem;
-  height: 56.8rem;
+  height: 100%;
   background-color: white;
 }
 
@@ -255,6 +255,15 @@ html, body {
   display: inline-block;
   position: absolute;
   left: .5rem;
+  top: -.3rem;
+}
+
+.returnimg {
+  display: inline-block;
+  width: 2.64rem;
+  height: 2.64rem;
+  background: url("../images/returnimg.png") 0rem 0.7rem no-repeat;
+  background-size: 2.5rem 3rem;
 }
 
 #showallnotes {
@@ -333,8 +342,16 @@ html, body {
   right: 0;
   bottom: 0;
   width: 32rem;
-  height: 56.8rem;
+  height: 100%;
   background-color: white;
+}
+
+#returnNote {
+  position: absolute;
+  height: 3.64rem;
+  width: 5.64rem;
+  background: url("../images/mobile-icon.png") 0.1rem -9.1rem no-repeat;
+  background-size: 3rem 15rem;
 }
 
 #note-header {

@@ -118,12 +118,19 @@
 
 	@at-root #notebooks-list{
 		position: absolute;
-		top: 102px;
 		right: 0;
 		bottom: 0;
 		left: 0;
 		width: 100%;
 		overflow: auto;
+
+		@at-root .open{
+			top: 193px;
+		}
+
+		@at-root .close{
+			top: 102px;
+		}
 
 		@at-root .clicklist{
 			background-color: $colorBlue1;
