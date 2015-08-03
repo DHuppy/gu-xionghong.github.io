@@ -167,11 +167,13 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
       var notebookTitle = $("#notebookSelect select").val();
       $('#noteScroll').hide();
       $('#noteeditScroll').show();
-      $('#notecontentedit').css('height', '100%');
-      $('#notecontentedit').css('height', $('#notecontentedit')[0].scrollHeight + 'px');
-      setTimeout(function() {
-        noteeditScroll.refresh();
-      }, 0);
+      if ($('#notecontentedit').css('overflow') != 'auto') {
+        $('#notecontentedit').css('height', '100%');
+        $('#notecontentedit').css('height', $('#notecontentedit')[0].scrollHeight + 'px');
+        setTimeout(function() {
+          noteeditScroll.refresh();
+        }, 0);
+      }
       $('#notetitle').removeAttr('disabled');
       $('#notetitle').removeClass('shownotetitle');
       $('#notetitle').addClass('editnotetitle');
@@ -229,11 +231,13 @@ define(['jquery', 'data', 'marked'], function($, data, marked) {
       $('#saveNote').show();
       $('#noteScroll').hide();
       $('#noteeditScroll').show();
-      $('#notecontentedit').css('height', '100%');
-      $('#notecontentedit').css('height', $('#notecontentedit')[0].scrollHeight + 'px');
-      setTimeout(function() {
-        noteeditScroll.refresh();
-      }, 0);
+      if ($('#notecontentedit').css('overflow') != 'auto') {
+        $('#notecontentedit').css('height', '100%');
+        $('#notecontentedit').css('height', $('#notecontentedit')[0].scrollHeight + 'px');
+        setTimeout(function() {
+          noteeditScroll.refresh();
+        }, 0);
+      }
       _NoteTag = true;
       return _NoteTag;
     });
