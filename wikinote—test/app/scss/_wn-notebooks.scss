@@ -1,0 +1,197 @@
+#wn-notebooks{
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 220px;
+	background-color: $colorWhite;
+	border-right:1px solid $headerColor;
+	box-shadow: 2px -3px 3px $headerColor;
+	
+	@at-root #returnNotebook{
+		display: none;
+	}
+	
+	.none{
+		margin: 70% 10px;
+		width: 200px;
+		font:{
+			size:20px;
+		}
+	}
+
+	@at-root #notebooks-createButton{
+		position: relative;
+		height: 40px;
+		width: 100%;
+		background-color: $colorGray;
+		border-bottom: 1px solid $headerColor;
+
+		@at-root #createButton-name{
+			-moz-user-select: none; 
+			-khtml-user-select: none; 
+			user-select: none; 
+			cursor: default;
+			position: absolute;
+			top: 11px;
+			right:10px;
+			color:gray;
+			font-size:20px;
+		}
+
+		@at-root #create{
+			position: absolute;
+			right: 50px;
+			border:0;
+			height: 40px;
+			width: 40px;
+			cursor: pointer;
+			background-color: $colorGray;
+			color:$headerColor;
+			font:{
+				size:40px;
+				weight:600;
+			}
+			&:hover {
+				color:#0142d0;
+			}
+		}
+	}
+
+	@at-root #createNotebook{
+		position: relative;
+		height: 90px;
+		width: 100%;
+		background-color: $colorGray;
+		border-bottom: 1px solid $headerColor;
+
+		@at-root #notebookName{
+			position: absolute;
+			top: 15px;
+			left: 25px;
+			border:1px solid $headerColor;
+			height: 30px;
+			width: 150px;
+			box-shadow: 1px 1px 3px $headerColor inset,-1px -1px 3px $headerColor inset;
+			text-indent:2em;
+		}
+
+		@at-root #confirmCreate,#canelCreate{
+			position: absolute;
+			top: 55px;
+			left: 40px;
+			height: 22px;
+			width: 40px;
+			cursor: pointer;
+			border:1px solid $headerColor;
+			background-color: $colorGray;
+			font:{
+				size:15px;
+				weight:bold;
+			}
+			&:hover {
+				background-color: $colorWhite;
+			}
+		}
+
+		@at-root #canelCreate{
+			left:110px;
+		}
+	}
+
+	@at-root #notebooks-header{
+		background-color: $colorGray;
+		height: 60px;
+		width: 100%;
+		text-align: center;
+		border-bottom: 1px solid $headerColor;
+
+		@at-root #notebooks-header-name{
+			-moz-user-select: none; 
+			-khtml-user-select: none; 
+			user-select: none; 
+			cursor: default;
+			line-height: 60px;
+			font:{
+				size:24px;
+				weight:600;
+			}
+		}
+	}
+
+	@at-root #notebooks-list{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: auto;
+
+		@at-root .open{
+			top: 193px;
+		}
+
+		@at-root .close{
+			top: 102px;
+		}
+
+		@at-root .clicklist{
+			background-color: $colorBlue1;
+		}	
+
+		li{
+			position: relative;
+			height: 60px;
+			width: 100%;
+			border-bottom: 1px solid gray;
+			list-style:none;
+			&:hover {
+					border-radius: 1px;
+					box-shadow: 1px 1px 3px $headerColor inset,-1px -1px 3px $headerColor inset;
+				}
+
+			input{
+				position: absolute;
+				border: 0;
+				height: 28px;
+				width: 28px;
+				top:10px;
+				right: 15px;
+				border-radius: 50%;
+				line-height: 14px;
+				color: $headerColor;
+				background-color: #f2f2e2;
+				border: 1px solid lightgray;
+				cursor: pointer;
+				font:{
+					size:14px;
+					weight: bolder;
+				}
+				&:hover {
+					color:red;
+					border: 1px solid $headerColor;
+				}
+			}
+		}
+
+		@at-root .notebook-title{
+			position: absolute;
+			top:8px;
+			left: 15px;
+			line-height: 20px;
+			font-size: 20px;
+			width: 150px;
+			text-overflow:ellipsis;
+    		white-space:nowrap;
+			overflow: hidden;
+		}
+
+		@at-root  .notebook-createdate{
+			position: absolute;
+			top: 38px;
+			left: 15px;
+
+		}
+	}
+}

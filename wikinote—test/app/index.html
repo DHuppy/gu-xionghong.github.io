@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>WikiNote</title>
+  <meta name="viewport"content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="description" content="WikiNote, a Wiki style knowledge management tool">
+
+  <!-- Place favicon.ico in the root directory -->
+  <link id = "pc" rel="stylesheet" type="text/css" href="./css/style.css" media="(min-width: 640px)">
+  <link id = 'mobile' rel="stylesheet" type="text/css" href="./css/mobile-style.css" media="(max-width: 640px)">
+  
+  <script type="text/javascript" src="./src/iscroll-lite.js"></script>
+  <script type="text/javascript">
+  var NotelistScroll;
+  var NotebookScroll;
+  var noteScroll;
+  var noteeditScroll;
+  function loaded() {
+    NotebookScroll = new IScroll('#wrapper');
+    NotelistScroll = new IScroll('#notescroll');
+    noteScroll = new IScroll('#noteScroll');
+    noteeditScroll = new IScroll('#noteeditScroll');
+  } 
+  </script>
+
+</head>
+
+<body onload="loaded()">
+  <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+  <div class="contain" style=''>
+    <header id="wn-header">
+      <img src="./images/WikiNote.png" id='wikinote'> 
+      <img src="./images/WikiNoteMobile.png" id='wikinotemobile'> 
+      <div id="wn-searchresults">
+        <input id='search'  type="text"  placeholder='查找笔记本'/><input type="button" id="searchButton"  value="搜索"/>  
+        <div id='search-list' style="display:none">
+          <div id='closesearch'>关闭</div>
+          <ul></ul>
+        </div>
+      </div>
+    </header>
+
+    <aside id="wn-notebooks">
+      <div id="notebooks-createButton">
+        <div id='createButton-name'>新建</div>
+        <input id='create' type='button' value='+' title="添加笔记本" />
+      </div>
+      <div id='createNotebook' style="display:none">
+        <div>
+          <input id='notebookName'  type="text"  placeholder='请输入笔记本名称'/>
+          <br/>  
+          <input type="button" id="confirmCreate"  value="确定"/>  
+          <input type="button" id="canelCreate"  value="取消"/>  
+        </div> 
+      </div>
+      <div id="notebooks-header">
+        <span id="notebooks-header-name">笔记本</span>
+      </div>
+      <div id = 'wrapper'>
+        <ul id="notebooks-list" class="close"></ul>
+      </div>
+      
+    </aside>
+
+    <aside id="wn-notes">
+      <div id="notes-header">
+        <span id='returnNotebook'><p class = 'returnimg'></p> 笔记本</span>
+        <span id="notes-header-name">笔记</span>
+        <input type="button" id="showallnotes"  value="Show" title="显示全部笔记" />  
+      </div>
+      <div id = "notescroll">
+        <ul id="notes-list"></ul>
+      </div>
+    </aside>
+
+    <section id="wn-note">
+      <div id='note-header'>
+        <div id='returnNote'></div>
+        <div id='notebutton'>
+          <input type="button" id="updateNote" disabled="true" value="Edit" title="编辑笔记"/>
+          <input type="button" id="createNote"  value="Add"  title="创建笔记" />    
+          <input type="button" id="saveNote"  value="Save"  title="保存操作" style="display:none" />  
+        </div>
+        <div id='notebookSelect'  style="display:none">
+          请选择笔记本  
+          <select id='selection'></select>
+        </div>
+      </div>
+      
+      <input id='notetitle'  type="text" class="shownotetitle" disabled="true" /> 
+      <pre id='date'></pre>
+      <div id = 'noteScroll'>
+        <div id='notecontent'></div>
+      </div>
+
+      <div id = 'noteeditScroll' style='display: none'>
+        <textarea id='notecontentedit'></textarea>
+      </div>
+     
+
+      <p id="statement">©2015 WikiNote / 程序由 <a href="https://github.com/li-xinyang">&nbsp LiXinyang</a><a href="https://github.com/Gxh-beGreat">&nbsp HeonGu&nbsp</a>合作完成/<a class="forum" href="http://frontseat.io/">FrontSeat|专注Web端的社区/</a> <a href="https://github.com/FrontSeat">FrontSeat 团队</a></p>
+    </section>
+  </div> 
+  
+  <script type="text/javascript">
+    (function(doc, win) {
+    var docEl = doc.documentElement,
+      resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+      recalc = function() {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        docEl.style.fontSize = 10 * (clientWidth / 320) + 'px';
+        if (docEl.style.fontSize.split('p')[0] > 20) {
+          docEl.style.fontSize = 20 + 'px';
+        }
+      };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+  })(document, window);
+  </script>
+  <script src="./bower_components/requirejs/require.js" data-main="src/app"></script>
+</body>
+</html>
