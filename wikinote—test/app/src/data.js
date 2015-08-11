@@ -9,22 +9,27 @@ define([], function() {
 
   // TODO: Use indexDB for Data Model
 
+  var saveStorage = function() {
+    var notebooks = getAllNotebook();
+    var str = JSON.stringify(notebooks);
+    localStorage.setItem('notebooks', str);
+  };
+
+  var loadStorage = function() {
+    var str = localStorage.getItem('notebooks');
+    if (str === null) {
+      _notebooks = [];
+    } else {
+      _notebooks = JSON.parse(str);
+    }
+  };
+
   var _noteId = 1;
   var _notebookId = 1;
-  var _notebooks = [{
-    id: 0,
-    title: "FrontSeat",
-    createDate: '2015/7/25',
-    modifyDate: '2015/7/25',
-    notes: [{
-      id: 0,
-      title: "WikiNote",
-      content: "",
-      tag: [],
-      createDate: '2015/7/25 下午9:18:01',
-      modifyDate: '2015/7/25 下午9:18:01',
-    }]
-  }];
+  var _notebooks = [];
+  loadStorage();
+
+
 
   /////////////////
   // Private API //
@@ -151,6 +156,8 @@ define([], function() {
 
       _notebookId++;
 
+      saveStorage();
+
       return true;
     }
     return false;
@@ -167,7 +174,9 @@ define([], function() {
     var targetNotebookIndex = _findNotebookIndexById(notebookId);
 
     if (targetNotebookIndex !== -1) {
-      return _deleteNoteBookAtIndex(targetNotebookIndex);
+      var notebook = _deleteNoteBookAtIndex(targetNotebookIndex);
+      saveStorage();
+      return notebook;
     } else {
       return {};
     }
@@ -202,6 +211,7 @@ define([], function() {
     if (note !== null) {
       note.title = newTitle;
       note.modifyDate = new Date();
+      saveStorage();
       return true;
     }
     return false;
@@ -244,7 +254,9 @@ define([], function() {
     var targetNoteIndex = _findNoteIndexById(noteId, notebookId);
 
     if (targetNoteIndex !== -1) {
-      return _deleteNoteAtIndex(targetNoteIndex, notebookId);
+      var note = _deleteNoteAtIndex(targetNoteIndex, notebookId);
+      saveStorage();
+      return note;
     } else {
       return {};
     }
@@ -347,6 +359,7 @@ define([], function() {
       _noteId++;
 
       notebook.notes.push(note);
+      saveStorage();
       return true;
     }
     return false;
@@ -414,6 +427,7 @@ define([], function() {
   var updateNoteContentByID = function(noteId, notebookID, newContent) {
     var note = getNoteById(noteId, notebookID);
     note.content = newContent;
+    saveStorage();
   };
 
   /**
@@ -426,6 +440,7 @@ define([], function() {
   var updateNoteContentByTitle = function(noteTitle, notebookID, newContent) {
     var note = getNoteByTitle(noteTitle, notebookID);
     note.content = newContent;
+    saveStorage();
   };
 
   return {
