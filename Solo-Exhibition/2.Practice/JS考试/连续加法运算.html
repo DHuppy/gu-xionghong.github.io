@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>连续加法运算</title>
+	</head>
+	<body>
+		<script>
+			function add(num){
+				var a=num;
+				return 	function f(num){
+							var b;
+							b=num+a;
+							return b;
+						}
+				}
+			var a=add(10)(10);
+			alert(a);
+		</script>
+	</body>
+</html>

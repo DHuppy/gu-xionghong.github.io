@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>浮动布局</title>
+		<style>
+			*{
+				margin: 0px;
+			}
+			
+			.parent{
+				width: 100%;
+				height: 200px;
+				color: white;
+				text-align: center;
+			}
+			
+			.side{
+				float: left;
+				width: 200px;
+				height: 100%;
+				background-color: rgb(192,0,0);
+			}
+			
+			.main{
+				float: left;
+				margin-left: 10px;
+				width: 600px;
+				height: 100%;
+				background-color: rgb(79,129,189) ;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="parent"> 
+    		<div class="side">侧栏</div>
+    		<div class="main">主栏</div>
+		</div>
+	</body>
+</html>

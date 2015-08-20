@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录网易通行证</title>
+		<style>
+			*{
+				margin: 0px;
+			}
+			
+			.title{
+				font-size: 14px;
+				font-family:"微软雅黑";
+				line-height: 16px;
+				font-weight: bold;
+				/*使标题距离第一个输入框15px*/
+				margin-bottom: 15px;
+			}
+			
+			._label{
+				/*设置为inline-block让其能被设置宽度60px*/
+				display: inline-block;
+				width: 60px;
+				font-size: 12px;
+				font-family:"宋体";
+				/*文字与输入框垂直居中对齐*/
+				vertical-align: middle; 
+			}
+			
+			input{
+				/*使input与label文字距离15px*/
+				margin-left: 15px;
+				width: 200px;
+				height: 20px;
+				border: 1px solid #ddd;
+			}
+			
+			div{
+				/*使两个input之间以及input与按钮之间距离15px*/
+				margin-bottom: 15px;
+			}
+			
+			.button{		
+				/*让按钮与input对齐*/		
+				margin-left: 75px;
+				width: 40px;
+				height: 20px;
+				line-height: 20px;
+				color: white;
+				background-color: rgb(84,174,222) ;
+				font-size: 12px;
+				font-family: "宋体";
+				/*文字居中*/
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="/login"  method="post" class="test-form">
+			<p class="title">登陆网易通行证</p>
+			<div>
+				<!--label与input写在同一行是为了去除chrome浏览器存在label与input之间会有间隙的小问题-->
+       			<label class="_label" for="user">用户名：</label><input class="txt" type="text" id="user">
+      		</div>
+			<div>
+       			<label class="_label" for="password">密码:</label><input class="txt" type="text" id="password">
+      		</div>
+      		<p class="button">登陆</p>
+		</form>
+	</body>
+</html>

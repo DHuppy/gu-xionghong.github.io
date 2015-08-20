@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Js入门</title>
+	</head>
+	<body >
+		<script>
+			function type(a){
+				if(!a instanceof Object){
+					alert("t="+a+"是"+typeof(a)+"类型");
+				}else if(a instanceof Number){
+					alert("t="+a+"是Number类型2");
+				}else if(a instanceof String){
+					alert("t="+a+"是String类型");
+				}else if(a instanceof Array){
+					alert("t="+a+"是Array类型");
+				}else if(a instanceof Date){
+					alert("t="+a+"是Date类型");
+				}else if(a instanceof null){
+					alert("t="+a+"是null类型");
+				}else if(a instanceof undefined){
+					alert("t="+a+"是undefined类型");
+				}else if(a instanceof RegExp){
+					alert("t="+a+"是regexp类型");
+				}else{
+					alert("t="+a+"是Object类型");
+				}
+			}
+//			var t = type(1) // t==="number"
+//			var t = type(new Number(1)) // t==="number"
+//			var t = type("abc") // t==="string"
+//			var t = type(new String("abc")) // t==="string"
+//			var t = type(true) // t==="boolean"
+			var t = type(undefined) // t==="undefined"
+//			var t = type(null) // t==="null"
+//			var t = type({}) // t==="object"
+//			var t = type([]) // t==="array"
+//			var t = type(new Date) // t==="date"
+//			var t = type(/\d/) // t==="regexp"
+//			var t = type(function(){}) // t==="function"
+		</script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+*{
+	margin: 0px;
+}
+
+.news{
+	/*控制整个新闻内容宽度*/
+	width: 300px;
+}
+
+.news_pic{
+	/*让新闻图片进行浮动*/
+	float: left;
+	width: 100px;
+	height: 100px;
+	background-color: rgb(0,121,190);
+}
+
+.news_content{
+	height: 100px;
+	/*设置margin 使图文之间距离15px*/
+	margin-left: 115px;
+	/*设置行高为25px*/
+	line-height: 25px;
+	font-size: 16px;
+	font-family: "宋体";
+	/*全文最多显示4行文字，因为行高为25px，设置了高度为100px，则超出的文字需要被隐藏。*/
+	overflow: hidden;
+}
+
+.news_title{
+	/*设置为粗体*/
+	font-weight: bold;
+	/*设置文本超出显示...*/
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow: hidden;
+}
+
+
+.news_text{
+	/*设置换行*/
+	word-wrap: break-word;	
+}

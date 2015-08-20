@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>二分法数组查找</title>
+	</head>
+	<body>
+		<script>
+			function search(arr,dst){
+				var left=0;
+				var right=arr.length-1;
+				//使用二分法进行查找
+				while(left<=right){
+					var middle=Math.floor((left+right)/2);//取中间的下标，需要将含小数的数向下取整
+					if(dst==arr[middle]){
+						return middle;
+					}
+					if(dst>arr[middle]){
+						left=middle+1;
+					}else{
+						right=middle-1;
+					}
+				}
+				//未能找到dst
+				return -1;
+			}
+			var arr =[1, 2, 4, 6, 7, 9, 19,20, 30, 40, 45, 47];
+			var idx = search(arr, 45); 
+			alert(idx);
+		</script>
+	</body>
+</html>

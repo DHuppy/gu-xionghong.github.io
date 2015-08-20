@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>根据输入参数不同打印不同内容的功能</title>
+	</head>
+	<body>
+		<script>
+			function type(param){
+				//进行类型识别
+				var type=param && param.constructor && param.constructor.toString().match(/function\s*([^(]*)/)[1];
+				//将产生的字符串type转换成小写
+				return type.toLocaleLowerCase();
+			}
+			var t=type(1);
+			alert(t==="number");
+		</script>
+	</body>
+</html>

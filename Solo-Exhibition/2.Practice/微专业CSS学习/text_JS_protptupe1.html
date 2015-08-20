@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test_JS_prototype</title>
+	</head>
+		<script>
+			function Person(){
+			}
+			
+			Person.prototype.name="Gxh";
+			Person.prototype.age=10;
+			
+			
+			var person1=new Person();
+			var person2=new Person();
+			
+			alert(person1.name);
+			person2.name="Lxd";
+			alert(person1.name);
+			alert(person2.name);
+		</script>
+	<body>
+	</body>
+</html>

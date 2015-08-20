@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.test{width: 400px;height: 400px;background: red;text-align: center;opacity: 1;}
+		</style>
+		<script>
+			var fadeout = function(ele) {
+			//先获取元素的实际opacity的值，并将其赋值到行内style里面，方便对其进行操作
+				var opnum=window.getComputedStyle(ele).opacity;
+				ele.style.opacity=opnum;
+				var step = function(){
+				if (ele.style.opacity>0) {
+				    ele.style.opacity-=0.1;
+				  }else{
+				  	ele.style.opacity=0;
+				  	clearInterval(interval);
+				  }
+				}
+				var interval= setInterval(step, 100);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="test" onclick="fadeout(this)">点击这里触发JS元素淡出效果</div>
+	</body>
+</html>
