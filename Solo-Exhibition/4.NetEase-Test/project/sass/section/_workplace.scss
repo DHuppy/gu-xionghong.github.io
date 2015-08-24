@@ -1,0 +1,35 @@
+#section-header {
+    width: 80.8em;
+    height: 11em;
+    #workplace-list {
+        width: 100%;
+        height: 100%;
+        li {
+            float: left;
+            width: 16em;
+            height: 11em;
+            margin: 0 0 0 .2em;
+            background: url('../img/workplace/workplace.png') no-repeat;
+            background-size: 16em 65em;
+            &:first-child {
+                margin: 0 0 0 0;
+            }
+            cursor: pointer;
+        }
+        .workplace1 {
+            background-position: 0 .05em;
+        }
+        .workplace2 {
+            background-position: 0 -13em;
+        }
+        .workplace3 {
+            background-position: 0 -26em;
+        }
+        .workplace4 {
+            background-position: 0 -40em;
+        }
+        .workplace5 {
+            background-position: 0 -53em;
+        }
+    }
+}

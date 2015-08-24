@@ -1,0 +1,137 @@
+#section-section {
+    width: 60.55em;
+    height: 77.6em;
+    padding: 4em 10.25em 6em 10em;
+    background-color: $bg-section;
+    #course-tab {
+        width: 20em;
+        height: 2.5em;
+        text-align: center;
+        box-shadow: 1px 1px 2px $box-shadow;
+        h2 {
+            float: left;
+            display: inline-block;
+            width: 10em;
+            height: 2.5em;
+            line-height: 2.5em;
+            color: $color-h2;
+            background-color: white;
+            cursor: pointer;
+            font: {
+                size: 1em;
+                weight: normal;
+            }
+        }
+        .click {
+            color: white;
+            background-color: $color-h1;
+        }
+    }
+    #course-list {
+    	// 原来49em
+        width: 60.74em;
+        // height: 67.4em;
+        margin: .5em -11.7em .4em -.9em;
+        li {
+            position: relative;
+            float: left;
+            width: 11.25em;
+            margin: .8em 0 .2em .9em;
+            background-color: $bg-course;
+            box-shadow: -1px 2px 2px $box-shadow, 1px 1px 2px $box-shadow;
+            .photo {
+                margin: .1em .05em 0 .05em;
+                width: 11.15em;
+                height: 6.2em;
+            }
+            .course-name,
+            .provider {
+                margin: .25em 0 0 .25em;
+                width: 100%;
+                color: $color-black;
+                overflow: hidden;
+                line-height: 1.5em;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font: {
+                    size: 12px;
+                    weight: normal;
+                }
+            }
+            .provider,
+            .learnerCount {
+                color: #999;
+            }
+            .learnerCount {
+                background: url('../img/icon/icon6.png') left top no-repeat;
+                background-size: 24px 24px;
+            }
+            .course-learnerCount {
+                display: block;
+                margin: 0 0 .5em .25em;
+                padding: .25em .2em 0 0;
+                width: 3em;
+                height: 1.15em;
+                font-size: 12px;
+                text-align: right;
+                border: 1px solid #999;
+                border-radius: 3px;
+            }
+            .price {
+                display: inline-block;
+                margin: 0 0 6px 0;
+                color: $color-price;
+                font-size: 16px;
+            }
+            .detail {
+                display: none;
+                position: absolute;
+                top: -.55em;
+                left: -.55em;
+                width: 23.84em;
+                color: $color-h2;
+                background-color: white;
+                box-shadow: -0 0 3px 2px $box-shadow, 0 -0 3px 2px $box-shadow;
+                .detail-photo {
+                    float: left;
+                    margin: .55em 1em 1em .55em;
+                }
+                .detail-name {
+                    margin: .7em 1em .5em 0;
+                    font-size: 18px;
+                    line-height: 1.5em;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    color: $color-black;
+                }
+                .detaillearnerCount {
+                    display: inline-block;
+                    padding: .25em .2em 0 0;
+                    font-size: 12px;
+                    text-indent: 2em;
+                }
+                p {
+                    font-size: 12px;
+                    padding: 1em 2em 0 0;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                .detail-description {
+                    float: left;
+                    padding: 1.52em;
+                    height: 2.85em;
+                    line-height: 1.4em;
+                    font-size: 14px;
+                    background-color: $bg-section;
+                    white-space: pre-wrap;
+                }
+            }
+            &:hover .detail {
+                display: block;
+                z-index: 2;
+            }
+        }
+    }
+}

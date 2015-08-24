@@ -1,0 +1,71 @@
+#banner-container {
+    position: relative;
+    width: 80.8em;
+    height: 23em;
+    overflow: hidden;
+    @at-root #banner-list {
+        position: absolute;
+        width: 80.8em;
+        height: 23em;
+        z-index: 1;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80.8em;
+            height: 23em;
+        }
+    }
+    @at-root #banner-buttons {
+        position: absolute;
+        bottom: 1em;
+        left: 38em;
+        width: 60px;
+        height: 10px;
+        z-index: 2;
+        span {
+            float: left;
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: #fff;
+            margin-right: 5px;
+        }
+        .on {
+            background-color: #333;
+        }
+    }
+    @at-root .arrow {
+        display: none;
+        position: absolute;
+        top: 6em;
+        width: 2em;
+        height: 2em;
+        cursor: pointer;
+        background-color: RGBA(0, 0, 0, .3);
+        // filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#70000000,endcolorstr=#70000000);
+        line-height: 2em;
+        text-align: center;
+        color: #fff;
+        font: {
+            size: 1.5em;
+            weight: bold;
+        }
+        z-index: 2;
+        &:hover {
+            background-color: RGBA(0, 0, 0, .7);
+            // filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#8F000000,endcolorstr=#8F000000);
+        }
+    }
+    //ie8 兼容性出问题了
+    &:hover .arrow{
+        display: block;
+    }
+    @at-root #banner-prev {
+        left: 1em;
+    }
+    @at-root #banner-next {
+        right: 1em;
+    }
+}

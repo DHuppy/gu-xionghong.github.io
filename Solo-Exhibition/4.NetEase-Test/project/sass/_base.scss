@@ -1,0 +1,28 @@
+$bg-notice:#f3f3f3;
+$bg-followed:#f8f8f8;
+$bg-section:#f8f8f8;
+$bg-course:#fff;
+$color-h1:#39a030;
+$color-price:#ff3f00;
+$color-h2:#666;
+$color-more:#21a557;
+$color-black:black;
+$border-color:#efefef;
+$box-shadow:#d0cfd0;
+body {
+    margin: 0 auto;
+    font-size: 20px;
+    width: 80.8em;
+    height: 100em;
+}
+
+.more {
+    color: $color-more;
+    &:hover{
+    	text-decoration: underline;
+    }
+}
+.clearfix{
+	overflow: hidden;
+	*zoom:1;
+}

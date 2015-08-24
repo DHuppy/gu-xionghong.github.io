@@ -1,0 +1,49 @@
+#three-product {
+    width: 60.2em;
+    height: 8.05em;
+    padding: 2.9em 6.7em 2.9em 10.3em;
+    #product-list {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        *zoom: 1;
+        li {
+            float: left;
+            width: 33.3%;
+            height: 100%;
+            .image {
+                float: left;
+                position: relative;
+                display: inline-block;
+                margin: 0 1em 4.55em 3.6em;
+                width: 4em;
+                height: 4em;
+                border-radius: 50%;
+                background-color: $color-h1;
+                img {
+                    position: absolute;
+                    top: -1.25em;
+                    left: -1.25em;
+                    width: 2.5em;
+                    height: 2.5em;
+                    margin: 50% 50%;
+                }
+            }
+            h2 {
+                font-size: 1.1em;
+            }
+            p {
+                margin: 1.3em 0 1.8em 0;
+                height: 5.1em;
+                color: #666;
+                font-size: .7em;
+                line-height: 1.4em;
+                word-wrap: break-word;
+                overflow: hidden;
+            }
+            a{
+            	font-size: .7em;
+            }
+        }
+    }
+}

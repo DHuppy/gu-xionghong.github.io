@@ -1,0 +1,111 @@
+#notice {
+    width: 60.2em;
+    height: 1.8em;
+    line-height: 1.8em;
+    padding: 0 10.3em 0 10.3em;
+    background-color: $bg-notice;
+    >span,
+    a {
+        font-size: .6em;
+    }
+    @at-root #nonotice {
+        float: right;
+        cursor: pointer;
+        span {
+            display: inline-block;
+            width: 1em;
+            height: .8em;
+            padding: 0 .5em 0 0;
+            background: url('../img/icon/icon1.png') center center no-repeat;
+        }
+    }
+}
+
+#header-header {
+    width: 60.2em;
+    height: 1.15em;
+    padding: 1.5em 10.3em 1.85em 10.3em;
+    .title,
+    >span {
+        float: left;
+    }
+    .title {
+        font-size: 1.1em;
+        h1 {
+            p {
+                display: inline-block;
+                height: .8em;
+                padding-right: .53em;
+                margin-right: .4em;
+                border-right: 1px solid $color-h1;
+                line-height: .9em;
+                font-size: 1.28em;
+                color: $color-h1;
+            }
+        }
+    }
+    .header-text {
+        height: 1.75em;
+        line-height: 1.75em;
+    }
+    .follow,
+    .followed,
+    {
+        display: inline-block;
+        margin: 0 1em 0 1.67em;
+        font-size: .6em;
+        border-radius: 2px;
+        text-align: center;
+    }
+    .follow {
+        width: 4.5em;
+        background-color: $color-more;
+        color: white;
+        cursor: pointer;
+    }
+    .followed {
+        width: 8.67em;
+        border: 1px solid $border-color;
+        background-color: $bg-followed;
+        .cancelfollow {
+            margin: 0 0 0 .5em;
+            color: #ccc;
+            span {
+                cursor: pointer;
+                color: #999;
+                &:hover {
+                    color: $color-more;
+                    text-decoration: underline;
+                }
+            }
+        }
+        &:hover {
+            background-color: #fff;
+        }
+    }
+    .fans {
+        display: inline-block;
+        font-size: .6em;
+    }
+    nav {
+        float: right;
+        font-size: .8em;
+        a {
+            display: inline-block;
+            margin: 0 1.56em 0 1.56em;
+            &:hover {
+                color: $color-more;
+            }
+        }
+        .search {
+            margin: 0 0;
+            width: 1.25em;
+            height: 1.3em;
+            background: url('../img/icon/icon2.png') no-repeat;
+            background-size: 1.56em 3.65em;
+            &:hover {
+                background-position: 0 -1.75em;
+            }
+        }
+    }
+}

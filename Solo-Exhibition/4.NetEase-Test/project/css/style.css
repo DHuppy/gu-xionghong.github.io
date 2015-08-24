@@ -1,0 +1,571 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+hr,
+figure,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+address,
+figure,
+figcaption,
+menu,
+details {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th {
+  text-align: left;
+  font-weight: normal;
+}
+
+html,
+body,
+fieldset,
+img,
+iframe,
+abbr {
+  border: 0;
+}
+
+i,
+cite,
+em,
+var,
+address,
+dfn {
+  font-style: normal;
+}
+
+[hidefocus],
+summary {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-size: 100%;
+}
+
+sup,
+sub {
+  font-size: 83%;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: inherit;
+}
+
+q:before,
+q:after {
+  content: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+label,
+summary {
+  cursor: default;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+del,
+ins,
+u,
+s,
+a,
+a:hover {
+  text-decoration: none;
+}
+
+body,
+textarea,
+input,
+button,
+select,
+keygen,
+legend {
+  font: 12px/1.14 Myriad Pro, Microsoft YaHei, Hiragino Sans GB W3, arial, sans-serif;
+  color: #333;
+  outline: 0;
+}
+
+body {
+  background: #fff;
+}
+
+a {
+  color: black;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 20px;
+  width: 80.8em;
+  height: 100em;
+}
+
+.more {
+  color: #21a557;
+}
+.more:hover {
+  text-decoration: underline;
+}
+
+.clearfix {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+#notice {
+  width: 60.2em;
+  height: 1.8em;
+  line-height: 1.8em;
+  padding: 0 10.3em 0 10.3em;
+  background-color: #f3f3f3;
+}
+#notice > span,
+#notice a {
+  font-size: .6em;
+}
+#nonotice {
+  float: right;
+  cursor: pointer;
+}
+#nonotice span {
+  display: inline-block;
+  width: 1em;
+  height: .8em;
+  padding: 0 .5em 0 0;
+  background: url("../img/icon/icon1.png") center center no-repeat;
+}
+
+#header-header {
+  width: 60.2em;
+  height: 1.15em;
+  padding: 1.5em 10.3em 1.85em 10.3em;
+}
+#header-header .title,
+#header-header > span {
+  float: left;
+}
+#header-header .title {
+  font-size: 1.1em;
+}
+#header-header .title h1 p {
+  display: inline-block;
+  height: .8em;
+  padding-right: .53em;
+  margin-right: .4em;
+  border-right: 1px solid #39a030;
+  line-height: .9em;
+  font-size: 1.28em;
+  color: #39a030;
+}
+#header-header .header-text {
+  height: 1.75em;
+  line-height: 1.75em;
+}
+#header-header .follow,
+#header-header .followed {
+  display: inline-block;
+  margin: 0 1em 0 1.67em;
+  font-size: .6em;
+  border-radius: 2px;
+  text-align: center;
+}
+#header-header .follow {
+  width: 4.5em;
+  background-color: #21a557;
+  color: white;
+  cursor: pointer;
+}
+#header-header .followed {
+  width: 8.67em;
+  border: 1px solid #efefef;
+  background-color: #f8f8f8;
+}
+#header-header .followed .cancelfollow {
+  margin: 0 0 0 .5em;
+  color: #ccc;
+}
+#header-header .followed .cancelfollow span {
+  cursor: pointer;
+  color: #999;
+}
+#header-header .followed .cancelfollow span:hover {
+  color: #21a557;
+  text-decoration: underline;
+}
+#header-header .followed:hover {
+  background-color: #fff;
+}
+#header-header .fans {
+  display: inline-block;
+  font-size: .6em;
+}
+#header-header nav {
+  float: right;
+  font-size: .8em;
+}
+#header-header nav a {
+  display: inline-block;
+  margin: 0 1.56em 0 1.56em;
+}
+#header-header nav a:hover {
+  color: #21a557;
+}
+#header-header nav .search {
+  margin: 0 0;
+  width: 1.25em;
+  height: 1.3em;
+  background: url("../img/icon/icon2.png") no-repeat;
+  background-size: 1.56em 3.65em;
+}
+#header-header nav .search:hover {
+  background-position: 0 -1.75em;
+}
+
+#banner-container {
+  position: relative;
+  width: 80.8em;
+  height: 23em;
+  overflow: hidden;
+}
+#banner-list {
+  position: absolute;
+  width: 80.8em;
+  height: 23em;
+  z-index: 1;
+}
+#banner-list img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80.8em;
+  height: 23em;
+}
+#banner-buttons {
+  position: absolute;
+  bottom: 1em;
+  left: 38em;
+  width: 60px;
+  height: 10px;
+  z-index: 2;
+}
+#banner-buttons span {
+  float: left;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 5px;
+}
+#banner-buttons .on {
+  background-color: #333;
+}
+.arrow {
+  display: none;
+  position: absolute;
+  top: 6em;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  background-color: RGBA(0, 0, 0, 0.3);
+  line-height: 2em;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  z-index: 2;
+}
+.arrow:hover {
+  background-color: RGBA(0, 0, 0, 0.7);
+}
+#banner-container:hover .arrow {
+  display: block;
+}
+#banner-prev {
+  left: 1em;
+}
+#banner-next {
+  right: 1em;
+}
+
+#three-product {
+  width: 60.2em;
+  height: 8.05em;
+  padding: 2.9em 6.7em 2.9em 10.3em;
+}
+#three-product #product-list {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  *zoom: 1;
+}
+#three-product #product-list li {
+  float: left;
+  width: 33.3%;
+  height: 100%;
+}
+#three-product #product-list li .image {
+  float: left;
+  position: relative;
+  display: inline-block;
+  margin: 0 1em 4.55em 3.6em;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background-color: #39a030;
+}
+#three-product #product-list li .image img {
+  position: absolute;
+  top: -1.25em;
+  left: -1.25em;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 50% 50%;
+}
+#three-product #product-list li h2 {
+  font-size: 1.1em;
+}
+#three-product #product-list li p {
+  margin: 1.3em 0 1.8em 0;
+  height: 5.1em;
+  color: #666;
+  font-size: .7em;
+  line-height: 1.4em;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+#three-product #product-list li a {
+  font-size: .7em;
+}
+
+#section-header {
+  width: 80.8em;
+  height: 11em;
+}
+#section-header #workplace-list {
+  width: 100%;
+  height: 100%;
+}
+#section-header #workplace-list li {
+  float: left;
+  width: 16em;
+  height: 11em;
+  margin: 0 0 0 .2em;
+  background: url("../img/workplace/workplace.png") no-repeat;
+  background-size: 16em 65em;
+  cursor: pointer;
+}
+#section-header #workplace-list li:first-child {
+  margin: 0 0 0 0;
+}
+#section-header #workplace-list .workplace1 {
+  background-position: 0 .05em;
+}
+#section-header #workplace-list .workplace2 {
+  background-position: 0 -13em;
+}
+#section-header #workplace-list .workplace3 {
+  background-position: 0 -26em;
+}
+#section-header #workplace-list .workplace4 {
+  background-position: 0 -40em;
+}
+#section-header #workplace-list .workplace5 {
+  background-position: 0 -53em;
+}
+
+#section-section {
+  width: 60.55em;
+  height: 77.6em;
+  padding: 4em 10.25em 6em 10em;
+  background-color: #f8f8f8;
+}
+#section-section #course-tab {
+  width: 20em;
+  height: 2.5em;
+  text-align: center;
+  box-shadow: 1px 1px 2px #d0cfd0;
+}
+#section-section #course-tab h2 {
+  float: left;
+  display: inline-block;
+  width: 10em;
+  height: 2.5em;
+  line-height: 2.5em;
+  color: #666;
+  background-color: white;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: normal;
+}
+#section-section #course-tab .click {
+  color: white;
+  background-color: #39a030;
+}
+#section-section #course-list {
+  width: 60.74em;
+  margin: .5em -11.7em .4em -.9em;
+}
+#section-section #course-list li {
+  position: relative;
+  float: left;
+  width: 11.25em;
+  margin: .8em 0 .2em .9em;
+  background-color: #fff;
+  box-shadow: -1px 2px 2px #d0cfd0, 1px 1px 2px #d0cfd0;
+}
+#section-section #course-list li .photo {
+  margin: .1em .05em 0 .05em;
+  width: 11.15em;
+  height: 6.2em;
+}
+#section-section #course-list li .course-name,
+#section-section #course-list li .provider {
+  margin: .25em 0 0 .25em;
+  width: 100%;
+  color: black;
+  overflow: hidden;
+  line-height: 1.5em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: normal;
+}
+#section-section #course-list li .provider,
+#section-section #course-list li .learnerCount {
+  color: #999;
+}
+#section-section #course-list li .learnerCount {
+  background: url("../img/icon/icon6.png") left top no-repeat;
+  background-size: 24px 24px;
+}
+#section-section #course-list li .course-learnerCount {
+  display: block;
+  margin: 0 0 .5em .25em;
+  padding: .25em .2em 0 0;
+  width: 3em;
+  height: 1.15em;
+  font-size: 12px;
+  text-align: right;
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+#section-section #course-list li .price {
+  display: inline-block;
+  margin: 0 0 6px 0;
+  color: #ff3f00;
+  font-size: 16px;
+}
+#section-section #course-list li .detail {
+  display: none;
+  position: absolute;
+  top: -.55em;
+  left: -.55em;
+  width: 23.84em;
+  color: #666;
+  background-color: white;
+  box-shadow: 0 0 3px 2px #d0cfd0, 0 0 3px 2px #d0cfd0;
+}
+#section-section #course-list li .detail .detail-photo {
+  float: left;
+  margin: .55em 1em 1em .55em;
+}
+#section-section #course-list li .detail .detail-name {
+  margin: .7em 1em .5em 0;
+  font-size: 18px;
+  line-height: 1.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: black;
+}
+#section-section #course-list li .detail .detaillearnerCount {
+  display: inline-block;
+  padding: .25em .2em 0 0;
+  font-size: 12px;
+  text-indent: 2em;
+}
+#section-section #course-list li .detail p {
+  font-size: 12px;
+  padding: 1em 2em 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#section-section #course-list li .detail .detail-description {
+  float: left;
+  padding: 1.52em;
+  height: 2.85em;
+  line-height: 1.4em;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  white-space: pre-wrap;
+}
+#section-section #course-list li:hover .detail {
+  display: block;
+  z-index: 2;
+}
