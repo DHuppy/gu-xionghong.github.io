@@ -159,7 +159,7 @@ a {
 
 body {
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 20.5px;
   width: 80.8em;
   height: 100em;
 }
@@ -169,6 +169,11 @@ body {
 }
 .more:hover {
   text-decoration: underline;
+}
+
+.learnerCount {
+  background: url("../img/icon/icon6.png") left top no-repeat;
+  background-size: 24px 24px;
 }
 
 .clearfix {
@@ -197,6 +202,9 @@ body {
   height: .8em;
   padding: 0 .5em 0 0;
   background: url("../img/icon/icon1.png") center center no-repeat;
+}
+#nonotice:hover {
+  color: #21a557;
 }
 
 #header-header {
@@ -332,6 +340,7 @@ body {
   height: 2em;
   cursor: pointer;
   background-color: RGBA(0, 0, 0, 0.3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#60000000,endcolorstr=#60000000);
   line-height: 2em;
   text-align: center;
   color: #fff;
@@ -341,6 +350,7 @@ body {
 }
 .arrow:hover {
   background-color: RGBA(0, 0, 0, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#9F000000,endcolorstr=#9F000000);
 }
 #banner-container:hover .arrow {
   display: block;
@@ -439,9 +449,10 @@ body {
 }
 
 #section-section {
+  position: relative;
   width: 60.55em;
   height: 77.6em;
-  padding: 4em 10.25em 6em 10em;
+  padding: 4em 10.25em 0 10em;
   background-color: #f8f8f8;
 }
 #section-section #course-tab {
@@ -474,7 +485,7 @@ body {
   position: relative;
   float: left;
   width: 11.25em;
-  margin: .8em 0 .2em .9em;
+  margin: .7em 0 .3em .9em;
   background-color: #fff;
   box-shadow: -1px 2px 2px #d0cfd0, 1px 1px 2px #d0cfd0;
 }
@@ -499,15 +510,11 @@ body {
 #section-section #course-list li .learnerCount {
   color: #999;
 }
-#section-section #course-list li .learnerCount {
-  background: url("../img/icon/icon6.png") left top no-repeat;
-  background-size: 24px 24px;
-}
 #section-section #course-list li .course-learnerCount {
   display: block;
   margin: 0 0 .5em .25em;
   padding: .25em .2em 0 0;
-  width: 3em;
+  width: 3.5em;
   height: 1.15em;
   font-size: 12px;
   text-align: right;
@@ -556,16 +563,146 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-#section-section #course-list li .detail .detail-description {
+#section-section #course-list li .detail div {
   float: left;
-  padding: 1.52em;
-  height: 2.85em;
+  padding: 1.47em;
   line-height: 1.4em;
   font-size: 14px;
+  overflow: hidden;
   background-color: #f8f8f8;
+}
+#section-section #course-list li .detail .detail-description {
+  padding: .2em;
+  height: 2.85em;
   white-space: pre-wrap;
+  cursor: pointer;
 }
 #section-section #course-list li:hover .detail {
   display: block;
   z-index: 2;
+}
+
+#course-page {
+  float: right;
+  margin: 1.5em 12.8em 0 0;
+  height: 24px;
+  text-align: center;
+}
+#course-page .page-arrow,
+#course-page ul,
+#course-page li {
+  float: left;
+}
+#course-page .page-clicked {
+  color: white;
+  background-color: #9dd8b1;
+  cursor: default;
+}
+#course-page .page-clicked:hover {
+  color: white;
+}
+#course-page .page-arrow {
+  width: 30px;
+  height: 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #9dd8b1;
+}
+#course-page .page-arrow:first-child {
+  margin: 0 10px 0 0;
+}
+#course-page .page-arrow:last-child {
+  margin: 0 0 0 10px;
+}
+#course-page .page-arrow:hover {
+  background-color: #21a557;
+}
+#course-page li {
+  margin: 0 5px 0 5px;
+  padding: 2px 0 2px 0;
+  font-size: 16px;
+  width: 19px;
+  height: 16px;
+  cursor: pointer;
+}
+#course-page li:hover {
+  color: #21a557;
+}
+
+#right {
+  position: absolute;
+  top: 4em;
+  right: 10.25em;
+  width: 11.65em;
+}
+#right h2 {
+  padding: 1.1em 1.1em 1em 1.1em;
+  font-size: 16px;
+  border-bottom: 1px solid #efefef;
+}
+#right #introduction {
+  width: 100%;
+  background-color: white;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  box-shadow: -1px 2px 2px #d0cfd0, 1px 1px 2px #d0cfd0;
+}
+#right #introduction p {
+  padding: 1.28em 1.25em 0.57em 1.45em;
+  font-size: .7em;
+}
+#right #introduction .introduc-photo {
+  position: relative;
+  margin: 0 1.1em 0 1.25em;
+  width: 9em;
+  height: 5.5em;
+  background: url("../img/video.png") no-repeat;
+  background-size: 9em 5.5em;
+}
+#right #introduction .introduc-photo .start-vedio {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1.5em 0 0 -1.5em;
+  width: 3em;
+  height: 3em;
+  background: url("../img/icon/icon7.png") no-repeat;
+  background-size: 3em 3em;
+  cursor: pointer;
+}
+#right #hot {
+  width: 100%;
+  background-color: white;
+  box-shadow: -1px 2px 2px #d0cfd0, 1px 1px 2px #d0cfd0;
+}
+#right #hot .ranking-list {
+  padding-top: .8em;
+}
+#right #hot .ranking-list li {
+  margin: 0 1em 0 1em;
+}
+#right #hot .ranking-list li a {
+  float: left;
+  margin-right: .6em;
+}
+#right #hot .ranking-list li a img {
+  width: 2.5em;
+  height: 2.5em;
+}
+#right #hot .ranking-list li h3 {
+  width: 8.6em;
+  line-height: 1.4em;
+  font-size: .7em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#right #hot .ranking-list li .hot-learnerCount {
+  display: inline-block;
+  margin: .8em 0 1.5em 0;
+  width: 8.6em;
+  font-size: .7em;
+  line-height: 1.4em;
+  text-indent: 1.8em;
 }

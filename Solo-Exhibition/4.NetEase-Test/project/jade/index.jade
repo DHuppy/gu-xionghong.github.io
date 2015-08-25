@@ -6,6 +6,8 @@ head
 	meta(charset='utf-8')
 	title NetEase_Test
 	link(rel='stylesheet',type='text/css',href='./css/style.css')
+	// ie8及以下版本完美兼容html5新标签
+	<!--[if IE 8]><script> (function() {if (! /*@cc_on!@*/0) return;var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');var i= e.length;while (i--){document.createElement(e[i])} })() </script><![endif]-->
 body
 	header
 		include ./header/header
@@ -14,5 +16,7 @@ body
 	section
 		include ./section/header
 		include ./section/section
+	footerp
+		include ./footer/footer
 	include ./script
 </html>

@@ -7,9 +7,9 @@
  * @param  {String} id 指定ID
  * @return {Object}    元素对象
  */
-var $ = function(id){
-	var ele = document.getElementById(id);
-	return ele;
+var $ = function(id) {
+    var ele = document.getElementById(id);
+    return ele;
 };
 
 /**
@@ -18,11 +18,42 @@ var $ = function(id){
  * @param  {String} TagName 标签名称
  * @return {Collecton}         标签对象集合
  */
-var getTag = function(ele,TagName){
-	var eles = ele.getElementsByTagName(TagName);
-	return eles;
+var getTag = function(ele, TagName) {
+    var eles = ele.getElementsByTagName(TagName);
+    return eles;
 };
 
+/**
+ * [delegateEvent 点击事件的事件代理]
+ * @param  {Element}   ele  代理元素
+ * @param  {String}   name 触发事件元素名
+ * @param  {Function} fn   执行函数
+ * @return {[type]}        [description]
+ */
+var delegateEvent = function(ele, name, fn) {
+    ele.onclick = function(event) {
+        var e = event || window.event;
+        var target = e.target || e.srcElement;
+        if (target.tagName.toLowerCase() == name.toLowerCase()) {
+            fn(target);
+        }
+    };
+};
+
+/**
+ * [clearPage 清除传入元素数组的所有类名]
+ * @param  {[type]} eles [description]
+ * @return {[type]}      [description]
+ */
+var clearClassName = function(eles, name) {
+    for (var i = 0; i < eles.length; i++) {
+        if (eles[i].className === name) {
+            eles[i].className = '';
+            return i+1;
+        }
+    }
+    return -1;
+};
 
 ///////////
 //数据交互相关 //
@@ -111,5 +142,3 @@ var ajax = function(obj) {
         }
     };
 };
-
-

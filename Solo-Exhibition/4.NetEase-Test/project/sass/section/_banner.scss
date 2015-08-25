@@ -44,7 +44,7 @@
         height: 2em;
         cursor: pointer;
         background-color: RGBA(0, 0, 0, .3);
-        // filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#70000000,endcolorstr=#70000000);
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#60000000,endcolorstr=#60000000);
         line-height: 2em;
         text-align: center;
         color: #fff;
@@ -55,7 +55,7 @@
         z-index: 2;
         &:hover {
             background-color: RGBA(0, 0, 0, .7);
-            // filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#8F000000,endcolorstr=#8F000000);
+            filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#9F000000,endcolorstr=#9F000000);
         }
     }
     //ie8 兼容性出问题了

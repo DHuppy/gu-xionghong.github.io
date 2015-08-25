@@ -2,6 +2,7 @@ $bg-notice:#f3f3f3;
 $bg-followed:#f8f8f8;
 $bg-section:#f8f8f8;
 $bg-course:#fff;
+$bg-page:#9dd8b1;
 $color-h1:#39a030;
 $color-price:#ff3f00;
 $color-h2:#666;
@@ -11,18 +12,24 @@ $border-color:#efefef;
 $box-shadow:#d0cfd0;
 body {
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 20.5px;
     width: 80.8em;
     height: 100em;
 }
 
 .more {
     color: $color-more;
-    &:hover{
-    	text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
     }
 }
-.clearfix{
-	overflow: hidden;
-	*zoom:1;
+
+.learnerCount {
+    background: url('../img/icon/icon6.png') left top no-repeat;
+    background-size: 24px 24px;
+}
+
+.clearfix {
+    overflow: hidden;
+    *zoom: 1;
 }
