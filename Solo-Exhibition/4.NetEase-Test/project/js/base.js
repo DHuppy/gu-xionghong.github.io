@@ -60,7 +60,7 @@ var clearClassName = function(eles, name) {
 ///////////
 
 /**
- * [ajax 自定义ajax函数]
+ * [ajax 封装ajax函数]
  * @param  {Object} obj 一个含有ajax需要的基本数据的对象
  * @return {[type]}     [description]
  */

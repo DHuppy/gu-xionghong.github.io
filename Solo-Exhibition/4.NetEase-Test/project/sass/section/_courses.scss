@@ -115,7 +115,7 @@
                     white-space: nowrap;
                     text-overflow: ellipsis;
                 }
-                div{
+                div {
                     float: left;
                     padding: 1.47em;
                     line-height: 1.4em;
@@ -127,7 +127,6 @@
                     padding: .2em;
                     height: 2.85em;
                     white-space: pre-wrap;
-                    cursor: pointer;
                 }
             }
             &:hover .detail {

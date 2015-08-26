@@ -1,0 +1,11 @@
+#login-cover.cover(style = 'display:none;')
+	#login
+		h3 登陆网易云课堂
+		span#closelogin.closecover
+		// 题目要求使用ajax登陆，所以放弃使用form提交
+		#log_in
+			input#useName.text(type = 'text',placeholder='账号')
+			p#noneUseName(style = 'display:none;') 请输入账号
+			input#password.text(type = 'password',placeholder='密码')
+			p#nonepassword(style = 'display:none;') 请输入密码
+			input#confirm.login(type = 'button' value = '登陆')

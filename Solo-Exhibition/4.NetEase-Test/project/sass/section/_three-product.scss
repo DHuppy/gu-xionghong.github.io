@@ -32,17 +32,19 @@
             h2 {
                 font-size: 1.1em;
             }
-            p {
-                margin: 1.3em 0 1.8em 0;
-                height: 5.1em;
+            div {
+                margin: .91em 0 1.26em 0;
+                height: 3.75em;
                 color: #666;
-                font-size: .7em;
-                line-height: 1.4em;
-                word-wrap: break-word;
+                line-height: .98em;
                 overflow: hidden;
+                p {
+                    font-size: .7em;
+                    word-wrap: break-word;
+                }
             }
-            a{
-            	font-size: .7em;
+            a {
+                font-size: .7em;
             }
         }
     }

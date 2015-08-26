@@ -1,0 +1,42 @@
+#login {
+    position: absolute;
+    padding: 1.5em 0 0 1.9em;
+    top: 15em;
+    left: 30em;
+    width: 17.4em;
+    background-color: $bg-course;
+    .text {
+        margin: 1em 0 .2em 0;
+        width: 14.75em;
+        height: 2.25em;
+        line-height: 2.25em;
+        text-indent: .5em;
+        font-size: 1em;
+        background-color: #fafafa;
+        border: 1px solid #dfdfdf;
+        box-shadow: 1px 1px 2px #dfdfdf inset;
+    }
+    #password {
+        margin: .4em 0 0 0;
+    }
+    p {
+        margin:.5em 0 0 0;
+        color: red;
+        font-size: .8em;
+    }
+    .login {
+        border: none;
+        margin: 1em 0 2em 0;
+        width: 14.85em;
+        height: 2.25em;
+        color: $bg-course;
+        background-color: #24ac47;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 1px 1px 3px black;
+        font: {
+            size: 1em;
+            weight: bold;
+        }
+    }
+}

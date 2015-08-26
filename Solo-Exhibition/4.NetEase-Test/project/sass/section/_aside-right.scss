@@ -25,7 +25,7 @@
             height: 5.5em;
             background: url('../img/video.png') no-repeat;
             background-size: 9em 5.5em;
-            .start-vedio {
+            #start-video {
                 display: inline-block;
                 position: absolute;
                 top: 50%;
@@ -43,7 +43,7 @@
         width: 100%;
         background-color: white;
         box-shadow: -1px 2px 2px $box-shadow, 1px 1px 2px $box-shadow;
-        .ranking-list {
+        #ranking-list {
             padding-top: .8em;
             li {
                 margin: 0 1em 0 1em;
@@ -55,21 +55,22 @@
                         height: 2.5em;
                     }
                 }
-                h3 {
-                	width: 8.6em;
-                	line-height: 1.4em;
-                    font-size: .7em;
+                div {
+                    width: 6.02em;
+                    line-height: .98em;
                     overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                    h3 {
+                        font-size: .7em;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
                 }
-                .hot-learnerCount{
-                	display: inline-block;
-                	margin:.8em 0 1.5em 0;
-                	width: 8.6em;
-                	font-size:.7em;
-                	line-height: 1.4em;
-                	text-indent: 1.8em;
+                .hot-learnerCount {
+                    display: inline-block;
+                    margin: .8em 0 1.5em 0;
+                    font-size: .7em;
+                    text-indent: 1.8em;
                 }
             }
         }

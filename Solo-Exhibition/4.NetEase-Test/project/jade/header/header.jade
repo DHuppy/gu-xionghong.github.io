@@ -1,18 +1,18 @@
-div#notice
+#notice(style='display:none')
 	span 网易云课堂微专业，帮助您掌握专业技能，令你求职或加薪多一份独特优势！ 
 	a.more(title='立即查看')  立即查看>
-	span#nonotice(title='不再提醒')
+	span#closenotice(title='不再提醒')
 		span
 		|不再提醒
-header#header-header.clearfix
+#header-header.clearfix
 	a.title(href='#',title='EDU | 网易教育产品部',target='_self')
 		h1
 			p EDU
 			span  网易教育产品部
-	span.follow.header-text(title='关注') + 关注
-	span.followed.header-text(title='已关注') √已关注
+	span#follow.follow.header-text(title='关注') + 关注
+	span#followed.followed.header-text(title='已关注',style = 'display:none') √已关注
 		span.cancelfollow |&nbsp&nbsp&nbsp&nbsp
-			span.cancel(title='取消') 取消
+			span.cancel#cancelfollow(title='取消') 取消
 	span.fans.header-text 粉丝&nbsp&nbsp45
 	nav.header-text
 		a(href='http://open.163.com/',title='网易公开课',target='_blank') 网易公开课

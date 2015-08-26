@@ -158,10 +158,33 @@ a {
 }
 
 body {
+  position: relative;
   margin: 0 auto;
-  font-size: 20.5px;
+  font-size: 16.6px;
   width: 80.8em;
-  height: 100em;
+  cursor: default;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(50, 50, 50, 0.8);
+  z-index: 999;
+}
+
+.closecover {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background: url("../img/icon/icon1.png") left top no-repeat;
+  background-size: 1.5em 1.5em;
+  cursor: pointer;
 }
 
 .more {
@@ -192,18 +215,18 @@ body {
 #notice a {
   font-size: .6em;
 }
-#nonotice {
+#closenotice {
   float: right;
   cursor: pointer;
 }
-#nonotice span {
+#closenotice span {
   display: inline-block;
   width: 1em;
   height: .8em;
   padding: 0 .5em 0 0;
   background: url("../img/icon/icon1.png") center center no-repeat;
 }
-#nonotice:hover {
+#closenotice:hover {
   color: #21a557;
 }
 
@@ -399,14 +422,16 @@ body {
 #three-product #product-list li h2 {
   font-size: 1.1em;
 }
-#three-product #product-list li p {
-  margin: 1.3em 0 1.8em 0;
-  height: 5.1em;
+#three-product #product-list li div {
+  margin: .91em 0 1.26em 0;
+  height: 3.75em;
   color: #666;
-  font-size: .7em;
-  line-height: 1.4em;
-  word-wrap: break-word;
+  line-height: .98em;
   overflow: hidden;
+}
+#three-product #product-list li div p {
+  font-size: .7em;
+  word-wrap: break-word;
 }
 #three-product #product-list li a {
   font-size: .7em;
@@ -575,7 +600,6 @@ body {
   padding: .2em;
   height: 2.85em;
   white-space: pre-wrap;
-  cursor: pointer;
 }
 #section-section #course-list li:hover .detail {
   display: block;
@@ -659,7 +683,7 @@ body {
   background: url("../img/video.png") no-repeat;
   background-size: 9em 5.5em;
 }
-#right #introduction .introduc-photo .start-vedio {
+#right #introduction .introduc-photo #start-video {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -676,33 +700,92 @@ body {
   background-color: white;
   box-shadow: -1px 2px 2px #d0cfd0, 1px 1px 2px #d0cfd0;
 }
-#right #hot .ranking-list {
+#right #hot #ranking-list {
   padding-top: .8em;
 }
-#right #hot .ranking-list li {
+#right #hot #ranking-list li {
   margin: 0 1em 0 1em;
 }
-#right #hot .ranking-list li a {
+#right #hot #ranking-list li a {
   float: left;
   margin-right: .6em;
 }
-#right #hot .ranking-list li a img {
+#right #hot #ranking-list li a img {
   width: 2.5em;
   height: 2.5em;
 }
-#right #hot .ranking-list li h3 {
-  width: 8.6em;
-  line-height: 1.4em;
-  font-size: .7em;
+#right #hot #ranking-list li div {
+  width: 6.02em;
+  line-height: .98em;
   overflow: hidden;
+}
+#right #hot #ranking-list li div h3 {
+  font-size: .7em;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
-#right #hot .ranking-list li .hot-learnerCount {
+#right #hot #ranking-list li .hot-learnerCount {
   display: inline-block;
   margin: .8em 0 1.5em 0;
-  width: 8.6em;
   font-size: .7em;
-  line-height: 1.4em;
   text-indent: 1.8em;
+}
+
+#video {
+  position: absolute;
+  top: 47.2em;
+  left: 16.5em;
+  padding-left: 1.5em;
+  width: 46em;
+  height: 31em;
+  background-color: #fff;
+}
+#video h3 {
+  margin: 1.35em 0 1.1em 0;
+}
+#video video {
+  width: 44.45em;
+  height: 25em;
+}
+
+#login {
+  position: absolute;
+  padding: 1.5em 0 0 1.9em;
+  top: 15em;
+  left: 30em;
+  width: 17.4em;
+  background-color: #fff;
+}
+#login .text {
+  margin: 1em 0 .2em 0;
+  width: 14.75em;
+  height: 2.25em;
+  line-height: 2.25em;
+  text-indent: .5em;
+  font-size: 1em;
+  background-color: #fafafa;
+  border: 1px solid #dfdfdf;
+  box-shadow: 1px 1px 2px #dfdfdf inset;
+}
+#login #password {
+  margin: .4em 0 0 0;
+}
+#login p {
+  margin: .5em 0 0 0;
+  color: red;
+  font-size: .8em;
+}
+#login .login {
+  border: none;
+  margin: 1em 0 2em 0;
+  width: 14.85em;
+  height: 2.25em;
+  color: #fff;
+  background-color: #24ac47;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px black;
+  font-size: 1em;
+  font-weight: bold;
 }
