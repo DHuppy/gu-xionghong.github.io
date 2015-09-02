@@ -2,7 +2,7 @@
 -------------------
 ##Install Node.js
 1. 前往[Node.js](https://nodejs.org/)官网下载对应匹配自己系统的版本;
-2. 双击安装包进行安装(默认配置，一直Next);
+2. 双击安装包进行安装(默认配置，一直Next); 
 3. ctrl+r打开命令行，输入```npm -v```查看安装是否成功（成功会返回版本号，我的版本是2.11.2)；
 4. 安装相关环境,在命令行中键入一下命令进行环境配置:  
 ```npm install express -g npm install jade -g npm install mysql -g```
