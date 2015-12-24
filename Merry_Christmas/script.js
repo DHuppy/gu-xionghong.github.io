@@ -276,6 +276,7 @@ function PageC() {
     }, 5e3);
     var e = this;
     this.closeWindow(function() {
+
         snowflake(),
             function() {
                 e.run(function() {})
@@ -3978,6 +3979,13 @@ function snowflake() {
         }
     }
 
+    setTimeout(function(){
+      $('#content1').fadeIn();
+    },3000);
+
+    setTimeout(function(){
+      $('#content2').fadeIn();
+    },6000);
     //animation loop
     setInterval(draw, 33);
 }
