@@ -1,0 +1,9 @@
+{
+  "name": "WikiNote API",
+  "description": "WikiNote, a Wiki style knowledge management tool",
+  "version": "0.1.0",
+  "url": "http://team.frontseat.io",
+  "options": {
+    "outdir": "./WikiNoteAPIDocs"
+  }
+}

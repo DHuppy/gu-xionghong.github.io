@@ -1,0 +1,2676 @@
+{
+    "project": {
+        "name": "WikiNote API",
+        "description": "WikiNote, a Wiki style knowledge management tool",
+        "version": "0.1.0",
+        "url": "http://team.frontseat.io"
+    },
+    "files": {
+        "app/bower_components/jquery/dist/jquery.js": {
+            "name": "app/bower_components/jquery/dist/jquery.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/jquery/src/ajax/load.js": {
+            "name": "app/bower_components/jquery/src/ajax/load.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/jquery/src/core/ready.js": {
+            "name": "app/bower_components/jquery/src/core/ready.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/jquery/src/css/defaultDisplay.js": {
+            "name": "app/bower_components/jquery/src/css/defaultDisplay.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/jquery/src/data/accepts.js": {
+            "name": "app/bower_components/jquery/src/data/accepts.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/jquery/src/sizzle/dist/sizzle.js": {
+            "name": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/jquery/src/offset.js": {
+            "name": "app/bower_components/jquery/src/offset.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/marked/lib/marked.js": {
+            "name": "app/bower_components/marked/lib/marked.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/marked/marked.min.js": {
+            "name": "app/bower_components/marked/marked.min.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/requirejs/dist/dist-site.js": {
+            "name": "app/bower_components/requirejs/dist/dist-site.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/requirejs/dist/file.js": {
+            "name": "app/bower_components/requirejs/dist/file.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/requirejs/tests/circular/complexPlugin/slowText.js": {
+            "name": "app/bower_components/requirejs/tests/circular/complexPlugin/slowText.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/requirejs/tests/jquery/scripts/jquery-1.7.1.js": {
+            "name": "app/bower_components/requirejs/tests/jquery/scripts/jquery-1.7.1.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/nonamd.js": {
+            "name": "app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/nonamd.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/text.js": {
+            "name": "app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/text.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/requirejs/tests/text/textBuilt.js": {
+            "name": "app/bower_components/requirejs/tests/text/textBuilt.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/bower_components/requirejs/require.js": {
+            "name": "app/bower_components/requirejs/require.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/script/data.js": {
+            "name": "app/script/data.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/src/data.js": {
+            "name": "app/src/data.js",
+            "modules": {},
+            "classes": {
+                "data": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "data": {
+            "name": "data",
+            "shortname": "data",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/src/data.js",
+            "line": 1,
+            "description": "数据模块用于进行笔记数据相关的操作"
+        }
+    },
+    "classitems": [
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 858,
+            "description": "Create key-value caches of limited size",
+            "return": {
+                "description": "Returns the Object data after storing it on itself with\n\tproperty name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)\n\tdeleting the oldest entry",
+                "type": "Function(string, Object)"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 878,
+            "description": "Mark a function for special use by Sizzle",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "The function to mark",
+                    "type": "Function"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 887,
+            "description": "Support testing using an element",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "Passed the created div and expects a boolean result",
+                    "type": "Function"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 908,
+            "description": "Adds the same handler for all of the specified attrs",
+            "params": [
+                {
+                    "name": "attrs",
+                    "description": "Pipe-separated list of attributes",
+                    "type": "String"
+                },
+                {
+                    "name": "handler",
+                    "description": "The method that will be applied",
+                    "type": "Function"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 922,
+            "description": "Checks document order of two siblings",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "b",
+                    "description": "",
+                    "type": "Element"
+                }
+            ],
+            "return": {
+                "description": "Returns less than 0 if a precedes b, greater than 0 if a follows b",
+                "type": "Number"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 951,
+            "description": "Returns a function to use in pseudos for input types",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 962,
+            "description": "Returns a function to use in pseudos for buttons",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 973,
+            "description": "Returns a function to use in pseudos for positionals",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 995,
+            "description": "Checks a node for validity as a Sizzle context",
+            "params": [
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element|Object="
+                }
+            ],
+            "return": {
+                "description": "The input node if acceptable, otherwise a falsy value",
+                "type": "Element|Object|Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 1007,
+            "description": "Detects XML nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "An element or a document",
+                    "type": "Element|Object"
+                }
+            ],
+            "return": {
+                "description": "True iff elem is a non-HTML XML node",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 1019,
+            "description": "Sets document-related variables once based on the current document",
+            "params": [
+                {
+                    "name": "doc",
+                    "description": "An element or document object to use to set the document",
+                    "type": "Element|Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Returns the current document",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 1461,
+            "description": "Document sorting and removing duplicates",
+            "params": [
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "ArrayLike"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 1494,
+            "description": "Utility function for retrieving the text value of an array of DOM nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "",
+                    "type": "Array|Element"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 2467,
+            "description": "A low-level selection function that works with Sizzle's compiled\n selector functions",
+            "params": [
+                {
+                    "name": "selector",
+                    "description": "A selector or a pre-compiled\n selector function built with Sizzle.compile",
+                    "type": "String|Function"
+                },
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "Array",
+                    "optional": true
+                },
+                {
+                    "name": "seed",
+                    "description": "A set of elements to match against",
+                    "type": "Array",
+                    "optional": true
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 3427,
+            "description": "The ready event handler and self cleanup method",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 3520,
+            "description": "Determines whether an object can have data",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 5478,
+            "description": "Retrieve the actual display of a element",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "nodeName of the element",
+                    "type": "String"
+                },
+                {
+                    "name": "doc",
+                    "description": "Document object",
+                    "type": "Object"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 5502,
+            "description": "Try to determine the default display value of an element",
+            "params": [
+                {
+                    "name": "nodeName",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 8830,
+            "description": "Load a url into a page",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/dist/jquery.js",
+            "line": 8914,
+            "description": "Gets a window from an element",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/ajax/load.js",
+            "line": 15,
+            "description": "Load a url into a page",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/core/ready.js",
+            "line": 61,
+            "description": "The ready event handler and self cleanup method",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/css/defaultDisplay.js",
+            "line": 9,
+            "description": "Retrieve the actual display of a element",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "nodeName of the element",
+                    "type": "String"
+                },
+                {
+                    "name": "doc",
+                    "description": "Document object",
+                    "type": "Object"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/css/defaultDisplay.js",
+            "line": 33,
+            "description": "Try to determine the default display value of an element",
+            "params": [
+                {
+                    "name": "nodeName",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/data/accepts.js",
+            "line": 5,
+            "description": "Determines whether an object can have data",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 305,
+            "description": "Create key-value caches of limited size",
+            "return": {
+                "description": "Returns the Object data after storing it on itself with\n\tproperty name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)\n\tdeleting the oldest entry",
+                "type": "Function(string, Object)"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 325,
+            "description": "Mark a function for special use by Sizzle",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "The function to mark",
+                    "type": "Function"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 334,
+            "description": "Support testing using an element",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "Passed the created div and expects a boolean result",
+                    "type": "Function"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 355,
+            "description": "Adds the same handler for all of the specified attrs",
+            "params": [
+                {
+                    "name": "attrs",
+                    "description": "Pipe-separated list of attributes",
+                    "type": "String"
+                },
+                {
+                    "name": "handler",
+                    "description": "The method that will be applied",
+                    "type": "Function"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 369,
+            "description": "Checks document order of two siblings",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "b",
+                    "description": "",
+                    "type": "Element"
+                }
+            ],
+            "return": {
+                "description": "Returns less than 0 if a precedes b, greater than 0 if a follows b",
+                "type": "Number"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 398,
+            "description": "Returns a function to use in pseudos for input types",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 409,
+            "description": "Returns a function to use in pseudos for buttons",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 420,
+            "description": "Returns a function to use in pseudos for positionals",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 442,
+            "description": "Checks a node for validity as a Sizzle context",
+            "params": [
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element|Object="
+                }
+            ],
+            "return": {
+                "description": "The input node if acceptable, otherwise a falsy value",
+                "type": "Element|Object|Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 454,
+            "description": "Detects XML nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "An element or a document",
+                    "type": "Element|Object"
+                }
+            ],
+            "return": {
+                "description": "True iff elem is a non-HTML XML node",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 466,
+            "description": "Sets document-related variables once based on the current document",
+            "params": [
+                {
+                    "name": "doc",
+                    "description": "An element or document object to use to set the document",
+                    "type": "Element|Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Returns the current document",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 908,
+            "description": "Document sorting and removing duplicates",
+            "params": [
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "ArrayLike"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 941,
+            "description": "Utility function for retrieving the text value of an array of DOM nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "",
+                    "type": "Array|Element"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/sizzle/dist/sizzle.js",
+            "line": 1914,
+            "description": "A low-level selection function that works with Sizzle's compiled\n selector functions",
+            "params": [
+                {
+                    "name": "selector",
+                    "description": "A selector or a pre-compiled\n selector function built with Sizzle.compile",
+                    "type": "String|Function"
+                },
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Element"
+                },
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "Array",
+                    "optional": true
+                },
+                {
+                    "name": "seed",
+                    "description": "A set of elements to match against",
+                    "type": "Array",
+                    "optional": true
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/jquery/src/offset.js",
+            "line": 17,
+            "description": "Gets a window from an element",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 1,
+            "description": "marked - a markdown parser\nCopyright (c) 2011-2014, Christopher Jeffrey. (MIT Licensed)\nhttps://github.com/chjj/marked",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 9,
+            "description": "Block-Level Grammar",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 67,
+            "description": "Normal Block Grammar",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 73,
+            "description": "GFM Block Grammar",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 88,
+            "description": "GFM + Tables Block Grammar",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 97,
+            "description": "Block Lexer",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 116,
+            "description": "Expose Block Rules",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 122,
+            "description": "Static Lex Method",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 131,
+            "description": "Preprocessing",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 145,
+            "description": "Lexing",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 444,
+            "description": "Inline-Level Grammar",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 476,
+            "description": "Normal Inline Grammar",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 482,
+            "description": "Pedantic Inline Grammar",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 491,
+            "description": "GFM Inline Grammar",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 505,
+            "description": "GFM + Line Breaks Inline Grammar",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 514,
+            "description": "Inline Lexer & Compiler",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 541,
+            "description": "Expose Inline Rules",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 547,
+            "description": "Static Lexing/Compiling Method",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 556,
+            "description": "Lexing/Compiling",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 694,
+            "description": "Compile Link",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 707,
+            "description": "Smartypants Transformations",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 728,
+            "description": "Mangle Links",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 749,
+            "description": "Renderer",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 892,
+            "description": "Parsing & Compiling",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 905,
+            "description": "Static Parse Method",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 914,
+            "description": "Parse Loop",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 930,
+            "description": "Next Token",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 938,
+            "description": "Preview Next Token",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 946,
+            "description": "Parse Text Tokens",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 960,
+            "description": "Parse Current Token",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 1072,
+            "description": "Helpers",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 1131,
+            "description": "Marked",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 1219,
+            "description": "Options",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/lib/marked.js",
+            "line": 1245,
+            "description": "Expose",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/marked/marked.min.js",
+            "line": 1,
+            "description": "marked - a markdown parser\nCopyright (c) 2011-2014, Christopher Jeffrey. (MIT Licensed)\nhttps://github.com/chjj/marked",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/dist/dist-site.js",
+            "line": 1,
+            "license": "RequireJS Copyright (c) 2010-2011, The Dojo Foundation All Rights Reserved.\nAvailable via the MIT or new BSD license.\nsee: http://github.com/jrburke/requirejs for details",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/dist/file.js",
+            "line": 1,
+            "license": "Copyright (c) 2010-2011, The Dojo Foundation All Rights Reserved.\nAvailable via the MIT or new BSD license.\nsee: http://github.com/jrburke/requirejs for details",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/dist/file.js",
+            "line": 51,
+            "description": "Gets the absolute file path as a string, normalized\nto using front slashes for path separators.",
+            "params": [
+                {
+                    "name": "fileName",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/dist/file.js",
+            "line": 166,
+            "description": "Reads a *text* file.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/tests/circular/complexPlugin/slowText.js",
+            "line": 4,
+            "license": "RequireJS text 1.0.2 Copyright (c) 2010-2011, The Dojo Foundation All Rights Reserved.\nAvailable via the MIT or new BSD license.\nsee: http://github.com/jrburke/requirejs for details",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/tests/circular/complexPlugin/slowText.js",
+            "line": 145,
+            "description": "Parses a resource name into its component parts. Resource names\nlook like: module/name.ext!strip, where the !strip part is\noptional.",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "the resource name",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "with properties \"moduleName\", \"ext\" and \"strip\"\nwhere strip is a boolean.",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/tests/circular/complexPlugin/slowText.js",
+            "line": 175,
+            "description": "Is an URL on another domain. Only works for browser use, returns\nfalse in non-browser environments. Only used to know if an\noptimized .js version of a text resource should be loaded\ninstead.",
+            "params": [
+                {
+                    "name": "url",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/tests/jquery/scripts/jquery-1.7.1.js",
+            "line": 4182,
+            "description": "Utility function for retreiving the text value of an array of DOM nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "",
+                    "type": "Array|Element"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/nonamd.js",
+            "line": 14,
+            "description": "AMD loader plugin that wraps non-amd scripts as amd modules on the fly.\nDepends on the standard text! plugin, registered under the module id \"text\".\n\nWrapping is the only 100% safe method of ensuring that \na non-amd module that depends on another non-amd module\nuses the right version of the latter.\n\nThe following description shows how it is possible to load an \nincorrect version of a dependency if the _native_ shim is used:\n\n1. A first module, A, is required.\n2. Module A depends on the non-amd module, J1.\n3. Module J1 is not yet loaded.\n4. Module J1 is then loaded and publishes its value in global variable `J` and the loader\n   reads this value correctly, according to an `exports: \"J\"` configuration.\n5. Module A is loaded and correctly reads the global value exported by module J1, in variable \"J\".\n6. A second module, B, is required.\n7. Module B depends on another non-amd module, J2.\n8. Module J2 is not yet loaded.\n9. Module J2 is then loaded and **also** publishes its value in global variable `J` and the loader\n   reads this value correctly, according to an `exports: \"J\"` configuration.\n10. Module B is loaded and correctly reads the global value exported by module J2, in variable \"J\".\n11. A third module, C, is required.\n12. Module C depends on the non-amd module, J1.\n13. Module J1 is **already** loaded.\n14. Module C is then loaded and **incorrectly** reads the global value exported by module J2, \n    in variable \"J\", and not that exported by module J1.\n\nIn any case, J1 or J2, the AMD loader correctly reads the just published value, \nand so real AMD modules depending on these always receive the correct value.\n\nThe conclusion is that to be 100% safe,\nany code depending on non-amd modules \n**must** be an amd module!\n\nThis plugin makes it easy to turn non-amd modules into amd modules.\nThe downfall is that all modules that depend on non-amd modules \nneed to use its _special_ module id:\n\n```javascript\ndefine(['amd!jquery.ui'], function($) {\n   // jquery ui has been loaded, and in the configured jquery instance, for sure, really, really!\n});\n```\n\nThe configuration of a module for use with this plugin is as close\nas possible to a _native_ shim configuration:\n\n```javascript\nrequirejs.config({\n  paths: {\n    \"amd\": \"path to the non-amd plugin\" \n  },\n  \n  config: {\n    // non-amd plugin configuration section\n    \"amd\": {\n      shim: {\n        \"jquery.ui\": {\n           exports: \"$\", // re-exports jquery\n           deps: { // instead of just an array, an object allows defining the define function argument names\n             \"$\": \"the-module-id-of-the-jquery-I-want\"\n             // other dependencies\n           }\n        }\n      }\n    }\n  }\n});\n```",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/nonamd.js",
+            "line": 120,
+            "description": "Compiles a non-amd module given its non-amd code and its compilation configuration options.",
+            "params": [
+                {
+                    "name": "jsText",
+                    "description": "The non-amd JavaScript code.",
+                    "type": "String"
+                },
+                {
+                    "name": "moduleConfig",
+                    "description": "The non-amd configuration of the module being compiled.",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "id",
+                            "description": "The amd id of the module being compiled.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "url",
+                            "description": "The url from which the `jsText` was loaded from.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "prescript",
+                            "description": "Arbitrary JavaScript code placed at \n   the first line of the module's define function.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "postscript",
+                            "description": "Arbitrary JavaScript code placed at \n   the end of the module's define function.\n   Placed before the return code generated when `exports` is also specified.\n   If this option already contains a return statement, don't specify the `exports` option.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "exports",
+                            "description": "The name of a variable that the module exports.\n   When unspecified, the module value must instead be returned by the \n   code in the more general `postscript` option.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "deps",
+                            "description": "A map of dependencies of the module, \n   having as keys the module's define function argument names and as values the correposding module ids.",
+                            "type": "Object.<string, string>",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "name": "isBuild",
+                    "description": "Whether running in build mode, under r.js.",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/text.js",
+            "line": 1,
+            "license": "RequireJS text 2.0.14 Copyright (c) 2010-2014, The Dojo Foundation All Rights Reserved.\nAvailable via the MIT or new BSD license.\nsee: http://github.com/requirejs/text for details",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/text.js",
+            "line": 77,
+            "description": "Parses a resource name into its component parts. Resource names\nlook like: module/name.ext!strip, where the !strip part is\noptional.",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "the resource name",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "with properties \"moduleName\", \"ext\" and \"strip\"\nwhere strip is a boolean.",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/text.js",
+            "line": 121,
+            "description": "Is an URL on another domain. Only works for browser use, returns\nfalse in non-browser environments. Only used to know if an\noptimized .js version of a text resource should be loaded\ninstead.",
+            "params": [
+                {
+                    "name": "url",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/tests/text/textBuilt.js",
+            "line": 39,
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1,
+            "license": "RequireJS 2.1.19 Copyright (c) 2010-2015, The Dojo Foundation All Rights Reserved.\nAvailable via the MIT or new BSD license.\nsee: http://github.com/jrburke/requirejs for details",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 49,
+            "description": "Helper function for iterating over an array. If the func returns\na true value, it will break out of the loop.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 64,
+            "description": "Helper function for iterating over an array backwards. If the func\nreturns a true value, it will break out of the loop.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 87,
+            "description": "Cycles over properties in an object and calls a function for each\nproperty value. If the function returns a truthy value, then the\niteration is stopped.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 103,
+            "description": "Simple function to mix in properties from source into target,\nbut only if target does not already have a property of the same name.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 157,
+            "description": "Constructs an error with a pointer to an URL with more information.",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "the error ID that maps to an ID on a web page.",
+                    "type": "String"
+                },
+                {
+                    "name": "message",
+                    "description": "human readable error.",
+                    "type": "String"
+                },
+                {
+                    "name": "err",
+                    "description": "the original error, if there is one.",
+                    "type": "Error",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Error"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 225,
+            "description": "Trims the . and .. from an array of path segments.\nIt will keep a leading path segment if a .. will become\nthe first path segment, to help with module name lookups,\nwhich act like paths, but can be remapped. But the end result,\nall paths that use this function should look normalized.\nNOTE: this method MODIFIES the input array.",
+            "params": [
+                {
+                    "name": "ary",
+                    "description": "the array of path segments.",
+                    "type": "Array"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 257,
+            "description": "Given a relative module name, like ./something, normalize it to\na real name that can be mapped to a path.",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "the relative name",
+                    "type": "String"
+                },
+                {
+                    "name": "baseName",
+                    "description": "a real name that the name arg is relative\nto.",
+                    "type": "String"
+                },
+                {
+                    "name": "applyMap",
+                    "description": "apply the map config to the value. Should\nonly be done if this normalization is for a dependency ID.",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "normalized name",
+                "type": "String"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 399,
+            "description": "Creates a module mapping that includes plugin prefix, module\nname, and path. If parentModuleMap is provided it will\nalso normalize the name via require.normalize()",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "the module name",
+                    "type": "String"
+                },
+                {
+                    "name": "parentModuleMap",
+                    "description": "parent module map\nfor the module name, used to resolve relative names.",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "isNormalized:",
+                    "description": "is the ID already normalized.\nThis is true if this call is done for a define() module ID.",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "applyMap:",
+                    "description": "apply the map config to the ID.\nShould only be true if this map is for a dependency.",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 550,
+            "description": "Internal method to transfer globalQueue items to this context's\ndefQueue.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 832,
+            "description": "Checks if the module is ready to define itself, and if so,\ndefine it.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1207,
+            "description": "Given an event from a script node, get the requirejs info from it,\nand then removes the event listeners on the node.",
+            "params": [
+                {
+                    "name": "evt",
+                    "description": "",
+                    "type": "Event"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1261,
+            "description": "Set a configuration for the context.",
+            "params": [
+                {
+                    "name": "cfg",
+                    "description": "config object to integrate.",
+                    "type": "Object"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1448,
+            "description": "Converts a module name + .extension into an URL path.\n*Requires* the use of a module name. It does not support using\nplain URLs like nameToUrl.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1522,
+            "description": "Called to enable a module if it is still in the registry\nawaiting enablement. A second arg, parent, the parent module,\nis passed in for context, when this method is overridden by\nthe optimizer. Not shown here to keep code compact.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1535,
+            "description": "Internal method used by environment adapters to complete a load event.\nA load event could be a script load or just a load pass from a synchronous\nload call.",
+            "params": [
+                {
+                    "name": "moduleName",
+                    "description": "the name of the module to potentially complete.",
+                    "type": "String"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1591,
+            "description": "Converts a module name to a file path. Supports cases where\nmoduleName may actually be just an URL.\nNote that it **does not** call normalize on the moduleName,\nit is assumed to have already been normalized. This is an\ninternal API, not a public one. Use toUrl for the public API.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1662,
+            "description": "Executes a module callback function. Broken out as a separate function\nsolely to allow the build system to sequence the files in the built\nlayer in the right sequence.",
+            "access": "private",
+            "tagname": "",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1673,
+            "description": "callback for script loads, used to check status of loading.",
+            "params": [
+                {
+                    "name": "evt",
+                    "description": "the event from the browser for the script\nthat was loaded.",
+                    "type": "Event"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1695,
+            "description": "Callback for script errors.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1710,
+            "description": "Main entry point.\n\nIf the only argument to require is a string, then the module that\nis represented by that string is fetched for the appropriate context.\n\nIf the first argument is an array, then it will be treated as an array\nof dependency string names to fetch. An optional function callback can\nbe specified to execute when all of those dependencies are available.\n\nMake a local req variable to help Caja compliance (it assumes things\non a require that are not standardized), and to give a short\nname for minification/local scope use.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1760,
+            "description": "Support require.config() to make it easier to cooperate with other\nAMD loaders on globally agreed names.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1768,
+            "description": "Execute something after the current tick\nof the event loop. Override for other envs\nthat have a better solution than setTimeout.",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "function to execute later.",
+                    "type": "Function"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1778,
+            "description": "Export require as a global, but only if it does not already exist.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1825,
+            "description": "Any errors that require explicitly generates will be passed to this\nfunction. Intercept/override it if you want custom error handling.",
+            "params": [
+                {
+                    "name": "err",
+                    "description": "the error object.",
+                    "type": "Error"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1832,
+            "description": "Creates the node for the load command. Only used in browser envs.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 1845,
+            "description": "Does the request to load a module for the browser case.\nMake this a separate function to allow other environments\nto override it.",
+            "params": [
+                {
+                    "name": "context",
+                    "description": "the require context to find state.",
+                    "type": "Object"
+                },
+                {
+                    "name": "moduleName",
+                    "description": "the name of the module.",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "the URL to the module.",
+                    "type": "Object"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 2004,
+            "description": "The function that handles definitions of modules. Differs from\nrequire() in that a string for the module should be the first argument,\nand the function to execute after dependencies are loaded should\nreturn a value to define the module corresponding to the first argument's\nname.",
+            "class": "data"
+        },
+        {
+            "file": "app/bower_components/requirejs/require.js",
+            "line": 2077,
+            "description": "Executes the text. Normally just uses eval, but can be modified\nto use a better, environment-specific call. Only used for transpiling\nloader plugins, not for plain JS modules.",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "the text to execute/evaluate.",
+                    "type": "String"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/script/data.js",
+            "line": 30,
+            "description": "Check the existence of current notebook",
+            "params": [
+                {
+                    "name": "notebookName",
+                    "description": "Notebook title",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The existence of named notebook",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/script/data.js",
+            "line": 44,
+            "description": "Check the existence of selected note title in target notebook",
+            "params": [
+                {
+                    "name": "notebookId",
+                    "description": "Notebook ID",
+                    "type": "Int"
+                },
+                {
+                    "name": "noteTitle",
+                    "description": "Note title",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The note existence state",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/script/data.js",
+            "line": 68,
+            "description": "Create a new notebook",
+            "params": [
+                {
+                    "name": "title",
+                    "description": "Notebook title (Must be a unique value)",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Create status",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/script/data.js",
+            "line": 92,
+            "description": "Get all notebook objects inside an array (Atleast one notebook, default)",
+            "return": {
+                "description": "All notebook objects in array",
+                "type": "Array"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/script/data.js",
+            "line": 100,
+            "description": "Get Notebook by ID",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "The requested notebook id",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "Single notebook object",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/script/data.js",
+            "line": 112,
+            "description": "Create a note object and add into selected notebook",
+            "params": [
+                {
+                    "name": "title",
+                    "description": "Note title",
+                    "type": "String"
+                },
+                {
+                    "name": "content",
+                    "description": "Note content in markdown or plain text",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The state of note creation",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 34,
+            "description": "检查提供的笔记本名是否存在",
+            "itemtype": "method",
+            "name": "_checkNotebookExistence",
+            "params": [
+                {
+                    "name": "notebookName",
+                    "description": "笔记本名称",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "笔记本是否存在状态",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 50,
+            "description": "检查所提供的笔记名称是否在指定笔记本中已经存在",
+            "itemtype": "method",
+            "name": "_checkNoteExistence",
+            "params": [
+                {
+                    "name": "notebookId",
+                    "description": "笔记本 ID",
+                    "type": "Int"
+                },
+                {
+                    "name": "noteTitle",
+                    "description": "笔记名称",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "笔记是否存在状态",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 73,
+            "description": "在笔记本数组中删除指定索引的笔记本并将删除的笔记本返回",
+            "itemtype": "method",
+            "name": "_deleteNoteBookAtIndex",
+            "params": [
+                {
+                    "name": "notebookIndex",
+                    "description": "笔记本索引",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "被删除的笔记本实例对象",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 83,
+            "description": "在笔记数组中删除指定索引的笔记并将删除的笔记返回",
+            "itemtype": "method",
+            "name": "_deleteNoteAtIndex",
+            "params": [
+                {
+                    "name": "noteIndex",
+                    "description": "笔记索引",
+                    "type": "Int"
+                },
+                {
+                    "name": "notebookId",
+                    "description": "笔记本ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "被删除的笔记本实例对象",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 95,
+            "description": "找到指定 ID 对于笔记本在数组中所对应的索引",
+            "itemtype": "method",
+            "name": "_findNotebookIndexById",
+            "params": [
+                {
+                    "name": "notebookId",
+                    "description": "笔记本 ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "笔记本索引号 （-1 为未找到）",
+                "type": "Int"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 111,
+            "description": "找到指定 ID 对于笔记在数组中所对应的索引",
+            "itemtype": "method",
+            "name": "_findNoteIndexById",
+            "params": [
+                {
+                    "name": "noteId",
+                    "description": "笔记 ID",
+                    "type": "Int"
+                },
+                {
+                    "name": "notebookId",
+                    "description": "笔记本 ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "笔记索引号 （-1 为未找到）",
+                "type": "Int"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 132,
+            "description": "创建一个新的笔记本并将其保存值笔记本数组中（笔记本实例必须唯一不可重名）",
+            "itemtype": "method",
+            "name": "createNotebook",
+            "params": [
+                {
+                    "name": "title",
+                    "description": "笔记本名称",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "创建成功状态",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 158,
+            "description": "删除指定 ID 的笔记本",
+            "itemtype": "method",
+            "name": "deleteNoteBookById",
+            "params": [
+                {
+                    "name": "notebookId",
+                    "description": "指定笔记本 ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "被删除的笔记本",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 175,
+            "description": "通过笔记本 ID 更改笔记本的名称",
+            "itemtype": "method",
+            "name": "updateNoteBookTitleById",
+            "params": [
+                {
+                    "name": "notebookId",
+                    "description": "笔记本 ID",
+                    "type": "Int"
+                },
+                {
+                    "name": "newTitle",
+                    "description": "笔记本新名称",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "笔记本更名状态",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 191,
+            "description": "通过笔记 ID 更改笔记本的名称",
+            "itemtype": "method",
+            "name": "updateNoteTitleById",
+            "params": [
+                {
+                    "name": "noteId",
+                    "description": "笔记 ID",
+                    "type": "Int"
+                },
+                {
+                    "name": "newTitle",
+                    "description": "笔记本新名称",
+                    "type": "String"
+                },
+                {
+                    "name": "notebookId",
+                    "description": "笔记本 ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "笔记更名状态",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 208,
+            "description": "通过笔记本的现有名称改变成新的名称",
+            "itemtype": "method",
+            "name": "updateNoteBookTitleByTitle",
+            "params": [
+                {
+                    "name": "notebookTitle",
+                    "description": "笔记本现有名称",
+                    "type": "String"
+                },
+                {
+                    "name": "newTitle",
+                    "description": "笔记本新名称",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "笔记本更名状态",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 220,
+            "description": "通过笔记的现有名称改变成新的名称",
+            "itemtype": "method",
+            "name": "updateNoteTitleByTitle",
+            "params": [
+                {
+                    "name": "noteTitle",
+                    "description": "笔记现有名称",
+                    "type": "String"
+                },
+                {
+                    "name": "newTitle",
+                    "description": "笔记新名称",
+                    "type": "String"
+                },
+                {
+                    "name": "notebookId",
+                    "description": "笔记本 ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "笔记更名状态",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 233,
+            "description": "删除指定 ID 的笔记",
+            "itemtype": "method",
+            "name": "deleteNoteById",
+            "params": [
+                {
+                    "name": "noteId",
+                    "description": "指定笔记 ID",
+                    "type": "Int"
+                },
+                {
+                    "name": "notebookId",
+                    "description": "指定笔记本 ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "被删除的笔记",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 251,
+            "description": "删除指定标题的笔记本",
+            "itemtype": "method",
+            "name": "deleteNotebookByTitle",
+            "params": [
+                {
+                    "name": "notebookTitle",
+                    "description": "笔记本标题",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "所删除的笔记本",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 263,
+            "description": "删除指定标题的笔记",
+            "itemtype": "method",
+            "name": "deleteNoteByTitle",
+            "params": [
+                {
+                    "name": "noteTitle",
+                    "description": "笔记标题",
+                    "type": "String"
+                },
+                {
+                    "name": "notebookId",
+                    "description": "笔记本ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "所删除的笔记",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 276,
+            "description": "获取所有现有笔记本",
+            "itemtype": "method",
+            "name": "getAllNotebook",
+            "return": {
+                "description": "返回现有所有保存在数组中的笔记本",
+                "type": "Array"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 286,
+            "description": "更具笔记本 ID 获取笔记本",
+            "itemtype": "method",
+            "name": "getNoteBookById",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "笔记本 ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "指定 ID 的笔记本示例对象",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 300,
+            "description": "通过笔记本名称获取笔记本",
+            "itemtype": "method",
+            "name": "getNoteBookByTitle",
+            "params": [
+                {
+                    "name": "notebookTitle",
+                    "description": "笔记本名称",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "笔记本实例对象",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 316,
+            "description": "新建一个笔记并将其插入指定 ID 的笔记本之中",
+            "itemtype": "method",
+            "name": "createNote",
+            "params": [
+                {
+                    "name": "title",
+                    "description": "笔记标题（唯一不可重复）",
+                    "type": "String"
+                },
+                {
+                    "name": "content",
+                    "description": "笔记内容",
+                    "type": "String"
+                },
+                {
+                    "name": "notebookId",
+                    "description": "指定笔记本 ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "笔记创建状态",
+                "type": "Boolean"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 350,
+            "description": "获取指定笔记本中所有的笔记",
+            "itemtype": "method",
+            "name": "getAllNote",
+            "params": [
+                {
+                    "name": "notebookId",
+                    "description": "指定笔记本 ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "储存在笔记本中的笔记数组",
+                "type": "Array"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 362,
+            "description": "从指定 ID 的笔记本中获取指定 ID 的笔记条目",
+            "itemtype": "method",
+            "name": "getNoteById",
+            "params": [
+                {
+                    "name": "noteId",
+                    "description": "指定的笔记 ID",
+                    "type": "Int"
+                },
+                {
+                    "name": "notebookID",
+                    "description": "指定的笔记本 ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "笔记实例对象",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 382,
+            "description": "根据笔记的名称从指定的笔记本中取出指定的笔记",
+            "itemtype": "method",
+            "name": "getNoteByTitle",
+            "params": [
+                {
+                    "name": "noteTitle",
+                    "description": "笔记名称",
+                    "type": "String"
+                },
+                {
+                    "name": "notebookID",
+                    "description": "笔记本所属 ID",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "指定笔记实例对象",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 402,
+            "description": "通过笔记的 ID 与 笔记本的 ID 来更新笔记的内容",
+            "itemtype": "method",
+            "name": "updateNoteContentByID",
+            "params": [
+                {
+                    "name": "noteId",
+                    "description": "笔记 ID",
+                    "type": "Int"
+                },
+                {
+                    "name": "notebookID",
+                    "description": "笔记本 ID",
+                    "type": "Int"
+                },
+                {
+                    "name": "newContent",
+                    "description": "笔记的",
+                    "type": "String"
+                }
+            ],
+            "class": "data"
+        },
+        {
+            "file": "app/src/data.js",
+            "line": 414,
+            "description": "通过笔记的标题与笔记本的 ID 来更新笔记的内容",
+            "itemtype": "method",
+            "name": "updateNoteContentByTitle",
+            "params": [
+                {
+                    "name": "noteTitle",
+                    "description": "笔记标题",
+                    "type": "String"
+                },
+                {
+                    "name": "notebookID",
+                    "description": "笔记本 ID",
+                    "type": "Int"
+                },
+                {
+                    "name": "newContent",
+                    "description": "笔记更新内容",
+                    "type": "String"
+                }
+            ],
+            "class": "data"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/jquery/dist/jquery.js:858"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/jquery/dist/jquery.js:922"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/jquery/dist/jquery.js:995"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/jquery/dist/jquery.js:1007"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/jquery/dist/jquery.js:1019"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:305"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:369"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:442"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:454"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:466"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " app/bower_components/requirejs/dist/dist-site.js:1"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " app/bower_components/requirejs/dist/file.js:1"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " app/bower_components/requirejs/tests/circular/complexPlugin/slowText.js:4"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/requirejs/tests/circular/complexPlugin/slowText.js:145"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/requirejs/tests/circular/complexPlugin/slowText.js:175"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/text.js:1"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/text.js:77"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/text.js:121"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " app/bower_components/requirejs/require.js:1"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/requirejs/require.js:157"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/requirejs/require.js:257"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/requirejs/require.js:399"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/bower_components/requirejs/require.js:1207"
+        },
+        {
+            "message": "Missing item type\nCreate key-value caches of limited size",
+            "line": " app/bower_components/jquery/dist/jquery.js:858"
+        },
+        {
+            "message": "Missing item type\nMark a function for special use by Sizzle",
+            "line": " app/bower_components/jquery/dist/jquery.js:878"
+        },
+        {
+            "message": "Missing item type\nSupport testing using an element",
+            "line": " app/bower_components/jquery/dist/jquery.js:887"
+        },
+        {
+            "message": "Missing item type\nAdds the same handler for all of the specified attrs",
+            "line": " app/bower_components/jquery/dist/jquery.js:908"
+        },
+        {
+            "message": "Missing item type\nChecks document order of two siblings",
+            "line": " app/bower_components/jquery/dist/jquery.js:922"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for input types",
+            "line": " app/bower_components/jquery/dist/jquery.js:951"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for buttons",
+            "line": " app/bower_components/jquery/dist/jquery.js:962"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for positionals",
+            "line": " app/bower_components/jquery/dist/jquery.js:973"
+        },
+        {
+            "message": "Missing item type\nChecks a node for validity as a Sizzle context",
+            "line": " app/bower_components/jquery/dist/jquery.js:995"
+        },
+        {
+            "message": "Missing item type\nDetects XML nodes",
+            "line": " app/bower_components/jquery/dist/jquery.js:1007"
+        },
+        {
+            "message": "Missing item type\nSets document-related variables once based on the current document",
+            "line": " app/bower_components/jquery/dist/jquery.js:1019"
+        },
+        {
+            "message": "Missing item type\nDocument sorting and removing duplicates",
+            "line": " app/bower_components/jquery/dist/jquery.js:1461"
+        },
+        {
+            "message": "Missing item type\nUtility function for retrieving the text value of an array of DOM nodes",
+            "line": " app/bower_components/jquery/dist/jquery.js:1494"
+        },
+        {
+            "message": "Missing item type\nA low-level selection function that works with Sizzle's compiled\n selector functions",
+            "line": " app/bower_components/jquery/dist/jquery.js:2467"
+        },
+        {
+            "message": "Missing item type\nThe ready event handler and self cleanup method",
+            "line": " app/bower_components/jquery/dist/jquery.js:3427"
+        },
+        {
+            "message": "Missing item type\nDetermines whether an object can have data",
+            "line": " app/bower_components/jquery/dist/jquery.js:3520"
+        },
+        {
+            "message": "Missing item type\nRetrieve the actual display of a element",
+            "line": " app/bower_components/jquery/dist/jquery.js:5478"
+        },
+        {
+            "message": "Missing item type\nTry to determine the default display value of an element",
+            "line": " app/bower_components/jquery/dist/jquery.js:5502"
+        },
+        {
+            "message": "Missing item type\nLoad a url into a page",
+            "line": " app/bower_components/jquery/dist/jquery.js:8830"
+        },
+        {
+            "message": "Missing item type\nGets a window from an element",
+            "line": " app/bower_components/jquery/dist/jquery.js:8914"
+        },
+        {
+            "message": "Missing item type\nLoad a url into a page",
+            "line": " app/bower_components/jquery/src/ajax/load.js:15"
+        },
+        {
+            "message": "Missing item type\nThe ready event handler and self cleanup method",
+            "line": " app/bower_components/jquery/src/core/ready.js:61"
+        },
+        {
+            "message": "Missing item type\nRetrieve the actual display of a element",
+            "line": " app/bower_components/jquery/src/css/defaultDisplay.js:9"
+        },
+        {
+            "message": "Missing item type\nTry to determine the default display value of an element",
+            "line": " app/bower_components/jquery/src/css/defaultDisplay.js:33"
+        },
+        {
+            "message": "Missing item type\nDetermines whether an object can have data",
+            "line": " app/bower_components/jquery/src/data/accepts.js:5"
+        },
+        {
+            "message": "Missing item type\nCreate key-value caches of limited size",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:305"
+        },
+        {
+            "message": "Missing item type\nMark a function for special use by Sizzle",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:325"
+        },
+        {
+            "message": "Missing item type\nSupport testing using an element",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:334"
+        },
+        {
+            "message": "Missing item type\nAdds the same handler for all of the specified attrs",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:355"
+        },
+        {
+            "message": "Missing item type\nChecks document order of two siblings",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:369"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for input types",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:398"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for buttons",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:409"
+        },
+        {
+            "message": "Missing item type\nReturns a function to use in pseudos for positionals",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:420"
+        },
+        {
+            "message": "Missing item type\nChecks a node for validity as a Sizzle context",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:442"
+        },
+        {
+            "message": "Missing item type\nDetects XML nodes",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:454"
+        },
+        {
+            "message": "Missing item type\nSets document-related variables once based on the current document",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:466"
+        },
+        {
+            "message": "Missing item type\nDocument sorting and removing duplicates",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:908"
+        },
+        {
+            "message": "Missing item type\nUtility function for retrieving the text value of an array of DOM nodes",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:941"
+        },
+        {
+            "message": "Missing item type\nA low-level selection function that works with Sizzle's compiled\n selector functions",
+            "line": " app/bower_components/jquery/src/sizzle/dist/sizzle.js:1914"
+        },
+        {
+            "message": "Missing item type\nGets a window from an element",
+            "line": " app/bower_components/jquery/src/offset.js:17"
+        },
+        {
+            "message": "Missing item type\nmarked - a markdown parser\nCopyright (c) 2011-2014, Christopher Jeffrey. (MIT Licensed)\nhttps://github.com/chjj/marked",
+            "line": " app/bower_components/marked/lib/marked.js:1"
+        },
+        {
+            "message": "Missing item type\nBlock-Level Grammar",
+            "line": " app/bower_components/marked/lib/marked.js:9"
+        },
+        {
+            "message": "Missing item type\nNormal Block Grammar",
+            "line": " app/bower_components/marked/lib/marked.js:67"
+        },
+        {
+            "message": "Missing item type\nGFM Block Grammar",
+            "line": " app/bower_components/marked/lib/marked.js:73"
+        },
+        {
+            "message": "Missing item type\nGFM + Tables Block Grammar",
+            "line": " app/bower_components/marked/lib/marked.js:88"
+        },
+        {
+            "message": "Missing item type\nBlock Lexer",
+            "line": " app/bower_components/marked/lib/marked.js:97"
+        },
+        {
+            "message": "Missing item type\nExpose Block Rules",
+            "line": " app/bower_components/marked/lib/marked.js:116"
+        },
+        {
+            "message": "Missing item type\nStatic Lex Method",
+            "line": " app/bower_components/marked/lib/marked.js:122"
+        },
+        {
+            "message": "Missing item type\nPreprocessing",
+            "line": " app/bower_components/marked/lib/marked.js:131"
+        },
+        {
+            "message": "Missing item type\nLexing",
+            "line": " app/bower_components/marked/lib/marked.js:145"
+        },
+        {
+            "message": "Missing item type\nInline-Level Grammar",
+            "line": " app/bower_components/marked/lib/marked.js:444"
+        },
+        {
+            "message": "Missing item type\nNormal Inline Grammar",
+            "line": " app/bower_components/marked/lib/marked.js:476"
+        },
+        {
+            "message": "Missing item type\nPedantic Inline Grammar",
+            "line": " app/bower_components/marked/lib/marked.js:482"
+        },
+        {
+            "message": "Missing item type\nGFM Inline Grammar",
+            "line": " app/bower_components/marked/lib/marked.js:491"
+        },
+        {
+            "message": "Missing item type\nGFM + Line Breaks Inline Grammar",
+            "line": " app/bower_components/marked/lib/marked.js:505"
+        },
+        {
+            "message": "Missing item type\nInline Lexer & Compiler",
+            "line": " app/bower_components/marked/lib/marked.js:514"
+        },
+        {
+            "message": "Missing item type\nExpose Inline Rules",
+            "line": " app/bower_components/marked/lib/marked.js:541"
+        },
+        {
+            "message": "Missing item type\nStatic Lexing/Compiling Method",
+            "line": " app/bower_components/marked/lib/marked.js:547"
+        },
+        {
+            "message": "Missing item type\nLexing/Compiling",
+            "line": " app/bower_components/marked/lib/marked.js:556"
+        },
+        {
+            "message": "Missing item type\nCompile Link",
+            "line": " app/bower_components/marked/lib/marked.js:694"
+        },
+        {
+            "message": "Missing item type\nSmartypants Transformations",
+            "line": " app/bower_components/marked/lib/marked.js:707"
+        },
+        {
+            "message": "Missing item type\nMangle Links",
+            "line": " app/bower_components/marked/lib/marked.js:728"
+        },
+        {
+            "message": "Missing item type\nRenderer",
+            "line": " app/bower_components/marked/lib/marked.js:749"
+        },
+        {
+            "message": "Missing item type\nParsing & Compiling",
+            "line": " app/bower_components/marked/lib/marked.js:892"
+        },
+        {
+            "message": "Missing item type\nStatic Parse Method",
+            "line": " app/bower_components/marked/lib/marked.js:905"
+        },
+        {
+            "message": "Missing item type\nParse Loop",
+            "line": " app/bower_components/marked/lib/marked.js:914"
+        },
+        {
+            "message": "Missing item type\nNext Token",
+            "line": " app/bower_components/marked/lib/marked.js:930"
+        },
+        {
+            "message": "Missing item type\nPreview Next Token",
+            "line": " app/bower_components/marked/lib/marked.js:938"
+        },
+        {
+            "message": "Missing item type\nParse Text Tokens",
+            "line": " app/bower_components/marked/lib/marked.js:946"
+        },
+        {
+            "message": "Missing item type\nParse Current Token",
+            "line": " app/bower_components/marked/lib/marked.js:960"
+        },
+        {
+            "message": "Missing item type\nHelpers",
+            "line": " app/bower_components/marked/lib/marked.js:1072"
+        },
+        {
+            "message": "Missing item type\nMarked",
+            "line": " app/bower_components/marked/lib/marked.js:1131"
+        },
+        {
+            "message": "Missing item type\nOptions",
+            "line": " app/bower_components/marked/lib/marked.js:1219"
+        },
+        {
+            "message": "Missing item type\nExpose",
+            "line": " app/bower_components/marked/lib/marked.js:1245"
+        },
+        {
+            "message": "Missing item type\nmarked - a markdown parser\nCopyright (c) 2011-2014, Christopher Jeffrey. (MIT Licensed)\nhttps://github.com/chjj/marked",
+            "line": " app/bower_components/marked/marked.min.js:1"
+        },
+        {
+            "message": "Missing item type",
+            "line": " app/bower_components/requirejs/dist/dist-site.js:1"
+        },
+        {
+            "message": "Missing item type",
+            "line": " app/bower_components/requirejs/dist/file.js:1"
+        },
+        {
+            "message": "Missing item type\nGets the absolute file path as a string, normalized\nto using front slashes for path separators.",
+            "line": " app/bower_components/requirejs/dist/file.js:51"
+        },
+        {
+            "message": "Missing item type\nReads a *text* file.",
+            "line": " app/bower_components/requirejs/dist/file.js:166"
+        },
+        {
+            "message": "Missing item type",
+            "line": " app/bower_components/requirejs/tests/circular/complexPlugin/slowText.js:4"
+        },
+        {
+            "message": "Missing item type\nParses a resource name into its component parts. Resource names\nlook like: module/name.ext!strip, where the !strip part is\noptional.",
+            "line": " app/bower_components/requirejs/tests/circular/complexPlugin/slowText.js:145"
+        },
+        {
+            "message": "Missing item type\nIs an URL on another domain. Only works for browser use, returns\nfalse in non-browser environments. Only used to know if an\noptimized .js version of a text resource should be loaded\ninstead.",
+            "line": " app/bower_components/requirejs/tests/circular/complexPlugin/slowText.js:175"
+        },
+        {
+            "message": "Missing item type\nUtility function for retreiving the text value of an array of DOM nodes",
+            "line": " app/bower_components/requirejs/tests/jquery/scripts/jquery-1.7.1.js:4182"
+        },
+        {
+            "message": "Missing item type\nAMD loader plugin that wraps non-amd scripts as amd modules on the fly.\nDepends on the standard text! plugin, registered under the module id \"text\".\n\nWrapping is the only 100% safe method of ensuring that \na non-amd module that depends on another non-amd module\nuses the right version of the latter.\n\nThe following description shows how it is possible to load an \nincorrect version of a dependency if the _native_ shim is used:\n\n1. A first module, A, is required.\n2. Module A depends on the non-amd module, J1.\n3. Module J1 is not yet loaded.\n4. Module J1 is then loaded and publishes its value in global variable `J` and the loader\n   reads this value correctly, according to an `exports: \"J\"` configuration.\n5. Module A is loaded and correctly reads the global value exported by module J1, in variable \"J\".\n6. A second module, B, is required.\n7. Module B depends on another non-amd module, J2.\n8. Module J2 is not yet loaded.\n9. Module J2 is then loaded and **also** publishes its value in global variable `J` and the loader\n   reads this value correctly, according to an `exports: \"J\"` configuration.\n10. Module B is loaded and correctly reads the global value exported by module J2, in variable \"J\".\n11. A third module, C, is required.\n12. Module C depends on the non-amd module, J1.\n13. Module J1 is **already** loaded.\n14. Module C is then loaded and **incorrectly** reads the global value exported by module J2, \n    in variable \"J\", and not that exported by module J1.\n\nIn any case, J1 or J2, the AMD loader correctly reads the just published value, \nand so real AMD modules depending on these always receive the correct value.\n\nThe conclusion is that to be 100% safe,\nany code depending on non-amd modules \n**must** be an amd module!\n\nThis plugin makes it easy to turn non-amd modules into amd modules.\nThe downfall is that all modules that depend on non-amd modules \nneed to use its _special_ module id:\n\n```javascript\ndefine(['amd!jquery.ui'], function($) {\n   // jquery ui has been loaded, and in the configured jquery instance, for sure, really, really!\n});\n```\n\nThe configuration of a module for use with this plugin is as close\nas possible to a _native_ shim configuration:\n\n```javascript\nrequirejs.config({\n  paths: {\n    \"amd\": \"path to the non-amd plugin\" \n  },\n  \n  config: {\n    // non-amd plugin configuration section\n    \"amd\": {\n      shim: {\n        \"jquery.ui\": {\n           exports: \"$\", // re-exports jquery\n           deps: { // instead of just an array, an object allows defining the define function argument names\n             \"$\": \"the-module-id-of-the-jquery-I-want\"\n             // other dependencies\n           }\n        }\n      }\n    }\n  }\n});\n```",
+            "line": " app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/nonamd.js:14"
+        },
+        {
+            "message": "Missing item type\nCompiles a non-amd module given its non-amd code and its compilation configuration options.",
+            "line": " app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/nonamd.js:120"
+        },
+        {
+            "message": "Missing item type",
+            "line": " app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/text.js:1"
+        },
+        {
+            "message": "Missing item type\nParses a resource name into its component parts. Resource names\nlook like: module/name.ext!strip, where the !strip part is\noptional.",
+            "line": " app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/text.js:77"
+        },
+        {
+            "message": "Missing item type\nIs an URL on another domain. Only works for browser use, returns\nfalse in non-browser environments. Only used to know if an\noptimized .js version of a text resource should be loaded\ninstead.",
+            "line": " app/bower_components/requirejs/tests/secondLateConfigPlugin/app/lib_/amd/text.js:121"
+        },
+        {
+            "message": "Missing item type",
+            "line": " app/bower_components/requirejs/tests/text/textBuilt.js:39"
+        },
+        {
+            "message": "Missing item type",
+            "line": " app/bower_components/requirejs/require.js:1"
+        },
+        {
+            "message": "Missing item type\nHelper function for iterating over an array. If the func returns\na true value, it will break out of the loop.",
+            "line": " app/bower_components/requirejs/require.js:49"
+        },
+        {
+            "message": "Missing item type\nHelper function for iterating over an array backwards. If the func\nreturns a true value, it will break out of the loop.",
+            "line": " app/bower_components/requirejs/require.js:64"
+        },
+        {
+            "message": "Missing item type\nCycles over properties in an object and calls a function for each\nproperty value. If the function returns a truthy value, then the\niteration is stopped.",
+            "line": " app/bower_components/requirejs/require.js:87"
+        },
+        {
+            "message": "Missing item type\nSimple function to mix in properties from source into target,\nbut only if target does not already have a property of the same name.",
+            "line": " app/bower_components/requirejs/require.js:103"
+        },
+        {
+            "message": "Missing item type\nConstructs an error with a pointer to an URL with more information.",
+            "line": " app/bower_components/requirejs/require.js:157"
+        },
+        {
+            "message": "Missing item type\nTrims the . and .. from an array of path segments.\nIt will keep a leading path segment if a .. will become\nthe first path segment, to help with module name lookups,\nwhich act like paths, but can be remapped. But the end result,\nall paths that use this function should look normalized.\nNOTE: this method MODIFIES the input array.",
+            "line": " app/bower_components/requirejs/require.js:225"
+        },
+        {
+            "message": "Missing item type\nGiven a relative module name, like ./something, normalize it to\na real name that can be mapped to a path.",
+            "line": " app/bower_components/requirejs/require.js:257"
+        },
+        {
+            "message": "Missing item type\nCreates a module mapping that includes plugin prefix, module\nname, and path. If parentModuleMap is provided it will\nalso normalize the name via require.normalize()",
+            "line": " app/bower_components/requirejs/require.js:399"
+        },
+        {
+            "message": "Missing item type\nInternal method to transfer globalQueue items to this context's\ndefQueue.",
+            "line": " app/bower_components/requirejs/require.js:550"
+        },
+        {
+            "message": "Missing item type\nChecks if the module is ready to define itself, and if so,\ndefine it.",
+            "line": " app/bower_components/requirejs/require.js:832"
+        },
+        {
+            "message": "Missing item type\nGiven an event from a script node, get the requirejs info from it,\nand then removes the event listeners on the node.",
+            "line": " app/bower_components/requirejs/require.js:1207"
+        },
+        {
+            "message": "Missing item type\nSet a configuration for the context.",
+            "line": " app/bower_components/requirejs/require.js:1261"
+        },
+        {
+            "message": "Missing item type\nConverts a module name + .extension into an URL path.\n*Requires* the use of a module name. It does not support using\nplain URLs like nameToUrl.",
+            "line": " app/bower_components/requirejs/require.js:1448"
+        },
+        {
+            "message": "Missing item type\nCalled to enable a module if it is still in the registry\nawaiting enablement. A second arg, parent, the parent module,\nis passed in for context, when this method is overridden by\nthe optimizer. Not shown here to keep code compact.",
+            "line": " app/bower_components/requirejs/require.js:1522"
+        },
+        {
+            "message": "Missing item type\nInternal method used by environment adapters to complete a load event.\nA load event could be a script load or just a load pass from a synchronous\nload call.",
+            "line": " app/bower_components/requirejs/require.js:1535"
+        },
+        {
+            "message": "Missing item type\nConverts a module name to a file path. Supports cases where\nmoduleName may actually be just an URL.\nNote that it **does not** call normalize on the moduleName,\nit is assumed to have already been normalized. This is an\ninternal API, not a public one. Use toUrl for the public API.",
+            "line": " app/bower_components/requirejs/require.js:1591"
+        },
+        {
+            "message": "Missing item type\nExecutes a module callback function. Broken out as a separate function\nsolely to allow the build system to sequence the files in the built\nlayer in the right sequence.",
+            "line": " app/bower_components/requirejs/require.js:1662"
+        },
+        {
+            "message": "Missing item type\ncallback for script loads, used to check status of loading.",
+            "line": " app/bower_components/requirejs/require.js:1673"
+        },
+        {
+            "message": "Missing item type\nCallback for script errors.",
+            "line": " app/bower_components/requirejs/require.js:1695"
+        },
+        {
+            "message": "Missing item type\nMain entry point.\n\nIf the only argument to require is a string, then the module that\nis represented by that string is fetched for the appropriate context.\n\nIf the first argument is an array, then it will be treated as an array\nof dependency string names to fetch. An optional function callback can\nbe specified to execute when all of those dependencies are available.\n\nMake a local req variable to help Caja compliance (it assumes things\non a require that are not standardized), and to give a short\nname for minification/local scope use.",
+            "line": " app/bower_components/requirejs/require.js:1710"
+        },
+        {
+            "message": "Missing item type\nSupport require.config() to make it easier to cooperate with other\nAMD loaders on globally agreed names.",
+            "line": " app/bower_components/requirejs/require.js:1760"
+        },
+        {
+            "message": "Missing item type\nExecute something after the current tick\nof the event loop. Override for other envs\nthat have a better solution than setTimeout.",
+            "line": " app/bower_components/requirejs/require.js:1768"
+        },
+        {
+            "message": "Missing item type\nExport require as a global, but only if it does not already exist.",
+            "line": " app/bower_components/requirejs/require.js:1778"
+        },
+        {
+            "message": "Missing item type\nAny errors that require explicitly generates will be passed to this\nfunction. Intercept/override it if you want custom error handling.",
+            "line": " app/bower_components/requirejs/require.js:1825"
+        },
+        {
+            "message": "Missing item type\nCreates the node for the load command. Only used in browser envs.",
+            "line": " app/bower_components/requirejs/require.js:1832"
+        },
+        {
+            "message": "Missing item type\nDoes the request to load a module for the browser case.\nMake this a separate function to allow other environments\nto override it.",
+            "line": " app/bower_components/requirejs/require.js:1845"
+        },
+        {
+            "message": "Missing item type\nThe function that handles definitions of modules. Differs from\nrequire() in that a string for the module should be the first argument,\nand the function to execute after dependencies are loaded should\nreturn a value to define the module corresponding to the first argument's\nname.",
+            "line": " app/bower_components/requirejs/require.js:2004"
+        },
+        {
+            "message": "Missing item type\nExecutes the text. Normally just uses eval, but can be modified\nto use a better, environment-specific call. Only used for transpiling\nloader plugins, not for plain JS modules.",
+            "line": " app/bower_components/requirejs/require.js:2077"
+        },
+        {
+            "message": "Missing item type\nCheck the existence of current notebook",
+            "line": " app/script/data.js:30"
+        },
+        {
+            "message": "Missing item type\nCheck the existence of selected note title in target notebook",
+            "line": " app/script/data.js:44"
+        },
+        {
+            "message": "Missing item type\nCreate a new notebook",
+            "line": " app/script/data.js:68"
+        },
+        {
+            "message": "Missing item type\nGet all notebook objects inside an array (Atleast one notebook, default)",
+            "line": " app/script/data.js:92"
+        },
+        {
+            "message": "Missing item type\nGet Notebook by ID",
+            "line": " app/script/data.js:100"
+        },
+        {
+            "message": "Missing item type\nCreate a note object and add into selected notebook",
+            "line": " app/script/data.js:112"
+        }
+    ]
+}
