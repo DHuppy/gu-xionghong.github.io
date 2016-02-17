@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    -webkit-overflow-scrolling: touch;
+}
+
+.title{
+    font-size: 23px;
+    font-weight: bold;
+    padding: 10px;    
+    border-bottom: 1px solid #ddd;
+}
+
+.list-container{
+    position: absolute;
+    top:47px;
+    left: 0;
+    right: 0;
+    bottom:0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.list-item{
+    margin: 0 auto;
+    padding:20px 0;
+    height: 120px;
+    width:90px;
+    border-bottom: 1px solid #000;
+}
+
+.list-item__img{
+    width:90px;
+    height: 90px;
+}
