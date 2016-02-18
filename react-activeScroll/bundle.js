@@ -26476,10 +26476,8 @@
 	            var scrollTop = _props.scrollTop;
 
 	            var recordHeight = 161;
-	            var visibleStart = Math.floor(scrollTop / recordHeight);
-	            console.log('start is ' + visibleStart);
-	            var visibleEnd = Math.min(visibleStart + 14, _dataJson.imgsUrl.length);
-	            console.log('end is ' + visibleEnd);
+	            var visibleStart = Math.max(Math.floor(scrollTop / recordHeight) - 5, 0);
+	            var visibleEnd = Math.min(visibleStart + 9, _dataJson.imgsUrl.length);
 	            var prevContainerHeight = recordHeight * visibleStart;
 	            var nextContainerHeight = recordHeight * (_dataJson.imgsUrl.length - visibleEnd);
 
