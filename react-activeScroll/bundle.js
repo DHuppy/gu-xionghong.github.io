@@ -26468,16 +26468,16 @@
 	        value: function componentDidMount() {
 	            var _this2 = this;
 
-	            alert(1112);
+	            alert(11212);
 	            document.getElementById('list-container').scrollTop = this.props.scrollTop;
-	            document.getElementById('list-container').onscroll = function (e) {
+	            $('#list-container').scroll(function (e) {
 	                e.preventDefault();
 	                e.stopPropagation();
 	                var scrollTop = document.getElementById('list-container').scrollTop;
 	                document.getElementsByClassName('title')[0].innerHTML = scrollTop;
 	                // console.log(this.props.scrollTop);
 	                _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
-	            };
+	            });
 	        }
 	    }, {
 	        key: 'render',
