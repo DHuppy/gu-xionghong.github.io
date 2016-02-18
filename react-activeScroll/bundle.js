@@ -26456,8 +26456,6 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            var _this2 = this;
-
 	            var dispatch = this.props.dispatch;
 
 	            var imagesRow = [];
@@ -26478,8 +26476,8 @@
 	                        onScroll: function (e) {
 	                            var scrollTop = document.getElementById('list-container').scrollTop;
 	                            document.getElementsByClassName('title')[0].innerHTML = scrollTop;
-	                            console.log(_this2.props.scrollTop);
-	                            dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
+	                            // console.log(this.props.scrollTop);
+	                            // dispatch(changeScrollTop(scrollTop));
 	                        }
 	                    },
 	                    _react2['default'].createElement(
