@@ -26458,9 +26458,7 @@
 	        value: function render() {
 	            var _this2 = this;
 
-	            var _props = this.props;
-	            var dispatch = _props.dispatch;
-	            var scrollTop = _props.scrollTop;
+	            var dispatch = this.props.dispatch;
 
 	            var imagesRow = [];
 	            _dataJson.imgsUrl.map(function (imgUrl, index) {
@@ -26473,16 +26471,13 @@
 	            return _react2['default'].createElement(
 	                'div',
 	                { className: 'app-container' },
-	                _react2['default'].createElement(
-	                    'h1',
-	                    { className: 'title' },
-	                    scrollTop
-	                ),
+	                _react2['default'].createElement('h1', { className: 'title' }),
 	                _react2['default'].createElement(
 	                    'div',
 	                    { className: 'list-container', id: 'list-container',
 	                        onScroll: function (e) {
 	                            var scrollTop = document.getElementById('list-container').scrollTop;
+	                            document.getElementsByClassName('title')[0].innerHTML = scrollTop;
 	                            console.log(_this2.props.scrollTop);
 	                            dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
 	                        }
@@ -26516,13 +26511,6 @@
 
 	module.exports = {
 		"imgsUrl": [
-			"logo.png",
-			"logo.png",
-			"logo.png",
-			"logo.png",
-			"logo.png",
-			"logo.png",
-			"logo.png",
 			"logo.png",
 			"logo.png",
 			"logo.png",
