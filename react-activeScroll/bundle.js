@@ -26501,6 +26501,8 @@
 	                    'div',
 	                    { className: 'list-container', id: 'list-container',
 	                        onScroll: function (e) {
+	                            e.preventDefault();
+	                            e.nativeEvent.stopImmediatePropagation();
 	                            var scrollTop = document.getElementById('list-container').scrollTop;
 	                            document.getElementsByClassName('title')[0].innerHTML = scrollTop;
 	                            // console.log(this.props.scrollTop);
