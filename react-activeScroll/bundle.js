@@ -26451,7 +26451,7 @@
 	    _createClass(App, [{
 	        key: 'componentWillMount',
 	        value: function componentWillMount() {
-	            console.log(111);
+	            console.log(11122);
 	        }
 	    }, {
 	        key: 'scrollState',
@@ -26468,10 +26468,11 @@
 	        value: function componentDidMount() {
 	            var _this2 = this;
 
-	            alert(111);
+	            alert(1112);
 	            document.getElementById('list-container').scrollTop = this.props.scrollTop;
 	            document.getElementById('list-container').onscroll = function (e) {
 	                e.preventDefault();
+	                e.stopPropagation();
 	                var scrollTop = document.getElementById('list-container').scrollTop;
 	                document.getElementsByClassName('title')[0].innerHTML = scrollTop;
 	                // console.log(this.props.scrollTop);
