@@ -26466,7 +26466,17 @@
 	    }, {
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
+	            var _this2 = this;
+
+	            alert(111);
 	            document.getElementById('list-container').scrollTop = this.props.scrollTop;
+	            document.getElementById('list-container').onscroll = function (e) {
+	                e.preventDefault();
+	                var scrollTop = document.getElementById('list-container').scrollTop;
+	                document.getElementsByClassName('title')[0].innerHTML = scrollTop;
+	                // console.log(this.props.scrollTop);
+	                _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
+	            };
 	        }
 	    }, {
 	        key: 'render',
@@ -26499,15 +26509,7 @@
 	                _react2['default'].createElement('h1', { className: 'title' }),
 	                _react2['default'].createElement(
 	                    'div',
-	                    { className: 'list-container', id: 'list-container',
-	                        onScroll: function (e) {
-	                            e.preventDefault();
-	                            e.nativeEvent.stopImmediatePropagation();
-	                            var scrollTop = document.getElementById('list-container').scrollTop;
-	                            document.getElementsByClassName('title')[0].innerHTML = scrollTop;
-	                            // console.log(this.props.scrollTop);
-	                            dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
-	                        }
+	                    { className: 'list-container', id: 'list-container'
 	                    },
 	                    _react2['default'].createElement(
 	                        'ul',
