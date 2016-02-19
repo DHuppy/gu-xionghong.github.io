@@ -4,10 +4,13 @@
 }
 
 body{
- 
+    -webkit-overflow-scrolling: touch;
 }
 
 .title{
+    position: absolute;
+    top:0;
+    left:0;
     font-size: 23px;
     font-weight: bold;
     padding: 10px;    
@@ -15,14 +18,13 @@ body{
 }
 
 .list-container{
-       -webkit-overflow-scrolling: touch;
-    position: absolute;
+    /*position: absolute;
     top:47px;
     left: 0;
     right: 0;
     bottom:0;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: hidden;*/
 }
 
 .list-item{
