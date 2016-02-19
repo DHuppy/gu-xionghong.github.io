@@ -26461,18 +26461,18 @@
 	    }, {
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
-	            var _this2 = this;
+	            var dispatch = this.props.dispatch;
 
-	            document.body.scrollTop = this.props.scrollTop;
-	            window.onscroll = function (e) {
-	                e.preventDefault();
-	                e.stopPropagation();
-	                console.log(document.body.scrollTop);
-	                var scrollTop = document.body.scrollTop;
+	            var myScroll;
+	            function updatePosition() {
+	                var scrollTop = -this.y;
 	                document.getElementsByClassName('title')[0].innerHTML = scrollTop;
 	                // console.log(this.props.scrollTop);
-	                _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
-	            };
+	                dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
+	            }
+
+	            myScroll = new IScroll('#wrapper', { probeType: 3, mouseWheel: true });
+	            myScroll.on('scroll', updatePosition);
 	        }
 	    }, {
 	        key: 'render',
@@ -26507,7 +26507,7 @@
 	                ),
 	                _react2['default'].createElement(
 	                    'div',
-	                    { className: 'list-container', id: 'list-container'
+	                    { className: 'list-container', id: 'wrapper'
 	                    },
 	                    _react2['default'].createElement(
 	                        'ul',
