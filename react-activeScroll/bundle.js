@@ -26450,9 +26450,7 @@
 
 	    _createClass(App, [{
 	        key: 'componentWillMount',
-	        value: function componentWillMount() {
-	            console.log(11122);
-	        }
+	        value: function componentWillMount() {}
 	    }, {
 	        key: 'scrollState',
 	        value: function scrollState(scroll) {
@@ -26468,11 +26466,12 @@
 	            var _this2 = this;
 
 	            document.getElementById('list-container').scrollTop = this.props.scrollTop;
-	            $('#list-container').on('touchmove', function () {
+	            console.log(navigator.appVersion.indexOf('Android'));
+	            var eventName = navigator.appVersion.indexOf('Android') > 0 ? 'scroll' : 'touchmove';
+	            $('#list-container').on(eventName, function () {
 	                document.title++;
 	                var scrollTop = document.getElementById('list-container').scrollTop;
 	                document.getElementsByClassName('title')[0].innerHTML = scrollTop;
-	                // console.log(this.props.scrollTop);
 	                _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
 	            });
 	        }
@@ -26483,11 +26482,10 @@
 	            var dispatch = _props.dispatch;
 	            var scrollTop = _props.scrollTop;
 
+	            var eleNum = navigator.appVersion.indexOf('Android') > 0 ? 30 : 60;
 	            var recordHeight = 161;
 	            var visibleStart = Math.max(Math.floor(scrollTop / recordHeight) - 14, 0);
-	            console.log(visibleStart);
-	            var visibleEnd = Math.min(visibleStart + 30, _dataJson.imgsUrl.length);
-	            console.log(visibleEnd);
+	            var visibleEnd = Math.min(visibleStart + eleNum, _dataJson.imgsUrl.length);
 	            var prevContainerHeight = recordHeight * visibleStart;
 	            var nextContainerHeight = recordHeight * (_dataJson.imgsUrl.length - visibleEnd);
 
