@@ -26459,7 +26459,6 @@
 	            var recordHeight = document.getElementsByTagName('li')[0].offsetHeight;
 	            var visibleStart = Math.floor(scroll / recordHeight);
 	            var visibleEnd = visibleStart + 14;
-
 	            var prevContainerHeight = recordHeight * visibleStart;
 	            var nextContainerHeight = recordHeight * (_dataJson.imgsUrl.length - visibleEnd);
 	        }
@@ -26468,12 +26467,10 @@
 	        value: function componentDidMount() {
 	            var _this2 = this;
 
-	            document.getElementById('skrollr-body').scrollTop = this.props.scrollTop;
-	            $('#skrollr-body').scroll(function (e) {
-	                e.preventDefault();
-	                e.stopPropagation();
+	            document.getElementById('list-container').scrollTop = this.props.scrollTop;
+	            $('#list-container').on('touchmove', function () {
 	                document.title++;
-	                var scrollTop = document.getElementById('skrollr-body').scrollTop;
+	                var scrollTop = document.getElementById('list-container').scrollTop;
 	                document.getElementsByClassName('title')[0].innerHTML = scrollTop;
 	                // console.log(this.props.scrollTop);
 	                _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
@@ -26510,7 +26507,7 @@
 	                _react2['default'].createElement('h1', { className: 'title' }),
 	                _react2['default'].createElement(
 	                    'div',
-	                    { className: 'list-container', id: 'skrollr-body'
+	                    { className: 'list-container', id: 'list-container'
 	                    },
 	                    _react2['default'].createElement(
 	                        'ul',
