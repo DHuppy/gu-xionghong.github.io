@@ -26449,6 +26449,11 @@
 	    // 包装 component ，注入 dispatch 和 state 到其默认的 connect(select)(App) 中；
 
 	    _createClass(App, [{
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {
+	            console.log(11122);
+	        }
+	    }, {
 	        key: 'scrollState',
 	        value: function scrollState(scroll) {
 	            var recordHeight = document.getElementsByTagName('li')[0].offsetHeight;
@@ -26461,18 +26466,17 @@
 	    }, {
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
-	            var dispatch = this.props.dispatch;
+	            var _this2 = this;
 
-	            var myScroll;
-	            function updatePosition() {
-	                var scrollTop = -this.y;
+	            document.getElementById('list-container').scrollTop = this.props.scrollTop;
+	            $('#list-container').scroll(function (e) {
+	                e.preventDefault();
+	                e.stopPropagation();
+	                var scrollTop = document.getElementById('list-container').scrollTop;
 	                document.getElementsByClassName('title')[0].innerHTML = scrollTop;
 	                // console.log(this.props.scrollTop);
-	                dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
-	            }
-
-	            myScroll = new IScroll('#wrapper', { probeType: 3, mouseWheel: true });
-	            myScroll.on('scroll', updatePosition);
+	                _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
+	            });
 	        }
 	    }, {
 	        key: 'render',
@@ -26483,7 +26487,9 @@
 
 	            var recordHeight = 161;
 	            var visibleStart = Math.max(Math.floor(scrollTop / recordHeight) - 14, 0);
+	            console.log(visibleStart);
 	            var visibleEnd = Math.min(visibleStart + 30, _dataJson.imgsUrl.length);
+	            console.log(visibleEnd);
 	            var prevContainerHeight = recordHeight * visibleStart;
 	            var nextContainerHeight = recordHeight * (_dataJson.imgsUrl.length - visibleEnd);
 
@@ -26500,14 +26506,10 @@
 	            return _react2['default'].createElement(
 	                'div',
 	                { className: 'app-container' },
-	                _react2['default'].createElement(
-	                    'h1',
-	                    { className: 'title' },
-	                    '0'
-	                ),
+	                _react2['default'].createElement('h1', { className: 'title' }),
 	                _react2['default'].createElement(
 	                    'div',
-	                    { className: 'list-container', id: 'wrapper'
+	                    { className: 'list-container', id: 'list-container'
 	                    },
 	                    _react2['default'].createElement(
 	                        'ul',
