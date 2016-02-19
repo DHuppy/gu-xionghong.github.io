@@ -26468,16 +26468,16 @@
 	        value: function componentDidMount() {
 	            var _this2 = this;
 
-	            alert(11212);
 	            document.getElementById('list-container').scrollTop = this.props.scrollTop;
-	            $('#list-container').scroll(function (e) {
+	            document.getElementById('list-container').onscroll = function (e) {
 	                e.preventDefault();
 	                e.stopPropagation();
+	                console.log('It is scrolling');
 	                var scrollTop = document.getElementById('list-container').scrollTop;
 	                document.getElementsByClassName('title')[0].innerHTML = scrollTop;
 	                // console.log(this.props.scrollTop);
 	                _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
-	            });
+	            };
 	        }
 	    }, {
 	        key: 'render',
@@ -26488,9 +26488,7 @@
 
 	            var recordHeight = 161;
 	            var visibleStart = Math.max(Math.floor(scrollTop / recordHeight) - 14, 0);
-	            console.log(visibleStart);
 	            var visibleEnd = Math.min(visibleStart + 30, _dataJson.imgsUrl.length);
-	            console.log(visibleEnd);
 	            var prevContainerHeight = recordHeight * visibleStart;
 	            var nextContainerHeight = recordHeight * (_dataJson.imgsUrl.length - visibleEnd);
 
