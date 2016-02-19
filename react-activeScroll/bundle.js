@@ -26495,7 +26495,7 @@
 	            newimgsUrl.map(function (imgUrl, index) {
 	                imagesRow.push(_react2['default'].createElement(
 	                    'li',
-	                    { key: newimgsNum[index] },
+	                    { key: newimgsNum[index], style: { height: '161px' } },
 	                    _react2['default'].createElement(ListItem, { imgUrl: imgUrl, imgNum: newimgsNum[index] })
 	                ));
 	            });
