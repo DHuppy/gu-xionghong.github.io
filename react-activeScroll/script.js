@@ -1,3 +1,1 @@
-        document.body.onscroll = function () {
-            console.log(2222);
-        }
+var s = skrollr.init(); 
