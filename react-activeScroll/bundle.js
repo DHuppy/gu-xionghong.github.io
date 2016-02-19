@@ -26468,12 +26468,18 @@
 	            document.getElementById('list-container').scrollTop = this.props.scrollTop;
 	            console.log(navigator.appVersion.indexOf('Android'));
 	            var eventName = navigator.appVersion.indexOf('Android') > 0 ? 'scroll' : 'touchmove';
-	            $('#list-container').on(eventName, function () {
+	            // $('#list-container').on(eventName,() => {
+	            //     document.title++;
+	            //     let scrollTop = document.getElementById('list-container').scrollTop;
+	            //     document.getElementsByClassName('title')[0].innerHTML = scrollTop;
+	            //     this.props.dispatch(changeScrollTop(scrollTop));
+	            // })
+	            setInterval(function () {
 	                document.title++;
 	                var scrollTop = document.getElementById('list-container').scrollTop;
 	                document.getElementsByClassName('title')[0].innerHTML = scrollTop;
 	                _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
-	            });
+	            }, 200);
 	        }
 	    }, {
 	        key: 'render',
