@@ -26465,14 +26465,49 @@
 	        value: function componentDidMount() {
 	            var _this2 = this;
 
-	            document.getElementById('list-container').scrollTop = this.props.scrollTop;
+	            // document.getElementById('list-container').scrollTop = this.props.scrollTop;
 	            // console.log(navigator.appVersion.indexOf('Android'));
 	            // let eventName = navigator.appVersion.indexOf('Android') > 0 ? 'scroll' : 'touchmove';
-	            $('#list-container').on('scroll', function () {
-	                document.title++;
-	                var scrollTop = document.getElementById('list-container').scrollTop;
-	                document.getElementsByClassName('title')[0].innerHTML = scrollTop;
-	                _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
+	            // $('#list-container').on('scroll',() => {
+	            //     document.title++;
+	            //     let scrollTop = document.getElementById('list-container').scrollTop;
+	            //     document.getElementsByClassName('title')[0].innerHTML = scrollTop;
+	            //     this.props.dispatch(changeScrollTop(scrollTop));
+	            // })
+	            var index = 0;
+	            var translate = undefined;
+	            var pertranslate = undefined;
+	            var interval = function interval(swiper) {
+	                setTimeout(function () {
+	                    if (!swiper.animating) {
+	                        console.log('it is not in animatin');
+	                        return;
+	                    }
+	                    pertranslate = (swiper.translate - translate) / 5;
+	                    index++;
+	                    translate += index * pertranslate;
+	                    _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(-translate));
+	                    console.log(translate);
+	                    interval(swiper);
+	                }, 200);
+	            };
+	            var mySwiper = new Swiper('.swiper-container', {
+	                direction: 'vertical',
+	                freeMode: true,
+	                onTransitionStart: function onTransitionStart(swiper, transition) {
+	                    interval(swiper);
+	                },
+	                onTransitionEnd: function onTransitionEnd() {
+	                    console.log('it is end');
+	                    // interval = clearInterval(interval);
+	                }
+	            });
+	            mySwiper.setWrapperTranslate(this.props.scrollTop);
+	            mySwiper.on('sliderMove', function () {
+	                index = 0;
+	                translate = mySwiper.translate;
+	                _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(-translate));
+	                // console.log('On slider move, translate is  ' + translate);
 	            });
 	        }
 	    }, {
@@ -26501,19 +26536,20 @@
 	            });
 	            return _react2['default'].createElement(
 	                'div',
-	                { className: 'app-container' },
+	                { className: 'app-container swiper-container' },
 	                _react2['default'].createElement('h1', { className: 'title' }),
 	                _react2['default'].createElement(
 	                    'div',
-	                    { className: 'list-container', id: 'list-container'
+	                    { className: 'list-container swiper-wrapper', id: 'list-container'
 	                    },
 	                    _react2['default'].createElement(
 	                        'ul',
-	                        null,
+	                        { className: 'swiper-slide' },
 	                        _react2['default'].createElement('li', { className: 'prevContainer', style: { height: prevContainerHeight + 'px' } }),
 	                        imagesRow,
 	                        _react2['default'].createElement('li', { className: 'nextContainer', style: { height: nextContainerHeight + 'px' } })
-	                    )
+	                    ),
+	                    _react2['default'].createElement('div', { className: 'swiper-slide' })
 	                )
 	            );
 	        }
