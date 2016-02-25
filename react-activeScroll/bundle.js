@@ -26457,7 +26457,6 @@
 	            var recordHeight = document.getElementsByTagName('li')[0].offsetHeight;
 	            var visibleStart = Math.floor(scroll / recordHeight);
 	            var visibleEnd = visibleStart + 14;
-	            var prevContainerHeight = recordHeight * visibleStart;
 	            var nextContainerHeight = recordHeight * (_dataJson.imgsUrl.length - visibleEnd);
 	        }
 	    }, {
@@ -26465,49 +26464,20 @@
 	        value: function componentDidMount() {
 	            var _this2 = this;
 
-	            // document.getElementById('list-container').scrollTop = this.props.scrollTop;
-	            // console.log(navigator.appVersion.indexOf('Android'));
-	            // let eventName = navigator.appVersion.indexOf('Android') > 0 ? 'scroll' : 'touchmove';
-	            // $('#list-container').on('scroll',() => {
-	            //     document.title++;
-	            //     let scrollTop = document.getElementById('list-container').scrollTop;
-	            //     document.getElementsByClassName('title')[0].innerHTML = scrollTop;
-	            //     this.props.dispatch(changeScrollTop(scrollTop));
-	            // })
-	            var index = 0;
-	            var translate = undefined;
-	            var pertranslate = undefined;
-	            var interval = function interval(swiper) {
-	                setTimeout(function () {
-	                    if (!swiper.animating) {
-	                        console.log('it is not in animatin');
-	                        return;
-	                    }
-	                    pertranslate = (swiper.translate - translate) / 5;
-	                    index++;
-	                    translate += index * pertranslate;
-	                    _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(-translate));
-	                    console.log(translate);
-	                    interval(swiper);
-	                }, 200);
-	            };
-	            var mySwiper = new Swiper('.swiper-container', {
-	                direction: 'vertical',
-	                freeMode: true,
-	                onTransitionStart: function onTransitionStart(swiper, transition) {
-	                    interval(swiper);
-	                },
-	                onTransitionEnd: function onTransitionEnd() {
-	                    console.log('it is end');
-	                    // interval = clearInterval(interval);
-	                }
-	            });
-	            mySwiper.setWrapperTranslate(this.props.scrollTop);
-	            mySwiper.on('sliderMove', function () {
-	                index = 0;
-	                translate = mySwiper.translate;
-	                _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(-translate));
-	                // console.log('On slider move, translate is  ' + translate);
+	            sessionStorage.setItem('aaa', 'true');
+	            var b = sessionStorage.getItem('aaa');
+	            if (b) {
+	                alert('sessionStorage is exites' + b);
+	            }
+	            if (sessionStorage) {
+	                alert('sessionStorage is exites');
+	            }
+	            document.getElementById('list-container').scrollTop = this.props.scrollTop;
+	            $('#list-container').on('scroll', function () {
+	                document.title++;
+	                var scrollTop = document.getElementById('list-container').scrollTop;
+	                document.getElementsByClassName('title')[0].innerHTML = scrollTop;
+	                _this2.props.dispatch((0, _actionsActionsJs.changeScrollTop)(scrollTop));
 	            });
 	        }
 	    }, {
@@ -26518,7 +26488,8 @@
 	            var scrollTop = _props.scrollTop;
 
 	            var eleNum = navigator.appVersion.indexOf('Android') > 0 ? 30 : 60;
-	            var recordHeight = 161;
+	            console.log(window.innerWidth);
+	            var recordHeight = 0.6 * window.innerWidth;
 	            var visibleStart = Math.max(Math.floor(scrollTop / recordHeight) - 14, 0);
 	            var visibleEnd = Math.min(visibleStart + eleNum, _dataJson.imgsUrl.length);
 	            var prevContainerHeight = recordHeight * visibleStart;
@@ -26530,26 +26501,25 @@
 	            newimgsUrl.map(function (imgUrl, index) {
 	                imagesRow.push(_react2['default'].createElement(
 	                    'li',
-	                    { key: newimgsNum[index], style: { height: '161px' } },
+	                    { key: newimgsNum[index], style: { height: '60vw' } },
 	                    _react2['default'].createElement(ListItem, { imgUrl: imgUrl, imgNum: newimgsNum[index] })
 	                ));
 	            });
 	            return _react2['default'].createElement(
 	                'div',
-	                { className: 'app-container swiper-container' },
+	                { className: 'app-container' },
 	                _react2['default'].createElement('h1', { className: 'title' }),
 	                _react2['default'].createElement(
 	                    'div',
-	                    { className: 'list-container swiper-wrapper', id: 'list-container'
+	                    { className: 'list-container', id: 'list-container'
 	                    },
 	                    _react2['default'].createElement(
 	                        'ul',
-	                        { className: 'swiper-slide' },
+	                        null,
 	                        _react2['default'].createElement('li', { className: 'prevContainer', style: { height: prevContainerHeight + 'px' } }),
 	                        imagesRow,
 	                        _react2['default'].createElement('li', { className: 'nextContainer', style: { height: nextContainerHeight + 'px' } })
-	                    ),
-	                    _react2['default'].createElement('div', { className: 'swiper-slide' })
+	                    )
 	                )
 	            );
 	        }
